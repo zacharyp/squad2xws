@@ -1,7 +1,7 @@
 {
-  "name": "node-rest-api-article",
+  "name": "squad2xws",
   "version": "1.0.0",
-  "description": "",
+  "description": "X-wing squads and XWS",
   "main": "index.js",
   "scripts": {
     "postinstall": "npx tsc",
@@ -52,5 +52,9 @@
     "@types/jest": "^23.3.10",
     "jest": "^23.6.0",
     "ts-jest": "^23.10.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacharyp/squad2xws.git"
   }
 }
