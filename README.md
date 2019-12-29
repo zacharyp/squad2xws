@@ -1,6 +1,21 @@
 ## squad2xws
 
-FFG x-wing squads to XWS
+FFG x-wing squads to XWS.  Also YASB urls to XWS, or XWS to YASB urls.
+
+## Usage
+
+Take the UUID (unique identifier) of your squadbuilder squad, i.e the `8d86dd8d-1ff8-4e07-a9cb-37582fe0655f` out of the URL `https://squadbuilder.fantasyflightgames.com/squad-preview/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f`
+
+
+Then go to http://squad2xws.herokuapp.com/squad/translate/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f
+ (editing for your squd's UUID), and you will be presented with [XWS](https://github.com/elistevens/xws-spec) JSON, for example:
+ 
+```
+{"faction":"scumandvillainy","pilots":[{"id":"l337-escapecraft","ship":"escapecraft","upgrades":{"crew":["tacticalofficer"]},"points":24},{"id":"bobafett","ship":"firesprayclasspatrolcraft","upgrades":{"crew":["perceptivecopilot"],"gunner":["hansolo-gunner"],"title":["marauder"],"ept":["debrisgambit"]},"points":99},{"id":"fennrau","ship":"fangfighter","upgrades":{"ept":["fearless"]},"points":71}],"name":"Boba Fenn L3-37","description":"","points":194}
+```
+
+This JSON can be imported into either [YASB](https://raithos.github.io) or [Vassal X-wing module](http://www.vassalengine.org/wiki/Module:Star_Wars:_X-Wing_Miniatures_Game).
+
 
 ### Getting started
 1. ```npm install```
@@ -10,7 +25,6 @@ FFG x-wing squads to XWS
 ### environment variables
 
 Needs to setup a .env file with all environment variables.  See ./node-rest-api/.env.example for an example.
-
 
 ### xwing-data2 submodule
 `git submodule foreach git pull origin master`
