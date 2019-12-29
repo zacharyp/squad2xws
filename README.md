@@ -10,3 +10,7 @@ FFG x-wing squads to XWS
 ### environment variables
 
 Needs to setup a .env file with all environment variables.  See ./node-rest-api/.env.example for an example.
+
+
+### xwing-data2 submodule
+`git submodule foreach git pull origin master`
