@@ -4,14 +4,14 @@
     "version": "1.0.0"
   },
   "host": "localhost:3000",
-  "basePath": "/api/v1",
+  "basePath": "",
   "schemes": ["http"],
   "produces": ["application/json"],
   "paths": {
-    "/search": {
+    "/squad/translate/{squadId}": {
       "get": {
-        "tags": ["Search Text"],
-        "summary": "Search by places using opencagedata service",
+        "tags": ["XWS"],
+        "summary": "Translates FFG Squad to XWS output",
         "responses": {
           "200": {
             "description": "OK"
@@ -25,9 +25,9 @@
         },
         "parameters": [
           {
-            "name": "q",
-            "in": "query",
-            "description": "Specifies the query string",
+            "name": "squadId",
+            "in": "path",
+            "description": "Specifies the FFG squad id",
             "required": true,
             "type": "string"
           }
