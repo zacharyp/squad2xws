@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { getSquadJSON } from "./SquadController";
+import { FFGSquad } from "./FFGSquad";
 // import { checkSearchParams } from "../../middleware/checks";
 
 export default [
@@ -9,7 +10,10 @@ export default [
     handler: [
     //   checkSearchParams,
       async (req: Request, res: Response) => {
-        const result = await getSquadJSON(req.params.squadId);
+        const result: FFGSquad = await getSquadJSON(req.params.squadId);
+
+
+
         res.status(200).send(result);
       }
     ]

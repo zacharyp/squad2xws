@@ -1,12 +1,6 @@
 import { getFFGSquad } from "./providers/FFGProvider";
+import { FFGSquad } from "./FFGSquad";
 
-export const getSquadJSON = async (squadId: string) => {
-//   if (q.length < 3) {
-//     return {
-//       type: "FeatureCollection",
-//       features: []
-//     };
-//   }
-
-  return await getFFGSquad(squadId);
+export async function getSquadJSON(squadId: string): Promise<FFGSquad> {    
+  return await getFFGSquad(squadId).then(json => <FFGSquad>json);
 };
