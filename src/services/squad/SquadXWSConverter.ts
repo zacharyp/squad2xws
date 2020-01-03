@@ -11,7 +11,7 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
     const vender = <Vendor>{
         builder: 'squad2xws',
         builder_url: 'http://squad2xws.herokuapp.com/',
-        url: `http://squad2xws.herokuapp.com/squad/translate/${squadId}`
+        url: `http://squad2xws.herokuapp.com/translate/${squadId}`
     }
 
     const xwsSquadron = <XWSSquadron>{
@@ -54,7 +54,6 @@ function constructPilots(decks: Deck[]): Pilot[] {
             }
             const pilot = <Pilot>{
                 id: xwsId,
-                name: xwsId,
                 ship: shipXWSId,
                 upgrades: upgradeObj,
                 points: deck.cost

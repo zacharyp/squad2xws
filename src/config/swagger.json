@@ -8,7 +8,7 @@
   "schemes": ["http"],
   "produces": ["application/json"],
   "paths": {
-    "/squad/translate/{squadId}": {
+    "/translate/{squadId}": {
       "get": {
         "tags": ["XWS"],
         "summary": "Translates FFG Squad to XWS output",

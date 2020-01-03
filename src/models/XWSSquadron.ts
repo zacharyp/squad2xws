@@ -10,7 +10,6 @@ export interface XWSSquadron {
 
 export interface Pilot {
     id:        string;
-    name:      string,
     ship?:     string,
     upgrades?: Upgrades;
     points?:   number;

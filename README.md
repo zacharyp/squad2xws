@@ -7,7 +7,7 @@ FFG x-wing squads to XWS.  Also YASB urls to XWS, or XWS to YASB urls.
 Take the UUID (unique identifier) of your squadbuilder squad, i.e the `8d86dd8d-1ff8-4e07-a9cb-37582fe0655f` out of the URL `https://squadbuilder.fantasyflightgames.com/squad-preview/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f`
 
 
-Then go to http://squad2xws.herokuapp.com/squad/translate/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f
+Then go to http://squad2xws.herokuapp.com/translate/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f
  (editing for your squd's UUID), and you will be presented with [XWS](https://github.com/elistevens/xws-spec) JSON, for example:
  
 ```

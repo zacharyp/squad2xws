@@ -6,7 +6,7 @@ import { XWSSquadron } from "../../models/XWSSquadron";
 
 export default [
     {
-        path: '/squad/translate/:squadId',
+        path: '/translate/:squadId',
         method: "get",
         handler: [
             async (req: Request, res: Response) => {
