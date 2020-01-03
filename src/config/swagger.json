@@ -3,7 +3,7 @@
   "info": {
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "squad2xws.herokuapp.com",
   "basePath": "",
   "schemes": ["http"],
   "produces": ["application/json"],
