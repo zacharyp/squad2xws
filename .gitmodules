@@ -1,3 +1,6 @@
 [submodule "xwing-data2"]
 	path = xwing-data2
 	url = git://github.com/guidokessels/xwing-data2.git
+[submodule "xwing"]
+	path = xwing
+	url = git://github.com/raithos/xwing.git
