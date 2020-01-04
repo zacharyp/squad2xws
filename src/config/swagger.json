@@ -33,6 +33,50 @@
           }
         ]
       }
+    },
+    "/yasb/reverse": {
+      "post": {
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "description": "XWS JSON representing x-wing squad",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "example": {"faction":"galacticempire","pilots":[{"id":"soontirfel","ship":"tieininterceptor","upgrades":{"modification":["shieldupgrade","targetingcomputer"],"ept":["crackshot"]},"points":65},{"id":"redline","ship":"tiecapunisher","upgrades":{"torpedo":["protontorpedoes"],"sensor":["passivesensors"],"device":["seismiccharges"]},"points":71},{"id":"coloneljendon","ship":"lambdaclasst4ashuttle","upgrades":{"crew":["directorkrennic"],"sensor":["collisiondetector"]},"points":56}],"name":"Soontir Jenden Redline","description":"","points":192,"vendor":{"sb2xws":{"builder":"SB2XWS","url":"http://sb2xws.herokuapp.com/translate/c230c0fd-9461-41c9-9a39-e0f9b641c094"}}}
+            }
+          }
+        ],
+        "tags": ["XWS"],
+        "summary": "Translates XWS input to YASB URL",
+        "responses": {
+          "200": {
+            "description": "YASB URL string",
+            "schema": {
+              "type": "object",
+              "example": {
+                "url": "https://raithos.github.io/?f=Galactic%20Empire&d=v8ZsZ200Z179X116W165W249Y191X240W136WWWW71WWY167X112WW28WWW&sn=Soontir%20Jenden%20Redline&obs="
+              },
+              "application/json": {
+                "example": {
+                  "url": "https://raithos.github.io/?f=Galactic%20Empire&d=v8ZsZ200Z179X116W165W249Y191X240W136WWWW71WWY167X112WW28WWW&sn=Soontir%20Jenden%20Redline&obs="
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {}
+          } 
+        }
+      }
     }
   }
 }
