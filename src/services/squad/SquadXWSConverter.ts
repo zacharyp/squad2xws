@@ -21,7 +21,9 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
         description: squad.description,
         obstacles: undefined,
         points: squad.cost,
-        vender: vender
+        vender: {
+            "squad2xws": vender
+        }
     }
 
     return xwsSquadron
