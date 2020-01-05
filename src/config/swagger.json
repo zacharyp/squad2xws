@@ -38,17 +38,6 @@
       "post": {
         "consumes": ["application/json"],
         "produces": ["application/json"],
-        "parameters": [
-          {
-            "in": "body",
-            "description": "XWS JSON representing x-wing squad",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "example": {"faction":"galacticempire","pilots":[{"id":"soontirfel","ship":"tieininterceptor","upgrades":{"modification":["shieldupgrade","targetingcomputer"],"ept":["crackshot"]},"points":65},{"id":"redline","ship":"tiecapunisher","upgrades":{"torpedo":["protontorpedoes"],"sensor":["passivesensors"],"device":["seismiccharges"]},"points":71},{"id":"coloneljendon","ship":"lambdaclasst4ashuttle","upgrades":{"crew":["directorkrennic"],"sensor":["collisiondetector"]},"points":56}],"name":"Soontir Jenden Redline","description":"","points":192,"vendor":{"sb2xws":{"builder":"SB2XWS","url":"http://sb2xws.herokuapp.com/translate/c230c0fd-9461-41c9-9a39-e0f9b641c094"}}}
-            }
-          }
-        ],
         "tags": ["XWS"],
         "summary": "Translates XWS input to YASB URL",
         "responses": {
@@ -71,10 +60,21 @@
           }
         },
         "requestBody": {
+          "description": "XWS JSON representing x-wing squad",
           "required": true,
           "content": {
-            "application/json": {}
-          } 
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "prop": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "example": {"faction":"galacticempire","pilots":[{"id":"soontirfel","ship":"tieininterceptor","upgrades":{"modification":["shieldupgrade","targetingcomputer"],"ept":["crackshot"]},"points":65},{"id":"redline","ship":"tiecapunisher","upgrades":{"torpedo":["protontorpedoes"],"sensor":["passivesensors"],"device":["seismiccharges"]},"points":71},{"id":"coloneljendon","ship":"lambdaclasst4ashuttle","upgrades":{"crew":["directorkrennic"],"sensor":["collisiondetector"]},"points":56}],"name":"Soontir Jenden Redline","description":"","points":192,"vendor":{"sb2xws":{"builder":"SB2XWS","url":"http://sb2xws.herokuapp.com/translate/c230c0fd-9461-41c9-9a39-e0f9b641c094"}}}
         }
       }
     }

@@ -20,32 +20,34 @@ const upgradeIdsByXWS: Map<string, number> = upgradeMap()
 
 export async function covert_xws(xwsString: string): Promise<string> {
     const xwsSquadron = <XWSSquadron>JSON.parse(xwsString)
- 
+
     let serializedSquad = "v8ZsZ200Z" // serialization version 8, standard squad, 200 points
 
     const faction = fromXWSFaction(xwsSquadron.faction)
     const squadName = xwsSquadron.name || "Unnamed"
 
-    xwsSquadron.pilots.forEach(pilot => {
-        const pilotXWS = pilot.id
-        let pilotFound = cardData.pilotsById.find(p => {
-            return p.faction == faction && canonicalize(p.name) == pilotXWS
-        })
-        if (pilotFound != undefined) {
-            serializedSquad += pilotFound.id + "X"
-            if (pilot.upgrades != undefined) {
-                Object.values(pilot.upgrades).forEach(upgradeArray => {
-                    upgradeArray.forEach(u => {
-                        let uFound = upgradeIdsByXWS.get(u)
-                        if (uFound) {
-                            serializedSquad += uFound + "W"
-                        }
+    if (xwsSquadron.pilots != undefined) {
+        xwsSquadron.pilots.forEach(pilot => {
+            const pilotXWS = pilot.id
+            let pilotFound = cardData.pilotsById.find(p => {
+                return p.faction == faction && canonicalize(p.name) == pilotXWS
+            })
+            if (pilotFound != undefined) {
+                serializedSquad += pilotFound.id + "X"
+                if (pilot.upgrades != undefined) {
+                    Object.values(pilot.upgrades).forEach(upgradeArray => {
+                        upgradeArray.forEach(u => {
+                            let uFound = upgradeIdsByXWS.get(u)
+                            if (uFound) {
+                                serializedSquad += uFound + "W"
+                            }
+                        })
                     })
-                })
+                }
+                serializedSquad += "XY"
             }
-           serializedSquad += "XY"
-        }      
-    })
+        })
+    }
 
     let urlFaction = encodeURIComponent(faction)
     var result = "https://raithos.github.io/?"
