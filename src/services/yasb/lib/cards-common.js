@@ -20,8 +20,6 @@ export function canonicalize(s) {
  * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
  */
 // This must be loaded before any of the card language modules!
-
-// export default exportObj = {}
 const exportObj = typeof exports !== 'undefined' && exports !== null ? exports : this;
 
 exportObj.unreleasedExpansions = [

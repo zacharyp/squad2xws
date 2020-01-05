@@ -19,7 +19,11 @@ This JSON can be imported into either [YASB](https://raithos.github.io) or [Vass
 
 Post endpoint for XWS data.  Returns a valid YASB2 url.
 
+POST JSON xws to `http://squad2xws.herokuapp.com/yasb/reverse`
 
+## API Documentation
+
+Located here: http://squad2xws.herokuapp.com/api-docs/#/
 
 ### Getting started
 1. ```npm install```
