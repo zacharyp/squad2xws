@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# git submodule foreach git pull origin master
+git submodule foreach git pull origin master
 
-# npm install -g decaffeinate
+npm install -g decaffeinate
 
 decaffeinate --use-cs2 xwing/coffeescripts/cards-common.coffee
 

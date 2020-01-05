@@ -1,7 +1,3 @@
 export declare function  basicCardData(): object;
 
-// declare module 'cards-common' {
-//     function basicCardData(): object;
-//     export = basicCardData
-// }
-
+export declare function canonicalize(s:string): string;

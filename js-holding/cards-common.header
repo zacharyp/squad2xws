@@ -3,3 +3,7 @@ export function basicCardData() {
     return exportObj.basicCardData();
 }
 
+export function canonicalize(s) {
+    return s.canonicalize()
+}
+

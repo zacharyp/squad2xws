@@ -3,6 +3,10 @@ export function basicCardData() {
     return exportObj.basicCardData();
 }
 
+export function canonicalize(s) {
+    return s.canonicalize()
+}
+
 /*
  * decaffeinate suggestions:
  * DS101: Remove unnecessary use of Array.from
