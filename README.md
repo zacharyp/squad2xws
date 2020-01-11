@@ -15,6 +15,12 @@ Then go to http://squad2xws.herokuapp.com/translate/8d86dd8d-1ff8-4e07-a9cb-3758
 
 This JSON can be imported into either [YASB](https://raithos.github.io) or [Vassal X-wing module](http://www.vassalengine.org/wiki/Module:Star_Wars:_X-Wing_Miniatures_Game).
 
+## YASB URL to XWS
+
+GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `squad2xws.herokuapp.com/yasb/xws`
+Example: `https://raithos.github.io/?f=Galactic%20Empire&d=v8ZsZ200Z179X116W249W165Y167X112WW28WWWY191X240W136WWWW71WW&sn=Soontir%20Redline%20Jenden&obs=`
+becomes `https://squad2xws.herokuapp.com/yasb/xws?f=Galactic%20Empire&d=v8ZsZ200Z179X116W249W165Y167X112WW28WWWY191X240W136WWWW71WW&sn=Soontir%20Redline%20Jenden&obs=`
+
 ## Reverse YASB
 
 Post endpoint for XWS data.  Returns a valid YASB2 url.

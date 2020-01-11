@@ -1,6 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
+    "description": "REST helper endpoints for FFG X-wing squads",
     "version": "1.0.0"
   },
   "host": "squad2xws.herokuapp.com",
