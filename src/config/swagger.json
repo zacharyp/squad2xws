@@ -51,30 +51,31 @@
         },
         "parameters": [
           {
-            "name": "d",
-            "in": "query",
-            "description": "serialized squad (example 'v8ZsZ200Z179X116W249W165Y166X112WWWWW162Y191X240W136WWWW71WW'",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "f",
             "in": "query",
-            "description": "faction (ex: 'Galactic Empire'",
+            "description": "faction (ex: 'Galactic Empire')",
+            "required": true,
+            "type": "string",
+            "enum": ["Rebel Alliance", "Galactic Empire", "Scum and Villainy", "First Order", "Resistance", "Galactic Republic", "Separatist Alliance"]
+          },
+          {
+            "name": "d",
+            "in": "query",
+            "description": "serialized squad (example 'v8ZsZ200Z179X116W249W165Y166X112WWWWW162Y191X240W136WWWW71WW')",
             "required": true,
             "type": "string"
           },
           {
             "name": "sn",
             "in": "query",
-            "description": "squad name (ex: 'My Awesome Squad'",
+            "description": "squad name (ex: 'My Awesome Squad')",
             "required": false,
             "type": "string"
           },
           {
             "name": "obs",
             "in": "query",
-            "description": "obstacles list, comma separated (ex: 'coreasteroid5,core2asteroid4,core2asteroid5'",
+            "description": "obstacles list, comma separated (ex: 'coreasteroid5,core2asteroid4,core2asteroid5')",
             "required": false,
             "type": "string"
           }
