@@ -1,5 +1,5 @@
 import { CardData, PilotById, Ship, UpgradeById } from "../../models/YASBCardData";
-import { Pilot, Upgrades, Vendor, XWSSquadron } from "../../models/XWSSquadron";
+import { Pilot, Upgrades } from "../../models/XWSSquadron";
 
 import { basicCardData, canonicalize } from './lib';
 
@@ -10,9 +10,7 @@ export function serializedToShips(serialized: string): Pilot[] {
     const re = /^v(\d+)Z(.*)/
     const matches = re.exec(serialized);
     if (matches != null) {
-        // const version = parseInt(matches[1]);
         let splitValues: string[] = matches[2].split('Z')
-        // let game_type_abbrev: string = splitValues[0]
         let serialized_ships: string = splitValues[2]
 
         const ship_splitter = 'Y';
@@ -30,8 +28,7 @@ export function serializedToShips(serialized: string): Pilot[] {
 };
 
 function fromSerializedShip(serialized: string): Pilot | undefined {
-    let conferredaddon_pairs, e, pilot_id, upgrade_ids;
-
+    let unused_value, pilot_id, upgrade_ids;
     const upgrades = <Upgrades>{}
 
     const pilotObj = <Pilot>{
@@ -44,7 +41,7 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
     const pilot_splitter = 'X';
     const upgrade_splitter = 'W';
 
-    [pilot_id, upgrade_ids, conferredaddon_pairs] = serialized.split(pilot_splitter);
+    [pilot_id, upgrade_ids, unused_value] = serialized.split(pilot_splitter);
 
     try {
         let p = cardData.pilotsById[parseInt(pilot_id)]
@@ -65,15 +62,9 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
                 let uXWS: string = upgradeById.xws || upgradeById.canonical_name ||  canonicalize(upgradeById.name)
 
                 let currentUpgradeArray: string[] = upgrades[uSlot] || []
-
                 currentUpgradeArray.push(uXWS)
 
                 upgrades[uSlot] = currentUpgradeArray
-
-                // get upgrade xws
-                // push into pilotObj
-                // pilotObj.upgrades.push(cardData.upgradesById[upgrade_id]);
-
                 let upgradePoints = getUpgradePoints(upgradeById, ship, p.skill)
                 pilotObj.points += upgradePoints
             }
