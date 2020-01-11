@@ -32,8 +32,6 @@ export function serializedToShips(serialized: string): Pilot[] {
 function fromSerializedShip(serialized: string): Pilot | undefined {
     let conferredaddon_pairs, e, pilot_id, upgrade_ids;
 
-    console.log("serialized pilot: " + serialized)
-
     const upgrades = <Upgrades>{}
 
     const pilotObj = <Pilot>{
@@ -61,7 +59,6 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
         for (let i = 0; i < uSplit.length; i++) {
             let upgrade_id = parseInt(uSplit[i]);
             if (upgrade_id >= 0) {
-                console.log(upgrade_id)
                 let upgradeById: UpgradeById = cardData.upgradesById[upgrade_id]
 
                 let uSlot: string = (upgradeById.slot == 'Force') ? 'force-power' : canonicalize(upgradeById.slot)
@@ -87,7 +84,6 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
         return undefined;
     }
 
-    console.log(pilotObj)
     return pilotObj;
 };
 
