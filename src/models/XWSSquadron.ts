@@ -6,6 +6,7 @@ export interface XWSSquadron {
     obstacles?:   string[];
     points?:      number;
     vendor?:      Map<string, Vendor>;
+    version?: string;
 }
 
 export interface Pilot {

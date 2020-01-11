@@ -1,7 +1,10 @@
 
 export interface Ship {
     name: string,
-    xws: string
+    xws: string,
+    agility: number,
+    medium?: boolean,
+    large?: boolean
 }
 
 export interface Ships {
@@ -13,7 +16,10 @@ export interface PilotById {
     id: number,
     faction: string,
     ship: string,
-    points: number
+    skill: number,
+    points: number,
+    canonical_name?: string,
+    xws?: string
 }
 
 export interface UpgradeById {
@@ -21,8 +27,13 @@ export interface UpgradeById {
     canonical_name?: string,
     id: number,
     slot: string,
+    xws?: string,
     faction: string,
-    points: number
+    points: number,
+    pointsarray?: number[],
+    variableagility?: boolean,
+    variablebase?: boolean,
+    variableinit?: boolean
 }
 
 export interface CardData {
