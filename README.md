@@ -1,8 +1,18 @@
 ## squad2xws
 
-FFG x-wing squads to XWS.  Also YASB urls to XWS, or XWS to YASB urls.
+Useful REST endpoints related to [X-Wing: The Miniatures Game (Second Edition)](https://www.fantasyflightgames.com/en/products/x-wing-second-edition/) by [Fantasy Flight Games](http://fantasyflightgames.com/).
 
-## Usage
+## Related projects and web pages
+
+FFG X-wing Squad Builder: https://squadbuilder.fantasyflightgames.com
+
+XWS is the X-wing Specification: https://github.com/elistevens/xws-spec
+
+YASB is Yet Another Squad Builder: https://github.com/raithos/xwing
+
+X-Wing Data 2 holds useful information about x-wing pilots, upgrade cards, etc: https://github.com/guidokessels/xwing-data2
+
+## FFG Squad builder to XWS
 
 Take the UUID (unique identifier) of your squadbuilder squad, i.e the `8d86dd8d-1ff8-4e07-a9cb-37582fe0655f` out of the URL `https://squadbuilder.fantasyflightgames.com/squad-preview/8d86dd8d-1ff8-4e07-a9cb-37582fe0655f`
 
