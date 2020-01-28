@@ -8353,6 +8353,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE Striker",
             points: 35,
             slots: [
+                "Talent",
                 "Gunner",
                 "Device",
                 "Modification"
@@ -8398,7 +8399,7 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Bossk (Z-95 Headhunter)",
-            xws: "bossk-z-95headhunter",
+            xws: "bossk-z95af4headhunter",
             id: 398,
             faction: "Scum and Villainy",
             unique: true,
@@ -11795,6 +11796,7 @@ exportObj.basicCardData = () => ({
             id: 318,
             slot: "Tech",
             points: 9,
+            charge: 2,
             faction: "First Order",
             unequips_upgrades: [ "Modification" ],
             also_occupies_upgrades: [ "Modification" ],
@@ -16670,6 +16672,7 @@ exportObj.fixIcons = function(data) {
             .replace(/%RECOVER%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-recover"></i>')
             .replace(/%REINFORCE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-reinforce"></i>')
             .replace(/%SALVAGEDASTROMECH%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-salvagedastromech"></i>')
+            .replace(/%SHIELD%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-shield"></i>')
             .replace(/%SLAM%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-slam"></i>')
             .replace(/%SLOOPLEFT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-sloopleft"></i>')
             .replace(/%SLOOPRIGHT%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-sloopright"></i>')

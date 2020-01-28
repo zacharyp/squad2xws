@@ -71,7 +71,6 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
         }
 
     } catch (error) {
-        e = error;
         return undefined;
     }
 
