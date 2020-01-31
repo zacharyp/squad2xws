@@ -14,6 +14,9 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
         url: `http://squad2xws.herokuapp.com/translate/${squadId}`
     }
 
+    const vendorMap: Map<string, Vendor> = new Map()
+    vendorMap.set("squad2xws", vendor)
+
     const xwsSquadron = <XWSSquadron>{
         faction: xwsFaction(factionId),
         pilots: pilots,
@@ -21,9 +24,7 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
         description: squad.description,
         obstacles: undefined,
         points: squad.cost,
-        vendor: {
-            "squad2xws": vendor
-        }
+        vendor: vendorMap
     }
 
     return xwsSquadron

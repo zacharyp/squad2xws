@@ -15,15 +15,16 @@ export async function serializedToXWS(faction: string, serialized: string, squad
         link: "https://raithos.github.io?" + originalPath
     }
 
+    const vendorMap: Map<string, Vendor> = new Map()
+    vendorMap.set("squad2xws", vendor)
+
     const xwsSquadron = <XWSSquadron>{
         faction: toXWSFaction(faction),
         pilots: pilots,
         description: undefined,
         obstacles: undefined,
         points: 0,
-        vendor: {
-            "squad2xws": vendor
-        },
+        vendor: vendorMap,
         version: '2.0.0'
     }
 
