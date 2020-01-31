@@ -17,13 +17,16 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
     const vendorMap: Map<string, Vendor> = new Map()
     vendorMap.set("squad2xws", vendor)
 
+    let pilotsPoints: number[] = pilots.map(p => (p.points || 0))
+    let points: number = pilotsPoints.reduce((a, b) => a + b, 0);
+
     const xwsSquadron = <XWSSquadron>{
         faction: xwsFaction(factionId),
         pilots: pilots,
         name: squad.name,
         description: squad.description,
         obstacles: undefined,
-        points: squad.cost,
+        points: points,
         vendor: vendorMap
     }
 
@@ -40,7 +43,9 @@ function constructPilots(decks: Deck[]): Pilot[] {
     decks.forEach(deck => {
         const xwsId = ffgPilots[deck.pilot_card.id]
         if (xwsId !== undefined) {
+            let points: number = 0
             const shipXWSId = ffgShips[deck.pilot_card.ship_type]
+            points += Number(deck.pilot_card.cost)
             const upgrades: Map<string, string[]> = new Map()
 
             deck.slots.forEach(slot => {
@@ -49,6 +54,7 @@ function constructPilots(decks: Deck[]): Pilot[] {
                 const currentSlotList = upgrades.get(upgradeType) || []
                 currentSlotList.push(upgradeXWS)
                 upgrades.set(upgradeType, currentSlotList)
+                points += Number(slot.cost)
             })
 
             let upgradeObj: { [index:string] : string[] } = {};
@@ -59,7 +65,7 @@ function constructPilots(decks: Deck[]): Pilot[] {
                 id: xwsId,
                 ship: shipXWSId,
                 upgrades: upgradeObj,
-                points: deck.cost
+                points: points
             }
             pilots.push(pilot)
         }
