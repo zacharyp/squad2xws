@@ -9,7 +9,7 @@ export async function serializedToXWS(faction: string, serialized: string, squad
 
     const pilots: Pilot[] = serializedToShips(serialized)
 
-    const vender = <Vendor>{
+    const vendor = <Vendor>{
         builder: 'squad2xws',
         builder_url: 'http://squad2xws.herokuapp.com/',
         link: "https://raithos.github.io?" + originalPath
@@ -21,8 +21,8 @@ export async function serializedToXWS(faction: string, serialized: string, squad
         description: undefined,
         obstacles: undefined,
         points: 0,
-        vender: {
-            "squad2xws": vender
+        vendor: {
+            "squad2xws": vendor
         },
         version: '2.0.0'
     }

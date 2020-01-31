@@ -8,7 +8,7 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
 
     const pilots = constructPilots(squad.deck)
 
-    const vender = <Vendor>{
+    const vendor = <Vendor>{
         builder: 'squad2xws',
         builder_url: 'http://squad2xws.herokuapp.com/',
         url: `http://squad2xws.herokuapp.com/translate/${squadId}`
@@ -21,8 +21,8 @@ export function convertFFGSquad(squadId: string, squad: FFGSquad): XWSSquadron {
         description: squad.description,
         obstacles: undefined,
         points: squad.cost,
-        vender: {
-            "squad2xws": vender
+        vendor: {
+            "squad2xws": vendor
         }
     }
 
