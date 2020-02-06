@@ -54,9 +54,3 @@ sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcup
 ```
 git submodule foreach git pull origin master
 ````
-
-
-### Heroku
-Needs the puppeteer buildpack installed:
-
-`heroku buildpacks:add jontewks/puppeteer`
