@@ -1,4 +1,4 @@
-export interface XWSSquadron {
+export type XWSSquadron = {
     faction:      string;
     pilots:       Pilot[];
     name?:        string;
@@ -9,14 +9,14 @@ export interface XWSSquadron {
     version?: string;
 }
 
-export interface Pilot {
+export type Pilot = {
     id:        string;
     ship?:     string,
     upgrades?: Upgrades;
     points?:   number;
 }
 
-export interface Upgrades {
+export type Upgrades = {
     [k:string]: string[]
 }
 
@@ -41,7 +41,7 @@ export interface Upgrades {
 //     'tactical-relay'?:   string[];
 // }
 
-export interface Vendor {
+export type Vendor = {
     builder?:     string;
     builder_url?: string;
     url?:         string;

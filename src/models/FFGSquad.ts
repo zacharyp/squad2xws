@@ -1,5 +1,5 @@
 
-export interface FFGSquad {
+export type FFGSquad = {
     id:          string;
     name:        string;
     description: string;
@@ -10,13 +10,13 @@ export interface FFGSquad {
     cost:        number;
 }
 
-export interface Deck {
+export type Deck = {
     pilot_card: PilotCard;
     slots:      Slot[];
     cost:       number;
 }
 
-export interface PilotCard {
+export type PilotCard = {
     id:                 number;
     faction_id:         number;
     card_set_ids:       number[];
@@ -37,7 +37,7 @@ export interface PilotCard {
     maneuvers_image:    string;
 }
 
-export interface Slot {
+export type Slot = {
     id:                number;
     card_set_ids:      number[];
     card_type_id:      number;
@@ -52,7 +52,7 @@ export interface Slot {
     card_image:        string;
 }
 
-export interface Faction {
+export type Faction = {
     id:              number;
     name:            string;
     description:     string;
@@ -63,7 +63,7 @@ export interface Faction {
     ship_art_mobile?: string;
 }
 
-export interface GameFormat {
+export type GameFormat = {
     id:                 string;
     name:               string;
     description?:        string;
@@ -74,7 +74,7 @@ export interface GameFormat {
     factions:           number[];
 }
 
-export interface GameMode {
+export type GameMode = {
     id:          number;
     name:        string;
     description?: string;

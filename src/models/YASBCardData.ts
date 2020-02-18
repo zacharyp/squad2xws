@@ -1,5 +1,5 @@
 
-export interface Ship {
+export type Ship = {
     name: string,
     xws: string,
     agility: number,
@@ -7,11 +7,11 @@ export interface Ship {
     large?: boolean
 }
 
-export interface Ships {
+export type Ships = {
     [key:string]: Ship
 }
 
-export interface PilotById {
+export type PilotById = {
     name: string,
     id: number,
     faction: string,
@@ -22,7 +22,7 @@ export interface PilotById {
     xws?: string
 }
 
-export interface UpgradeById {
+export type UpgradeById = {
     name: string,
     canonical_name?: string,
     id: number,
@@ -36,7 +36,7 @@ export interface UpgradeById {
     variableinit?: boolean
 }
 
-export interface CardData {
+export type CardData = {
     ships: Ships,
     pilotsById: Array<PilotById>
     upgradesById: Array<UpgradeById>
