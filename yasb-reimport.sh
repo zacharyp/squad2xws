@@ -6,9 +6,9 @@ git submodule foreach git pull origin master
 
 npm install -g decaffeinate
 
-decaffeinate --use-cs2 xwing/coffeescripts/cards-common.coffee
+decaffeinate --use-cs2 xwing/coffeescripts/content/cards-common.coffee
 
-mv xwing/coffeescripts/cards-common.js js-holding/cards-common.js
+mv xwing/coffeescripts/content/cards-common.js js-holding/cards-common.js
 
 rm src/services/yasb/lib/cards-common.js
 
