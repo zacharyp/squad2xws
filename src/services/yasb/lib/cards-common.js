@@ -55,8 +55,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Barrel Roll"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 0, 2, 2, 2, 0, 0, 0, 0, 0, 0],
@@ -78,11 +76,9 @@ exportObj.basicCardData = () => ({
             shields: 2,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Barrel Roll",
-                "Reload"
+                "Lock",
+                "R-Barrel Roll",
+                "R-Reload"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
@@ -107,8 +103,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "Boost"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 0, 0, 0, 1, 0, 0, 0],
@@ -129,10 +123,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
-                "Rotate Arc"
-            ],
-            actionsred: [
-                "Boost"
+                "Rotate Arc",
+                "R-Boost"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
@@ -155,10 +147,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
-                "Rotate Arc"
-            ],
-            actionsred: [
-                "Boost"
+                "Rotate Arc",
+                "R-Boost"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
@@ -182,8 +172,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "Evade"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
               [ 1, 0, 0, 0, 1, 0],
@@ -206,8 +194,6 @@ exportObj.basicCardData = () => ({
                 "R> Barrel Roll",
                 "Lock",
                 "Barrel Roll"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -233,8 +219,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "Evade"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 0, 0, 0, 1, 0, 0, 0],
@@ -247,7 +231,7 @@ exportObj.basicCardData = () => ({
         "Firespray-31": {
             name: "Firespray-31",
             xws: "Firespray-class Patrol Craft".canonicalize(),
-            factions: [ "Scum and Villainy", ],
+            factions: [ "Scum and Villainy", "Separatist Alliance"],
             attack: 3,
             attackb: 3,
             agility: 2,
@@ -257,10 +241,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
-                "Boost"
-            ],
-            actionsred: [
-                "Reinforce"
+                "Boost",
+                "R-Reinforce"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -283,11 +265,9 @@ exportObj.basicCardData = () => ({
                 "R> Rotate Arc",
                 "Lock",
                 "R> Rotate Arc",
-                "Rotate Arc"
-            ],
-            actionsred: [
-                "Boost",
-                "Jam"
+                "Rotate Arc",
+                "R-Boost",
+                "R-Jam"
             ],
             maneuvers: [
               [ 0, 0, 3, 0, 0],
@@ -309,10 +289,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Coordinate",
-                "Reinforce"
-            ],
-            actionsred: [
-                "Jam"
+                "Reinforce",
+                "R-Jam"
             ],
             maneuvers: [
               [ 0, 0, 3, 0, 0],
@@ -336,8 +314,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Barrel Roll"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 3, 2, 2, 2, 3, 0, 0, 0, 3, 3],
@@ -358,10 +334,8 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Lock",
                 "Barrel Roll",
-                "R> Lock"
-            ],
-            actionsred: [
-                "Reload"
+                "R> Lock",
+                "R-Reload"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
@@ -382,10 +356,8 @@ exportObj.basicCardData = () => ({
             shields: 2,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Barrel Roll"
+                "Lock",
+                "R-Barrel Roll"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
@@ -409,8 +381,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Barrel Roll",
                 "Boost"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
@@ -438,8 +408,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "R> Lock"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 3, 2, 2, 2, 3, 0, 0, 0 ],
@@ -463,8 +431,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "Cloak"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0],
                 [ 1, 1, 0, 1, 1, 0],
@@ -484,10 +450,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
+                "R-Barrel Roll",
                 "Rotate Arc"
-            ],
-            actionsred: [
-                "Barrel Roll"
             ],
             large: true,
             maneuvers: [
@@ -510,10 +474,8 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Lock",
                 "Reinforce",
-                "Rotate Arc"
-            ],
-            actionsred: [
-                "Coordinate"
+                "Rotate Arc",
+                "R-Coordinate"
             ],
             large: true,
             maneuvers: [
@@ -540,8 +502,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "R> Focus"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0],
                 [ 1, 2, 2, 2, 1, 0, 0, 0],
@@ -563,8 +523,6 @@ exportObj.basicCardData = () => ({
                 "Evade",
                 "Lock",
                 "Barrel Roll"
-            ],
-            actionsred: [
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ],
@@ -589,8 +547,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Boost"
             ],
-            actionsred: [
-            ],
             medium: true,
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -614,8 +570,6 @@ exportObj.basicCardData = () => ({
                 "Reinforce",
                 "Lock"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0 ],
                 [ 0, 2, 2, 2, 0, 0 ],
@@ -636,8 +590,6 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Lock",
                 "Barrel Roll"
-            ],
-            actionsred: [
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -663,8 +615,6 @@ exportObj.basicCardData = () => ({
                 "Rotate Arc",
                 "Reload"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ],
                 [ 0, 2, 2, 2, 0, 0 ],
@@ -684,12 +634,10 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
+                "R-Barrel Roll",
                 "Boost",
                 "R> Lock",
                 "Reload"
-            ],
-            actionsred: [
-                "Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0 ],
@@ -713,8 +661,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Reinforce"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ],
                 [ 3, 1, 2, 1, 3, 0 ],
@@ -736,8 +682,6 @@ exportObj.basicCardData = () => ({
                 "Evade",
                 "Barrel Roll",
                 "R> Evade"
-            ],
-            actionsred: [
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ],
@@ -764,8 +708,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "R> Focus"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 2, 2, 0, 2, 2, 0, 0, 0, 0, 0 ],
@@ -789,8 +731,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Jam"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0 ],
                 [ 3, 2, 2, 2, 3, 0 ],
@@ -812,10 +752,8 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "R> Rotate Arc",
                 "Lock",
-                "R> Rotate Arc"
-            ],
-            actionsred: [
-                "Barrel Roll"
+                "R> Rotate Arc",
+                "R-Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -837,10 +775,8 @@ exportObj.basicCardData = () => ({
             medium: true,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Barrel Roll"
+                "Lock",
+                "R-Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0 ],
@@ -867,8 +803,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "R> Focus"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0 ],
@@ -894,8 +828,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Rotate Arc"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0],
                 [ 0, 1, 1, 1, 0, 0],
@@ -914,11 +846,9 @@ exportObj.basicCardData = () => ({
             hull: 5,
             shields: 0,
             actions: [
-                "Barrel Roll",
-                "Focus"
-            ],
-            actionsred: [
-                "Evade"
+                "Focus",
+                "R-Evade",
+                "Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -938,10 +868,8 @@ exportObj.basicCardData = () => ({
             shields: 3,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Coordinate"
+                "Lock",
+                "R-Coordinate"
             ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0 ],
@@ -967,8 +895,6 @@ exportObj.basicCardData = () => ({
                 "Evade",
                 "Barrel Roll"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 1, 2, 2, 2, 1, 3, 0, 0 ],
@@ -986,10 +912,8 @@ exportObj.basicCardData = () => ({
             shields: 2,
             actions: [
                 "Focus",
+                "R-Barrel Roll",
                 "Reinforce"
-            ],
-            actionsred: [
-                "Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0 ],
@@ -1010,10 +934,8 @@ exportObj.basicCardData = () => ({
             medium: true,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Barrel Roll"
+                "Lock",
+                "R-Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1037,8 +959,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "R> Evade"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 0, 1, 2, 1, 0, 0, 0, 0, 0, 0 ],
@@ -1061,8 +981,6 @@ exportObj.basicCardData = () => ({
                 "Slam",
                 "Reload"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 0, 1, 2, 1, 0, 0, 0, 0 ],
@@ -1083,10 +1001,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Lock",
+                "R-Barrel Roll",
                 "Reload"
-            ],
-            actionsred: [
-                "Barrel Roll"
             ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0],
@@ -1109,8 +1025,6 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Coordinate"
             ],
-            actionsred: [
-            ],
             maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
                 [ 0, 1, 2, 1, 0, 0, 0, 0, 0, 0, 0, 3, 0],
@@ -1131,10 +1045,8 @@ exportObj.basicCardData = () => ({
             actions: [
                 "Focus",
                 "Evade",
-                "Jam"
-            ],
-            actionsred: [
-                "Coordinate"
+                "Jam",
+                "R-Coordinate"
             ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0 ],
@@ -1153,10 +1065,8 @@ exportObj.basicCardData = () => ({
             shields: 2,
             actions: [
                 "Focus",
-                "Barrel Roll"
-            ],
-            actionsred: [
-                "Coordinate"
+                "Barrel Roll",
+                "R-Coordinate"
             ],
             maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0 ],
@@ -1177,8 +1087,6 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Lock",
                 "Boost"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1206,8 +1114,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "Boost"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 0, 0, 0, 1, 0, 0, 0],
@@ -1231,8 +1137,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Barrel Roll"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 0, 0, 0, 1, 0, 0, 0],
@@ -1255,8 +1159,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "Lock",
                 "Barrel Roll"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1286,8 +1188,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "> Rotate Arc"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 3, 2, 2, 2, 3, 0, 0, 0, 0, 0],
@@ -1311,8 +1211,6 @@ exportObj.basicCardData = () => ({
                 "Reinforce",
                 "Coordinate",
                 "Jam"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
@@ -1339,8 +1237,6 @@ exportObj.basicCardData = () => ({
                 "Rotate Arc",
                 "Reload"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0],
               [ 3, 2, 2, 2, 3, 0, 0, 0, 0, 0],
@@ -1362,11 +1258,9 @@ exportObj.basicCardData = () => ({
             shields: 3,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Boost",
-                "Rotate Arc"
+                "Lock",
+                "R-Boost",
+                "R-Rotate Arc"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1389,8 +1283,6 @@ exportObj.basicCardData = () => ({
                 "Focus",
                 "Barrel Roll",
                 "Evade"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0],
@@ -1416,8 +1308,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "R> Evade"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 3, 2, 2, 2, 3, 0, 0, 0, 0, 0],
@@ -1442,8 +1332,6 @@ exportObj.basicCardData = () => ({
                 "Barrel Roll",
                 "Boost"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 2, 0, 2, 1, 0, 0, 0, 0, 0],
@@ -1464,10 +1352,8 @@ exportObj.basicCardData = () => ({
             shields: 4,
             actions: [
                 "Focus",
-                "Lock"
-            ],
-            actionsred: [
-                "Barrel Roll"
+                "Lock",
+                "R-Barrel Roll"
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1491,8 +1377,6 @@ exportObj.basicCardData = () => ({
                 "Lock",
                 "Barrel Roll",
                 "R> Calculate"
-            ],
-            actionsred: [
             ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1519,8 +1403,6 @@ exportObj.basicCardData = () => ({
                 "Boost",
                 "R> Focus"
             ],
-            actionsred: [
-            ],
             maneuvers: [
               [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
               [ 1, 1, 0, 1, 1, 0, 0, 0, 0, 0],
@@ -1544,8 +1426,6 @@ exportObj.basicCardData = () => ({
              "Barrel Roll",
              "Boost"
            ],
-           actionsred: [
-           ],
            maneuvers: [
              [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
              [ 0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
@@ -1567,10 +1447,8 @@ exportObj.basicCardData = () => ({
              "Calculate",
              "Lock",
              "Barrel Roll",
-             "R> Lock"
-           ],
-           actionsred: [
-             "Reload"
+             "R> Lock",
+             "R-Reload"
            ],
            maneuvers: [
              [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1590,12 +1468,10 @@ exportObj.basicCardData = () => ({
            hull: 3,
            shields: 1,
            actions: [
-             "Focus"
-           ],
-           actionsred: [
-             "Lock",
-             "Barrel Roll",
-             "Jam"
+             "Focus",
+             "R-Lock",
+             "R-Barrel Roll",
+             "R-Jam"
            ],
            maneuvers: [
              [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1615,11 +1491,9 @@ exportObj.basicCardData = () => ({
            shields: 3,
            actions: [
              "Focus",
-             "Lock"
-           ],
-           actionsred: [
-             "Coordinate",
-             "Jam"
+             "Lock",
+             "R-Coordinate",
+             "R-Jam"
            ],
            maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1661,11 +1535,9 @@ exportObj.basicCardData = () => ({
            shields: 3,
            actions: [
              "Focus",
-             "Lock"
-           ],
-           actionsred: [
-             "Barrel Roll",
-             "Reload"
+             "Lock",
+             "R-Barrel Roll",
+             "R-Reload"
            ],
            maneuvers: [
                 [ 0, 0, 0, 0, 0, 0],
@@ -1689,8 +1561,6 @@ exportObj.basicCardData = () => ({
              "Evade",
              "Barrel Roll",
              "Slam"
-           ],
-           actionsred: [
            ],
            maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1733,13 +1603,12 @@ exportObj.basicCardData = () => ({
            agility: 2,
            hull: 5,
            shields: 2,
+           medium: true,
            actions: [
              "Focus",
+             "R-Lock",
+             "R-Coordinate",
              "Jam"
-           ],
-           actionsred: [
-             "Lock",
-             "Coordinate"
            ],
            maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1761,11 +1630,9 @@ exportObj.basicCardData = () => ({
            actions: [
              "Calculate",
              "Lock",
+             "R-Barrel Roll",
              "Reload",
              "R> Calculate"
-           ],
-           actionsred: [
-             "Roll"
            ],
            maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1780,18 +1647,17 @@ exportObj.basicCardData = () => ({
            name: "LAAT/i Gunship",
            xws: "LAAT/i Gunship".canonicalize(),
            factions: ["Galactic Republic"],
-           attackt: 2,
+           attackdt: 2,
            agility: 1,
            hull: 8,
            shields: 2,
+           medium: true,
            actions: [
              "Focus",
              "Lock",
-             "Rotate",
+             "Rotate Arc",
+             "R-Reinforce",
              "Reload"
-           ],
-           actionsred: [
-             "Reinforce"
            ],
            maneuvers: [
                 [ 0, 0, 3, 0, 0, 0, 0, 0, 0, 0 ],
@@ -1809,23 +1675,95 @@ exportObj.basicCardData = () => ({
            attackt: 2,
            agility: 1,
            hull: 8,
+           medium: true,
            actions: [
              "Focus",
              "Reinforce",
              "Lock",
-             "Rotate",
+             "R-Barrel Roll",
+             "Rotate Arc",
              "R> Calculate"
-           ],
-           actionsred: [
-             "Barrel Roll"
            ],
            maneuvers: [
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 3, 1, 2, 1, 3, 0, 0, 0, 0, 0 ],
                 [ 1, 2, 2, 2, 1, 0, 0, 0, 0, 0 ],
-                [ 3, 1, 3, 1, 3, 3, 0, 0, 3, 3 ],
+                [ 3, 1, 1, 1, 3, 0, 0, 0, 3, 3 ],
                 [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ],
                 [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ]
+           ]
+       },
+        "Droid Tri-Fighter": {
+           name: "Droid Tri-Fighter",
+           xws: "Droid Tri-Fighter".canonicalize(),
+           factions: ["Separatist Alliance"],
+           attack: 3,
+           agility: 3,
+           hull: 3,
+           actions: [
+             "Calculate",
+             "Evade",
+             "Lock",
+             "Barrel Roll",
+             "R> Evade",
+             "Boost",
+             "R> Calculate"
+           ],
+           maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 1, 0, 0, 0, 1, 0, 0, 0, 3, 3 ],
+                [ 2, 1, 2, 1, 2, 0, 0, 0, 0, 0 ],
+                [ 2, 1, 2, 1, 2, 3, 0, 0, 0, 0 ],
+                [ 0, 0, 2, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 1, 0, 0, 3, 0, 0, 0, 0 ]
+           ]
+       },
+        "Nimbus-class V-Wing": {
+           name: "Nimbus-class V-Wing",
+           xws: "Nimbus-class V-Wing".canonicalize(),
+           factions: ["Galactic Republic"],
+           attack: 2,
+           agility: 3,
+           hull: 2,
+           shields: 2,
+           actions: [
+             "Focus",
+             "Lock",
+             "R-Barrel Roll",
+             "Boost",
+             "R> Lock"
+           ],
+           maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 1, 3, 0, 3, 1, 0, 0, 0, 0, 0 ],
+                [ 2, 2, 2, 2, 2, 3, 0, 0, 0, 0 ],
+                [ 1, 1, 2, 1, 1, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 1, 0, 0, 3, 0, 0, 0, 0 ],
+                [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
+           ]
+       },
+        "ETA-2 Actis": {
+           name: "ETA-2 Actis",
+           xws: "ETA-2 Actis".canonicalize(),
+           factions: ["Galactic Republic"],
+           attackbull: 3,
+           attack: 2,
+           agility: 3,
+           hull: 3,
+           actions: [
+             "Focus",
+             "Evade",
+             "Lock",
+             "Barrel Roll",
+             "Boost"
+           ],
+           maneuvers: [
+                [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ],
+                [ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0 ],
+                [ 1, 2, 2, 2, 1, 0, 0, 0, 4, 4 ],
+                [ 1, 2, 2, 2, 1, 0, 0, 0, 0, 0 ],
+                [ 0, 0, 2, 0, 0, 3, 0, 0, 0, 0 ],
+                [ 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 ]
            ]
        },
 
@@ -1848,10 +1786,8 @@ exportObj.basicCardData = () => ({
              "Focus",
              "Reinforce",
              "Lock",
+             "R-Coordinate",
              "Jam"
-           ],
-           actionsred: [
-             "Coordinate"
            ],
            maneuvers: [
                 [ 0, 3, 3, 3, 0],
@@ -1904,12 +1840,10 @@ exportObj.basicCardData = () => ({
            energyrecurr: 1,
            actions: [
              "Focus",
+             "R-Lock",
              "Coordinate",
+             "R-Reinforce",
              "Jam"
-           ],
-           actionsred: [
-             "Reinforce",
-             "Lock"
            ],
            maneuvers: [
                 [ 0, 3, 3, 3, 0],
@@ -1962,10 +1896,8 @@ exportObj.basicCardData = () => ({
              "Focus",
              "Reinforce",
              "Lock",
+             "R-Coordinate",
              "Jam"
-           ],
-           actionsred: [
-             "Coordinate"
            ],
            maneuvers: [
                 [ 0, 3, 3, 3, 0],
@@ -2639,6 +2571,7 @@ exportObj.basicCardData = () => ({
                 actions: [
                     "Calculate",
                     "Lock",
+                    "R-Barrel Roll",
                     "Rotate Arc"
                 ]
             }
@@ -3530,7 +3463,8 @@ exportObj.basicCardData = () => ({
                 actions: [
                     "Calculate",
                     "Lock",
-                    "Rotate Arc"
+                    "Rotate Arc",
+                    "R-Boost"
                 ]
             }
         },
@@ -3599,7 +3533,8 @@ exportObj.basicCardData = () => ({
             ship_override: {
                 actions: [
                     "Calculate",
-                    "Barrel Roll"
+                    "Barrel Roll",
+                    "R-Coordinate"
                 ]
             }
         },
@@ -3617,7 +3552,8 @@ exportObj.basicCardData = () => ({
             ship_override: {
                 actions: [
                     "Calculate",
-                    "Barrel Roll"
+                    "Barrel Roll",
+                    "R-Coordinate"
                 ]
             }
         },
@@ -5770,9 +5706,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6098,9 +6034,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6116,9 +6052,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6133,9 +6069,9 @@ exportObj.basicCardData = () => ({
             points: 47,
             slots: [
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6150,9 +6086,9 @@ exportObj.basicCardData = () => ({
             points: 48,
             slots: [
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6168,9 +6104,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6185,9 +6121,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6201,9 +6137,9 @@ exportObj.basicCardData = () => ({
             points: 42,
             slots: [
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6809,9 +6745,9 @@ exportObj.basicCardData = () => ({
             recurring: true,
             slots: [
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6827,9 +6763,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6845,9 +6781,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -6863,9 +6799,9 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Astromech",
+                "Tech",
                 "Modification",
                 "Configuration",
-                "Tech",
                 "Title",
                 "HardpointShip"
             ]
@@ -7294,8 +7230,12 @@ exportObj.basicCardData = () => ({
                 "Configuration"
             ],
             ship_override: {
-                actionsred: [
-                    "Jam"
+                actions: [
+                     "Calculate",
+                     "Lock",
+                     "Barrel Roll",
+                     "R> Lock",
+                     "R-Jam"
                 ]
             }
         },
@@ -7422,7 +7362,8 @@ exportObj.basicCardData = () => ({
             ship_override: {
                 actions: [
                     "Calculate",
-                    "Lock"
+                    "Lock",
+                    "R-Barrel Roll"
                 ]
             }
         },
@@ -7650,7 +7591,10 @@ exportObj.basicCardData = () => ({
             ],
             ship_override: {
                 actions: [
-                    "Calculate"
+                    "Calculate",
+                    "R-Lock",
+                    "R-Barrel Roll",
+                    "R-Jam"
                 ]
             }
         },
@@ -7855,7 +7799,9 @@ exportObj.basicCardData = () => ({
             ship_override: {
                 actions: [
                     "Calculate",
-                    "Lock"
+                    "Lock",
+                    "R-Barrel Roll",
+                    "R-Reload"
                 ]
             }
         },
@@ -8372,7 +8318,8 @@ exportObj.basicCardData = () => ({
             ship_override: {
                 actions: [
                     "Calculate",
-                    "Lock"
+                    "Lock",
+                    "R-Coordinate"
                 ]
             }
         },
@@ -8563,11 +8510,14 @@ exportObj.basicCardData = () => ({
             name: "First Order Courier",
             id: 401,
             faction: "First Order",
-            unique: true,
             skill: 2,
             ship: "Xi-class Light Shuttle",
-            points: 200,
+            points: 38,
             slots: [
+                "Tech",
+                "Tech",
+                "Crew",
+                "Crew",
                 "Modification"
             ]
         },
@@ -8575,63 +8525,78 @@ exportObj.basicCardData = () => ({
             name: "Agent Terex",
             id: 402,
             faction: "First Order",
+            unique: true,
             skill: 3,
             ship: "Xi-class Light Shuttle",
-            points: 200,
+            points: 42,
             slots: [
+                "Talent",
+                "Tech",
+                "Tech",
                 "Crew",
+                "Crew",
+                "Illicit",
+                "Illicit",
+                "Illicit",
                 "Modification"
             ]
         },
         {
-            name: "Unnamed I4",
+            name: "Gideon Hask (Xi Shuttle)",
+            canonical_name: "Gideon Hask".canonicalize(),
             id: 403,
             faction: "First Order",
             unique: true,
             skill: 4,
             ship: "Xi-class Light Shuttle",
-            points: 200,
+            points: 40,
             slots: [
+                "Talent",
+                "Tech",
+                "Tech",
+                "Crew",
                 "Crew",
                 "Modification"
             ]
         },
         {
-            name: "Commander Malarus (Xi-class Light Shuttle)",
+            name: "Commander Malarus (Xi Shuttle)",
+            canonical_name: "Commander Malarus".canonicalize(),
             id: 404,
             faction: "First Order",
             unique: true,
             skill: 5,
             ship: "Xi-class Light Shuttle",
-            points: 200,
+            points: 43,
             slots: [
+                "Talent",
+                "Tech",
+                "Tech",
+                "Crew",
                 "Crew",
                 "Modification"
             ]
         },
         {
-            name: "Generic I1",
+            name: "Baktoid Drone",
             id: 405,
             faction: "Separatist Alliance",
             skill: 1,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 34,
             slots: [
+                "Missile",
+                "Missile",
+                "Tactical Relay",
                 "Crew",
-                "Modification"
+                "Device",
+                "Modification",
+                "Configuration"
             ]
         },
         {
-            name: "Unnamed I1",
             id: 406,
-            faction: "Separatist Alliance",
-            skill: 1,
-            ship: "HMP Droid Gunship",
-            points: 200,
-            slots: [
-                "Crew",
-                "Modification"
-            ]
+            skip: true
         },
         {
             name: "Separatist Predator",
@@ -8639,59 +8604,87 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             skill: 3,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 36,
             slots: [
+                "Missile",
+                "Missile",
+                "Tactical Relay",
                 "Crew",
-                "Modification"
+                "Device",
+                "Modification",
+                "Configuration"
             ]
         },
         {
-            name: "Unnamed I2",
+            name: "Geonosian Prototype",
             id: 408,
             faction: "Separatist Alliance",
             skill: 2,
+            max_per_squad: 2,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 35,
             slots: [
-                "Crew",
-                "Modification"
+                "Missile",
+                "Missile",
+                "Cannon",
+                "Cannon",
+                "Tactical Relay",
+                "Modification",
+                "Configuration"
             ]
         },
         {
-            name: "Unnamed I1",
+            name: "DGS-047",
             id: 409,
             faction: "Separatist Alliance",
             skill: 1,
+            unique: true,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 35,
             slots: [
+                "Missile",
+                "Missile",
+                "Tactical Relay",
                 "Crew",
-                "Modification"
+                "Device",
+                "Modification",
+                "Configuration"
             ]
         },
         {
-            name: "Unnamed I3",
+            name: "DGS-286",
             id: 410,
             faction: "Separatist Alliance",
             skill: 3,
+            unique: true,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 42,
             slots: [
+                "Missile",
+                "Missile",
+                "Tactical Relay",
                 "Crew",
-                "Modification"
+                "Device",
+                "Modification",
+                "Configuration"
             ]
         },
         {
-            name: "Onderon Exterminator",
+            name: "Onderon Oppressor",
             id: 411,
             faction: "Separatist Alliance",
             skill: 3,
             max_per_squad: 2,
             ship: "HMP Droid Gunship",
-            points: 200,
+            points: 40,
             slots: [
+                "Missile",
+                "Missile",
+                "Tactical Relay",
                 "Crew",
-                "Modification"
+                "Device",
+                "Modification",
+                "Configuration"
             ]
         },
         {
@@ -8699,23 +8692,37 @@ exportObj.basicCardData = () => ({
             id: 412,
             faction: "Galactic Republic",
             skill: 2,
+            charge: 2,
+            recurring: true,
             ship: "LAAT/i Gunship",
-            points: 200,
+            points: 51,
             slots: [
+                "Missile",
+                "Missile",
                 "Crew",
+                "Crew",
+                "Gunner",
+                "Gunner",
                 "Modification"
             ]
         },
         {
-            name: '"Halo"',
+            name: '"Hound"',
             id: 413,
             faction: "Galactic Republic",
             skill: 2,
             unique: true,
+            charge: 2,
+            recurring: true,
             ship: "LAAT/i Gunship",
-            points: 200,
+            points: 52,
             slots: [
+                "Missile",
+                "Missile",
                 "Crew",
+                "Crew",
+                "Gunner",
+                "Gunner",
                 "Modification"
             ]
         },
@@ -8725,10 +8732,17 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             skill: 3,
             unique: true,
+            charge: 2,
+            recurring: true,
             ship: "LAAT/i Gunship",
-            points: 200,
+            points: 54,
             slots: [
+                "Missile",
+                "Missile",
                 "Crew",
+                "Crew",
+                "Gunner",
+                "Gunner",
                 "Modification"
             ]
         },
@@ -8737,11 +8751,19 @@ exportObj.basicCardData = () => ({
             id: 415,
             faction: "Galactic Republic",
             skill: 4,
+            charge: 2,
+            recurring: true,
             unique: true,
             ship: "LAAT/i Gunship",
-            points: 200,
+            points: 55,
             slots: [
+                "Talent",
+                "Missile",
+                "Missile",
                 "Crew",
+                "Crew",
+                "Gunner",
+                "Gunner",
                 "Modification"
             ]
         },
@@ -8753,7 +8775,8 @@ exportObj.basicCardData = () => ({
             ship: "TIE/rb Heavy",
             points: 200,
             slots: [
-                "Crew",
+                "Cannon",
+                "Cannon",
                 "Modification",
                 "Configuration"
             ]
@@ -8768,12 +8791,13 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Cannon",
+                "Cannon",
                 "Modification",
                 "Configuration"
             ]
         },
         {
-            name: "Lytham Dree",
+            name: "Lyttan Dree",
             id: 418,
             faction: "Galactic Empire",
             skill: 3,
@@ -8782,6 +8806,7 @@ exportObj.basicCardData = () => ({
             points: 200,
             slots: [
                 "Talent",
+                "Cannon",
                 "Cannon",
                 "Modification",
                 "Configuration"
@@ -8798,8 +8823,484 @@ exportObj.basicCardData = () => ({
             slots: [
                 "Talent",
                 "Cannon",
+                "Cannon",
                 "Modification",
                 "Configuration"
+            ]
+        },
+        {
+            name: "Limited I3",
+            id: 420,
+            faction: "Separatist Alliance",
+            max_per_squad: 3,
+            skill: 3,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Unnamed I3",
+            id: 421,
+            faction: "Separatist Alliance",
+            skill: 3,
+            unique: true,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "DIS-T81",
+            id: 422,
+            faction: "Separatist Alliance",
+            skill: 4,
+            unique: true,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Limited I5",
+            id: 423,
+            faction: "Separatist Alliance",
+            skill: 5,
+            max_per_squad: 2,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Colicoid Interceptor",
+            id: 424,
+            faction: "Separatist Alliance",
+            skill: 1,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Separatist Interceptor",
+            id: 425,
+            faction: "Separatist Alliance",
+            skill: 3,
+            ship: "Droid Tri-Fighter",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Separatist Hunter",
+            id: 426,
+            faction: "Separatist Alliance",
+            skill: 1,
+            ship: "Firespray-31",
+            points: 200,
+            slots: [
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Device",
+                "Illicit",
+                "Modification",
+                "Title"
+            ]
+        },
+        {
+            name: "Boba Fett (Separatist)",
+            id: 427,
+            faction: "Separatist Alliance",
+            unique: true,
+            skill: 3,
+            ship: "Firespray-31",
+            points: 200,
+            slots: [
+                "Talent",
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Device",
+                "Illicit",
+                "Modification",
+                "Title"
+            ]
+        },
+        {
+            name: "Zam Wesell",
+            id: 428,
+            faction: "Separatist Alliance",
+            unique: true,
+            skill: 5,
+            ship: "Firespray-31",
+            points: 200,
+            slots: [
+                "Talent",
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Device",
+                "Illicit",
+                "Modification",
+                "Title"
+            ]
+        },
+        {
+            name: "Jango Fett",
+            id: 429,
+            faction: "Separatist Alliance",
+            skill: 6,
+            unique: true,
+            ship: "Firespray-31",
+            points: 200,
+            slots: [
+                "Talent",
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Device",
+                "Illicit",
+                "Modification",
+                "Title"
+            ]
+        },
+        {
+            name: "Loyalist Vanguard",
+            id: 430,
+            faction: "Galactic Republic",
+            skill: 2,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Shadow Squadron Scout",
+            id: 431,
+            faction: "Galactic Republic",
+            skill: 3,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Wilhuff Tarkin",
+            id: 432,
+            faction: "Galactic Republic",
+            skill: 3,
+            unique: true,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Unnamed I4",
+            id: 433,
+            faction: "Galactic Republic",
+            skill: 4,
+            unique: true,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Unnamed I5",
+            id: 434,
+            faction: "Galactic Republic",
+            skill: 5,
+            unique: true,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: '"Oddball" (V-Wing)',
+            canonical_name: '"Oddball"'.canonicalize(),
+            id: 435,
+            faction: "Galactic Republic",
+            skill: 5,
+            unique: true,
+            ship: "Nimbus-class V-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Jedi Knight (ETA-2)",
+            id: 436,
+            faction: "Galactic Republic",
+            skill: 4,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Yoda",
+            id: 437,
+            faction: "Galactic Republic",
+            skill: 3,
+            unique: true,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Shaak Ti",
+            id: 438,
+            faction: "Galactic Republic",
+            skill: 4,
+            unique: true,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Aayla Secura",
+            id: 439,
+            faction: "Galactic Republic",
+            skill: 5,
+            unique: true,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Obi-Wan Kenobi (ETA-2)",
+            canonical_name: 'Obi-Wan Kenobi'.canonicalize(),
+            id: 440,
+            faction: "Galactic Republic",
+            skill: 5,
+            unique: true,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Anakin Skywalker (ETA-2)",
+            canonical_name: 'Anakin Skywalker'.canonicalize(),
+            id: 441,
+            faction: "Galactic Republic",
+            skill: 6,
+            unique: true,
+            ship: "ETA-2 Actis",
+            points: 200,
+            slots: [
+                "Force",
+                "Astromech",
+                "Modification",
+                "Configuration"
+            ]
+        },
+        {
+            name: "Poe Dameron (HoH)",
+            canonical_name: 'Poe Dameron'.canonicalize(),
+            id: 442,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-Wing",
+            skill: 6,
+            points: 200,
+            charge: 2,
+            recurring: true,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Tech",
+                "Modification",
+                "Configuration",
+                "Title",
+                "HardpointShip"
+            ]
+        },
+        {
+            name: "Temmin Wexley (HoH)",
+            canonical_name: 'Temmin Wexley'.canonicalize(),
+            id: 443,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-Wing",
+            skill: 4,
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Tech",
+                "Modification",
+                "Configuration",
+                "Title",
+                "HardpointShip"
+            ]
+        },
+        {
+            name: "Merl Cobben",
+            id: 444,
+            faction: "Resistance",
+            unique: true,
+            skill: 1,
+            ship: "RZ-2 A-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Missile",
+                "Tech"
+            ]
+        },
+        {
+            name: "Suralinda Javos",
+            id: 445,
+            faction: "Resistance",
+            unique: true,
+            skill: 3,
+            ship: "RZ-2 A-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Talent",
+                "Missile",
+                "Tech"
+            ]
+        },
+        {
+            name: "Wrobie Tyce",
+            id: 446,
+            faction: "Resistance",
+            unique: true,
+            skill: 4,
+            ship: "RZ-2 A-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Talent",
+                "Missile",
+                "Tech"
+            ]
+        },
+        {
+            name: "Seftin Vanik",
+            id: 447,
+            faction: "Resistance",
+            unique: true,
+            skill: 5,
+            ship: "RZ-2 A-Wing",
+            points: 200,
+            slots: [
+                "Talent",
+                "Talent",
+                "Missile",
+                "Tech"
+            ]
+        },
+        {
+            name: "Nimi Chereen",
+            id: 448,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-Wing",
+            skill: 2,
+            points: 200,
+            slots: [
+                "Astromech",
+                "Tech",
+                "Modification",
+                "Configuration",
+                "Title",
+                "HardpointShip"
+            ]
+        },
+        {
+            name: "C'ai Threnalli",
+            id: 449,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-Wing",
+            skill: 4,
+            points: 200,
+            slots: [
+                "Talent",
+                "Astromech",
+                "Tech",
+                "Modification",
+                "Configuration",
+                "Title",
+                "HardpointShip"
             ]
         }
 
@@ -9046,7 +9547,7 @@ exportObj.basicCardData = () => ({
            faction: "Galactic Empire",
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Coordinate", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle))) || ((needle1 = "R-Coordinate", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9159,7 +9660,7 @@ exportObj.basicCardData = () => ({
            recurring: true,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Lock", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Lock", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9332,7 +9833,7 @@ exportObj.basicCardData = () => ({
            recurring: true,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Coordinate", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Coordinate", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9449,7 +9950,7 @@ exportObj.basicCardData = () => ({
            points: 6,
            restriction_func(ship) {
                 let needle;
-                return (needle = "Coordinate", Array.from(ship.effectiveStats().actionsred).includes(needle));
+                return (needle = "R-Coordinate", Array.from(ship.effectiveStats().actions).includes(needle));
             },
            modifier_func(stats) {
                 if (!Array.from(stats.actions).includes('Coordinate')) { return stats.actions.push('Coordinate'); }
@@ -9733,7 +10234,7 @@ exportObj.basicCardData = () => ({
            variablebase: true,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Rotate Arc", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Rotate Arc", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Rotate Arc", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Rotate Arc", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9867,7 +10368,7 @@ exportObj.basicCardData = () => ({
            points: 3,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Slam", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Slam", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Slam", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Slam", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9894,7 +10395,7 @@ exportObj.basicCardData = () => ({
            variablebase: true,
            restriction_func(ship) {
                 let needle;
-                return (needle = "Boost", Array.from(ship.effectiveStats().actionsred).includes(needle));
+                return (needle = "R-Boost", Array.from(ship.effectiveStats().actions).includes(needle));
             },
            modifier_func(stats) {
                 if (!Array.from(stats.actions).includes('Boost')) { return stats.actions.push('Boost'); }
@@ -9953,7 +10454,7 @@ exportObj.basicCardData = () => ({
            points: 1,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Focus", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Focus", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Focus", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Focus", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -9970,7 +10471,7 @@ exportObj.basicCardData = () => ({
            points: 2,
            restriction_func(ship) {
                 let needle;
-                return (needle = "Boost", Array.from(ship.effectiveStats().actions).includes(needle)) && !((ship.data.large != null) || (ship.data.medium != null) || (ship.data.huge != null));
+                return ((needle = "Boost", Array.from(ship.effectiveStats().actions).includes(needle))) && !((ship.data.large != null) || (ship.data.medium != null) || (ship.data.huge != null));
             }
        },
        {
@@ -9982,7 +10483,7 @@ exportObj.basicCardData = () => ({
                 return !((ship.data.large != null) || (ship.data.huge != null));
             },
            modifier_func(stats) {
-                if (!Array.from(stats.actionsred).includes('Evade')) { return stats.actionsred.push('Evade'); }
+                if (!Array.from(stats.actions).includes('R-Evade')) { return stats.actions.push('R-Evade'); }
             }
        },
        {
@@ -10003,7 +10504,7 @@ exportObj.basicCardData = () => ({
            variablebase: true,
            restriction_func(ship) {
                 let needle;
-                return (needle = "Barrel Roll", Array.from(ship.effectiveStats().actionsred).includes(needle));
+                return (needle = "R-Barrel Roll", Array.from(ship.effectiveStats().actions).includes(needle));
             },
            modifier_func(stats) {
                 if (!Array.from(stats.actions).includes('Barrel Roll')) { return stats.actions.push('Barrel Roll'); }
@@ -10072,7 +10573,7 @@ exportObj.basicCardData = () => ({
            points: 4,
            restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Reload", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Reload", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Reload", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Reload", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -10086,20 +10587,18 @@ exportObj.basicCardData = () => ({
            name: "Squad Leader",
            id: 131,
            slot: "Talent",
-           pointsarray: [2,4,6,8,10,12,14,16,18],
+           pointsarray: [2,4,6,8,10,12,14],
            variableinit: true,
            unique: true,
            modifier_func(stats) {
-                if (stats.actionsred != null) {
-                    if (!Array.from(stats.actionsred).includes('Coordinate')) { return stats.actionsred.push('Coordinate'); }
-                }
+                if (!Array.from(stats.actions).includes('R-Coordinate')) { return stats.actions.push('R-Coordinate'); }
             }
        },
        {
            name: "Swarm Tactics",
            id: 132,
            slot: "Talent",
-           pointsarray: [3,3,3,3,3,4,5,6,7],
+           pointsarray: [3,3,3,3,3,4,5],
            variableinit: true
        },
        {
@@ -10568,14 +11067,14 @@ exportObj.basicCardData = () => ({
             points: 4,
             restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Lock", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Lock", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
             name: "Primed Thrusters",
             id: 178,
             slot: "Tech",
-            pointsarray: [4,5,6,7,8,9,10,11,12],
+            pointsarray: [4,5,6,7,8,9,10],
             variableinit: true,
             restriction_func(ship) {
                 return !((ship.data.large != null) || (ship.data.medium != null) || (ship.data.huge != null));
@@ -10713,7 +11212,7 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             modifier_func(stats) {
                 if (!Array.from(stats.actions).includes('Calculate')) { stats.actions.push('Calculate'); }
-                if (!Array.from(stats.actionsred).includes('Coordinate')) { return stats.actionsred.push('Coordinate'); }
+                if (!Array.from(stats.actions).includes('R-Coordinate')) { return stats.actions.push('R-Coordinate'); }
             }
        },
        {
@@ -10725,7 +11224,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Resistance",
             modifier_func(stats) {
-                if (!Array.from(stats.actionsred).includes('Evade')) { return stats.actionsred.push('Evade'); }
+                if (!Array.from(stats.actions).includes('R-Evade')) { return stats.actions.push('R-Evade'); }
             }
        },
        {
@@ -10821,7 +11320,7 @@ exportObj.basicCardData = () => ({
             faction: "First Order",
             restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Lock", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Lock", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -10882,7 +11381,7 @@ exportObj.basicCardData = () => ({
             points: 5,
             restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Calculate", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Calculate", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Calculate", Array.from(ship.effectiveStats().actions).includes(needle)))  || ((needle1 = "R-Calculate", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -10903,7 +11402,7 @@ exportObj.basicCardData = () => ({
             points: 1,
             restriction_func(ship) {
                 let needle, needle1;
-                return (needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Lock", Array.from(ship.effectiveStats().actionsred).includes(needle1));
+                return ((needle = "Lock", Array.from(ship.effectiveStats().actions).includes(needle))) || ((needle1 = "R-Lock", Array.from(ship.effectiveStats().actions).includes(needle1)));
             }
        },
        {
@@ -10911,7 +11410,7 @@ exportObj.basicCardData = () => ({
             id: 212,
             faction: "Galactic Republic",
             slot: "Force",
-            pointsarray: [4,4,4,4,6,8,10],
+            pointsarray: [0,0,2,4,6,8,10],
             variableinit: true,
             modifier_func(stats) {
                 if (!Array.from(stats.actions).includes('F-Coordinate')) { return stats.actions.push('F-Coordinate'); }
@@ -10962,7 +11461,7 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             points: 4,
             modifier_func(stats) {
-                if (!Array.from(stats.actionsred).includes('Cloak')) { stats.actionsred.push('Cloak'); }
+                if (!Array.from(stats.actions).includes('R-Cloak')) { stats.actions.push('R-Cloak'); }
                 if (!Array.from(stats.actions).includes('Jam')) { return stats.actions.push('Jam'); }
             }
        },
@@ -11151,7 +11650,7 @@ exportObj.basicCardData = () => ({
             charge: 1,
             restriction_func(ship, upgrade_obj) {
                 let needle, needle1;
-                return ((needle = "Reload", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "Reload", Array.from(ship.effectiveStats().actionsred).includes(needle1))) && ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, "Modification");
+                return (((needle = "Reload", Array.from(ship.effectiveStats().actions).includes(needle))) || ((needle1 = "R-Reload", Array.from(ship.effectiveStats().actions).includes(needle1)))) && ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, "Modification");
             },
             validation_func(ship, upgrade_obj) {
                 return upgrade_obj.occupiesAnUpgradeSlot("Modification");
@@ -11205,7 +11704,7 @@ exportObj.basicCardData = () => ({
             slot: "Sensor",
             charge: 1,
             recurring: true,
-            pointsarray: [2,2,2,2,2,4,6,7,8],
+            pointsarray: [2,2,2,2,2,4,6,8,10],
             variableinit: true
        },
        {
@@ -11596,7 +12095,7 @@ exportObj.basicCardData = () => ({
             slot: "Crew",
             points: 4,
             modifier_func(stats) {
-                stats.actions.push('Lock');
+                stats.actions.push('*Lock');
                 return stats.actions.push('R> Coordinate');
             },
             restriction_func(ship) {
@@ -12006,7 +12505,7 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             points: 8,
             modifier_func(stats) {
-                if (!Array.from(stats.actionsred).includes('Evade')) { stats.actionsred.push('Evade'); }
+                if (!Array.from(stats.actions).includes('R-Evade')) { stats.actions.push('R-Evade'); }
                 if (!Array.from(stats.actions).includes('Coordinate')) { return stats.actions.push('Coordinate'); }
             },
             confersAddons: [
@@ -12130,7 +12629,7 @@ exportObj.basicCardData = () => ({
                 stats.actions.push('R> Evade');
                 stats.actions.push('*Barrel Roll');
                 stats.actions.push('R> Lock');
-                return stats.actionsred.push('Reload');
+                return stats.actions.push('R-Reload');
             }
        },
        {
@@ -12198,15 +12697,15 @@ exportObj.basicCardData = () => ({
             slot: "Crew",
             unique: true,
             faction: "First Order",
-            points: 200
+            points: 5
        },
        {
             name: "Clone Captain Rex",
             id: 321,
-            slot: "Crew",
+            slot: "Gunner",
             unique: true,
             faction: "Galactic Republic",
-            points: 200
+            points: 4
        },
        {
             name: "Yoda",
@@ -12215,7 +12714,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             force: 2,
             faction: "Galactic Republic",
-            points: 200,
+            points: 15,
             modifier_func(stats) {
                 stats.force += 2;
                 if (!Array.from(stats.actions).includes('F-Coordinate')) { return stats.actions.push('F-Coordinate'); }
@@ -12224,9 +12723,9 @@ exportObj.basicCardData = () => ({
        {
             name: "Repulsorlift Stabilizers",
             id: 323,
-            slot: "Config",
+            slot: "Configuration",
             faction: "Separatist Alliance",
-            points: 200
+            points: 3
        },
        {
             name: "Agent Terex",
@@ -12234,7 +12733,7 @@ exportObj.basicCardData = () => ({
             slot: "Crew",
             unique: true,
             faction: "First Order",
-            points: 200
+            points: 6
        },
        {
             name: "Plo Koon",
@@ -12243,17 +12742,17 @@ exportObj.basicCardData = () => ({
             unique: true,
             force: 1,
             faction: "Galactic Republic",
-            points: 200,
+            points: 10,
             modifier_func(stats) {
                 stats.force += 1;
                 if (!Array.from(stats.actions).includes('F-Reinforce')) { return stats.actions.push('F-Reinforce'); }
             }
        },
        {
-           name: "Multi-Missle Pods",
+           name: "Multi-Missile Pods",
            id: 326,
            slot: "Missile",
-           points: 200,
+           points: 8,
            attackf: 2,
            range: "1-2",
            rangebonus: true,
@@ -12273,7 +12772,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             force: 1,
             faction: "Galactic Republic",
-            points: 200,
+            points: 9,
             modifier_func(stats) {
                 stats.force += 1;
                 if (!Array.from(stats.actions).includes('F-Evade')) { return stats.actions.push('F-Evade'); }
@@ -12286,11 +12785,323 @@ exportObj.basicCardData = () => ({
             unique: true,
             force: 1,
             faction: "Galactic Republic",
-            points: 200,
+            points: 16,
             modifier_func(stats) {
                 stats.force += 1;
-                stats.actions.push('Focus');
+                stats.actions.push('*Focus');
                 return stats.actions.push('> F-Coordinate');
+            }
+       },
+       {
+            name: "Maneuver-Assist MGK-300",
+            id: 329,
+            slot: "Configuration",
+            ship: "TIE/rb Heavy",
+            faction: "Galactic Empire",
+            points: 200,
+            modifier_func(stats) {
+                stats.actions.push('Calculate');
+                stats.actions.push('*Barrel Roll');
+                return stats.actions.push('*R> Calculate');
+            }
+       },
+       {
+            name: "Ion Limiter Override",
+            id: 330,
+            slot: "Talent",
+            points: 200,
+            restriction_func(ship) {
+               return (ship.data.name != null ? ship.data.name.includes("TIE") : undefined);
+           }
+       },
+       {
+            name: "Marg Sabl Closure",
+            id: 331,
+            slot: "Talent",
+            points: 200,
+            restriction_func(ship) {
+                return !((ship.data.large != null) || (ship.data.huge != null));
+            }
+       },
+       {
+            name: "XX-23 S-Thread Tracers",
+            id: 332,
+            slot: "Missile",
+            attack: 3,
+            range: "1-3",
+            rangebonus: true,
+            charge: 2,
+            points: 200
+       },
+       {
+            name: "Hondo Ohnaka",
+            id: 333,
+            unique: true,
+            slot: "Crew",
+            points: 200
+       },
+       {
+            name: "Boba Fett (Separatist)",
+            id: 334,
+            slot: "Gunner",
+            unique: true,
+            points: 200,
+            faction: ["Scum and Villainy", "Separatist Alliance"]
+       },
+       {
+            name: "Jango Fett",
+            id: 335,
+            slot: "Crew",
+            unique: true,
+            faction: "Separatist Alliance",
+            points: 200
+       },
+       {
+            name: "Zam Wesell",
+            id: 336,
+            slot: "Crew",
+            unique: true,
+            charge: 2,
+            faction: "Separatist Alliance",
+            points: 200
+       },
+       {
+            name: 'Alpha-3B "Besh"',
+            id: 337,
+            slot: "Configuration",
+            ship: "Nimbus-class V-Wing",
+            points: 200
+       },
+       {
+            name: "Twin Ion Engines",
+            id: 338,
+            skip: true,
+            slot: "Modification",
+            points: 200
+       },
+       {
+            name: "Thermal Detonators",
+            id: 339,
+            skip: true,
+            slot: "Configuration",
+            points: 200,
+            applies_condition: 'Thermal Detonator'.canonicalize()
+       },
+       {
+            name: "R2-D2 (Republic)",
+            id: 340,
+            charge: 2,
+            unique: true,
+            faction: "Galactic Republic",
+            slot: "Astromech",
+            points: 200
+       },
+       {
+            name: "Evasive Maneuvers",
+            id: 341,
+            slot: "Force",
+            points: 200
+       },
+       {
+            name: "Patience",
+            id: 342,
+            slot: "Force",
+            points: 200
+       },
+       {
+            name: "Deadeye Shot",
+            id: 343,
+            slot: "Talent",
+            points: 1,
+            restriction_func(ship) {
+                return !((ship.data.large != null) || (ship.data.huge != null));
+            }
+       },
+       {
+            name: "Starbird Slash",
+            id: 344,
+            slot: "Talent",
+            points: 200,
+            restriction_func(ship) {
+               return (ship.data.name != null ? ship.data.name.includes("A-Wing") : undefined);
+           }
+       },
+       {
+            name: "Overdrive Thruster",
+            id: 345,
+            ship: "T-70 X-Wing",
+            slot: "Modification",
+            points: 200
+       },
+       {
+            name: '"Fives"',
+            id: 346,
+            unique: true,
+            faction: "Galactic Republic",
+            slot: "Crew",
+            points: 3
+       },
+       {
+            name: "Commander Malarus",
+            id: 347,
+            unique: true,
+            faction: "First Order",
+            slot: "Crew",
+            points: 7
+       },
+       {
+            name: "Automated Target Priority",
+            id: 348,
+            slot: "Tech",
+            points: 1,
+            restriction_func(ship) {
+                return ship.pilot.skill < 4;
+            }
+       },
+       {
+            name: "Sensor Buoy Suite",
+            id: 349,
+            faction: "First Order",
+            slot: "Tech",
+            points: 4,
+            restriction_func(ship) {
+                return (ship.data.large != null) || (ship.data.medium != null);
+            },
+            applies_condition: 'Sensor Buoy'.canonicalize()
+       },
+       {
+            name: "Suppressive Gunner",
+            id: 350,
+            slot: "Gunner",
+            points: 200,
+            pointsarray: [8,7,6,3],
+            variablebase: true
+       },
+       {
+            name: "Ghost Company",
+            id: 351,
+            faction: "Galactic Republic",
+            unique: true,
+            slot: "Crew",
+            points: 5,
+            restriction_func(ship, upgrade_obj) {
+                let needle, needle1;
+                return (((needle = "Rotate Arc", Array.from(ship.effectiveStats().actions).includes(needle))) || ((needle1 = "R-Rotate Arc", Array.from(ship.effectiveStats().actions).includes(needle1)))) && ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, "Gunner");
+            },
+            validation_func(ship, upgrade_obj) {
+                return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
+            },
+            also_occupies_upgrades: [ "Gunner" ],
+            modifier_func(stats) {
+                stats.actions.push('*Rotate Arc');
+                return stats.actions.push('R> Focus');
+            }
+       },
+       {
+            name: "Wolf Pack",
+            id: 352,
+            faction: "Galactic Republic",
+            unique: true,
+            slot: "Crew",
+            points: 4,
+            restriction_func(ship, upgrade_obj) {
+                return ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, "Gunner");
+            },
+            validation_func(ship, upgrade_obj) {
+                return upgrade_obj.occupiesAnUpgradeSlot("Gunner");
+            },
+            also_occupies_upgrades: [ "Gunner" ]
+       },       
+       {
+            name: "Kalani",
+            id: 353,
+            charge: 3,
+            unique: true,
+            recurring: true,
+            slot: "Tactical Relay",
+            solitary: true,
+            faction: "Separatist Alliance",
+            points: 5,
+            modifier_func(stats) {
+                if (!Array.from(stats.actions).includes('Calculate')) { return stats.actions.push('Calculate'); }
+            }
+       },
+       {
+            name: "Synced Laser Cannons",
+            id: 354,
+            slot: "Cannon",
+            points: 6,
+            attack: 3,
+            range: "2-3",
+            restriction_func(ship, upgrade_obj) {
+                return ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, upgrade_obj.slot);
+            },
+            validation_func(ship, upgrade_obj) {
+                return upgrade_obj.occupiesAnUpgradeSlot(upgrade_obj.slot);
+            },
+            also_occupies_upgrades: [ 'Cannon' ]
+       },
+       {
+            name: "Concussion Bombs",
+            id: 355,
+            slot: "Device",
+            charge: 3,
+            points: 3,
+            applies_condition: 'Concussion Bomb'.canonicalize()
+       },
+       {
+            name: "Target-Assist MGK-300",
+            id: 356,
+            slot: "Configuration",
+            ship: "TIE/rb Heavy",
+            faction: "Galactic Empire",
+            points: 200,
+            modifier_func(stats) {
+                stats.actions.push('Calculate');
+                stats.actions.push('*Rotate Arc');
+                return stats.actions.push('> Calculate');
+            }
+       },
+       {
+            name: "Backwards Tailslide",
+            id: 357,
+            slot: "Talent",
+            points: 200,
+            restriction_func(ship, upgrade_obj) {
+                return (ship.data.name != null ? ship.data.name.includes("X-Wing") : undefined) && (!ship.hasAnotherUnoccupiedSlotLike(upgrade_obj, "Configuration"));
+            }
+       },
+       {
+            name: "R2-D2 (Resistance)",
+            id: 358,
+            slot: "Astromech",
+            points: 200,
+            unique: true,
+            charge: 4,
+            faction: "Resistance"
+       },
+       {
+            name: "R6-D8",
+            id: 359,
+            points: 200,
+            unique: true,
+            slot: "Astromech",
+            faction: "Resistance"
+       },
+       {
+            name: "Underslung Blaster Cannon",
+            id: 360,
+            points: 200,
+            slot: "Cannon",
+            attackt: 2,
+            range: "1",
+            rangebonus: true,
+            faction: "Resistance",
+            restriction_func(ship) {
+                return (ship.data.name != null ? ship.data.name.includes("X-Wing") : undefined);
+            },
+            modifier_func(stats) {
+                if (!Array.from(stats.actions).includes('Rotate Arc')) { return stats.actions.push('Rotate Arc'); }
             }
        }
     ],
@@ -12387,6 +13198,18 @@ exportObj.basicCardData = () => ({
         {
             name: 'Ion Bomb',
             id: 20
+        },
+        {
+            name: 'Concussion Bomb',
+            id: 21
+        },
+        {
+            name: 'Thermal Detonator',
+            id: 22
+        },
+        {
+            name: 'Sensor Buoy',
+            id: 23
         }
     ],
 
@@ -18243,7 +19066,6 @@ exportObj.fixIcons = function(data) {
             .replace(/%DEVICE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-device"></i>')
             .replace(/%MODIFICATION%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-modification"></i>')
             .replace(/%RELOAD%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-reload"></i>')
-            .replace(/%CONFIG%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-config"></i>')
             .replace(/%FORCE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-forcecharge"></i>')
             .replace(/%CHARGE%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-charge"></i>')
             .replace(/%ENERGY%/g, '<i class="xwing-miniatures-font xwing-miniatures-font-energy"></i>')
@@ -18363,15 +19185,18 @@ exportObj.hyperspaceShipInclusions = [
     {name: 'TIE/FO Fighter', faction: 'First Order'},
     {name: 'TIE/VN Silencer', faction: 'First Order'},
     {name: 'TIE/SF Fighter', faction: 'First Order'},
+    {name: 'Xi-class Light Shuttle', faction: 'First Order'},
     {name: 'Delta-7 Aethersprite', faction: 'Galactic Republic'},
     {name: 'ARC-170', faction: 'Galactic Republic'},
     {name: 'Naboo Royal N-1 Starfighter', faction: 'Galactic Republic'},
     {name: 'BTL-B Y-Wing', faction: 'Galactic Republic'},
     {name: 'V-19 Torrent', faction: 'Galactic Republic'},
+    {name: 'LAAT/i Gunship', faction: 'Galactic Republic'},
     {name: 'Vulture-class Droid Fighter', faction: 'Separatist Alliance'},
     {name: 'Hyena-Class Droid Bomber', faction: 'Separatist Alliance'},
     {name: 'Sith Infiltrator', faction: 'Separatist Alliance'},
     {name: 'Nantex-Class Starfighter', faction: 'Separatist Alliance'},
+    {name: 'HMP Droid Gunship', faction: 'Separatist Alliance'},
     {name: 'Belbullab-22 Starfighter', faction: 'Separatist Alliance'}
 ];
 
@@ -18382,8 +19207,6 @@ exportObj.hyperspacePilotExclusions = [
     'Wedge Antilles',
     'Biggs Darklighter',
     'Kullbee Sperado',
-    'Leevan Tenza',
-    'Edrio Two Tubes',
     'Cavern Angels Zealot',
     'Outer Rim Smuggler',
     '"Chopper"',
@@ -18484,11 +19307,9 @@ exportObj.hyperspaceUpgradeExclusions = [
     "Qi'ra",
     'Tobias Beckett',
     'Han Solo (Scum)',
-    "Marauder",
     'Virago',
 
     // Resistance
-    'M9-G8',
     'C-3PO (Resistance)',
     'Chewbacca (Resistance)',
     'GA-97',
