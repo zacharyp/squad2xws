@@ -8544,6 +8544,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Gideon Hask (Xi Shuttle)",
             canonical_name: "Gideon Hask".canonicalize(),
+            xws: "gideonhask-xiclasslightshuttle",
             id: 403,
             faction: "First Order",
             unique: true,
@@ -8562,6 +8563,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Commander Malarus (Xi Shuttle)",
             canonical_name: "Commander Malarus".canonicalize(),
+            xws: "commandermalarus-xiclasslightshuttle",
             id: 404,
             faction: "First Order",
             unique: true,
@@ -12724,6 +12726,7 @@ exportObj.basicCardData = () => ({
             name: "Repulsorlift Stabilizers",
             id: 323,
             slot: "Configuration",
+            ship: "HMP Droid Gunship",
             faction: "Separatist Alliance",
             points: 3
        },
