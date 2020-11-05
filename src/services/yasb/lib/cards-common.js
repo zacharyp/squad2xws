@@ -9208,6 +9208,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Poe Dameron (HoH)",
             canonical_name: 'Poe Dameron'.canonicalize(),
+            xws: 'poedameron-swz68',
             id: 442,
             unique: true,
             faction: "Resistance",
@@ -9229,6 +9230,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Temmin Wexley (HoH)",
             canonical_name: 'Temmin Wexley'.canonicalize(),
+            xws: 'temminwexley-swz68',
             id: 443,
             unique: true,
             faction: "Resistance",
@@ -9305,7 +9307,7 @@ exportObj.basicCardData = () => ({
             ]
         },
         {
-            name: "Nimi Chereen",
+            name: "Nimi Chireen",
             id: 448,
             unique: true,
             faction: "Resistance",
