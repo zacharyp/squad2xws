@@ -9833,9 +9833,9 @@ exportObj.basicCardData = () => ({
            unique: true,
            faction: ["Scum and Villainy", "Rebel Alliance"],
            force: 1,
+           keyword: ["Dark Side"], 
            modifier_func(stats) {
-                stats.force += 1;
-                return stats.darkside = true;
+                return stats.force += 1;
             },
            restriction_func(ship) {
                 const {
@@ -11118,8 +11118,8 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "First Order",
             restriction_func(ship) {
-                let needle;
-                return (needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle));
+                let needle, needle1;
+                return (needle = "Coordinate", Array.from(ship.effectiveStats().actions).includes(needle)) || (needle1 = "R-Coordinate", Array.from(ship.effectiveStats().actions).includes(needle1));
             }
        },
        {
@@ -18950,6 +18950,109 @@ exportObj.basicCardData = () => ({
                 "Elusive",
                 "Outmaneuver",
                 "Afterburners"
+            ]
+        },
+        {
+            id: 457,
+            faction: "First Order",
+            pilot: "First Order Courier",
+            ship: "Xi-class Light Shuttle",
+            threat: 2,
+            upgrades: [
+                "Tactical Officer",
+                "Automated Target Priority",
+                "Shield Upgrade"
+            ]
+        },
+        {
+            id: 458,
+            faction: "First Order",
+            pilot: "Gideon Hask (Xi Shuttle)",
+            ship: "Xi-class Light Shuttle",
+            threat: 2,
+            upgrades: [
+                "Deadeye Shot",
+                "Sensor Buoy Suite",
+                "Commander Pyre",
+                "Rigged Cargo Chute"
+            ]
+        },
+        {
+            id: 459,
+            faction: "First Order",
+            pilot: "Commander Malarus (Xi Shuttle)",
+            ship: "Xi-class Light Shuttle",
+            threat: 2,
+            upgrades: [
+                "Snap Shot",
+                "Sensor Buoy Suite",
+                "Agent Terex",
+                "Hull Upgrade"
+            ]
+        },
+        {
+            id: 460,
+            faction: "First Order",
+            pilot: "Agent Terex",
+            ship: "Xi-class Light Shuttle",
+            threat: 2,
+            upgrades: [
+                "Inertial Dampeners",
+                "Deadman's Switch",
+                "Commander Malarus",
+                "Contraband Cybernetics"
+            ]
+        },
+        {
+            id: 461,
+            faction: "Galactic Empire",
+            pilot: "Cardia Academy Cadet",
+            ship: "TIE/rb Heavy",
+            threat: 2,
+            upgrades: [
+                "Snap Shot",
+                "Maneuver-Assists MGK-300",
+                "Synced Laser Cannons"
+            ]
+        },
+        {
+            id: 462,
+            faction: "Galactic Empire",
+            pilot: "Lyttan Dree",
+            ship: "TIE/rb Heavy",
+            threat: 2,
+            upgrades: [
+                "Deadye Shot",
+                "Ion Cannon",
+                "Heavy Laser Cannon",
+                "Maneuver-Assists MGK-300"
+            ]
+        },
+        {
+            id: 463,
+            faction: "Galactic Empire",
+            pilot: "Onyx Squadron Sentry",
+            ship: "TIE/rb Heavy",
+            threat: 2,
+            upgrades: [
+                "Ion Limiter Override",
+                "Shield Upgrade",
+                "Heavy Laser Cannon",
+                "Maneuver-Assists MGK-300"
+            ]
+        },
+        {
+            id: 464,
+            faction: "Galactic Empire",
+            pilot: '"Rampage"',
+            ship: "TIE/rb Heavy",
+            threat: 3,
+            upgrades: [
+                "Predator",
+                "Afterburners",
+                "Maneuver-Assists MGK-300",
+                "Synced Laser Cannons",
+                "Ablative Plating"
             ]
         }
     ]

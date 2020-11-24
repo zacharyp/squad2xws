@@ -54,6 +54,7 @@ function constructPilots(decks: Deck[]): Pilot[] {
                 const currentSlotList = upgrades.get(upgradeType) || []
                 currentSlotList.push(upgradeXWS)
                 upgrades.set(upgradeType, currentSlotList)
+                // console.log(slot.cost)
                 points += Number(slot.cost)
             })
 

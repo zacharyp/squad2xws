@@ -13,6 +13,8 @@ export default [
                 const squadId = req.params.squadId;
                 const squad: FFGSquad = await getSquadJSON(squadId);
                 const xwsSquadron: XWSSquadron = convertFFGSquad(squadId, squad)
+
+                // console.log(xwsSquadron)
                 res.status(200).send(xwsSquadron);
             }
         ]
