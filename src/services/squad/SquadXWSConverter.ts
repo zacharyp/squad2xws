@@ -43,9 +43,10 @@ function constructPilots(decks: Deck[]): Pilot[] {
     decks.forEach(deck => {
         const xwsId = ffgPilots[deck.pilot_card.id]
         if (xwsId !== undefined) {
-            let points: number = 0
+            // let points: number = 0
+            let points: number = deck.cost
             const shipXWSId = ffgShips[deck.pilot_card.ship_type]
-            points += Number(deck.pilot_card.cost)
+            // points += Number(deck.pilot_card.cost)
             const upgrades: Map<string, string[]> = new Map()
 
             deck.slots.forEach(slot => {
@@ -55,7 +56,7 @@ function constructPilots(decks: Deck[]): Pilot[] {
                 currentSlotList.push(upgradeXWS)
                 upgrades.set(upgradeType, currentSlotList)
                 // console.log(slot.cost)
-                points += Number(slot.cost)
+                // points += Number(slot.cost)
             })
 
             let upgradeObj: { [index:string] : string[] } = {};
