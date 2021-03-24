@@ -9474,6 +9474,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Hera Syndulla (A-Wing)",
             canonical_name: 'Hera Syndulla'.canonicalize(),
+            xws: "herasyndulla-rz1awing",
             id: 451,
             unique: true,
             faction: "Rebel Alliance",
@@ -9573,6 +9574,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Kanan Jarrus (HWK-290)",
             canonical_name: 'Kanan Jarrus'.canonicalize(),
+            xws: "kananjarrus-hwk290lightfreighter",
             id: 457,
             unique: true,
             faction: "Scum and Villainy",
@@ -9663,6 +9665,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Shara Bey (A-Wing)",
             canonical_name: 'Shara Bey'.canonicalize(),
+            xws: "sharabey-rz1awing",
             id: 462,
             unique: true,
             faction: "Rebel Alliance",
@@ -9679,6 +9682,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Ahsoka Tano (A-Wing)",
             canonical_name: 'Ahsoka Tano'.canonicalize(),
+            xws: "ahsokatano-rz1awing",
             id: 463,
             unique: true,
             faction: "Rebel Alliance",
@@ -9761,6 +9765,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Vult Skerris (TIE Interceptor)",
             canonical_name: 'Vult Skerris'.canonicalize(),
+            xws: "vultskerris-tieininterceptor",
             id: 468,
             unique: true,
             faction: "Galactic Empire",
@@ -9779,6 +9784,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Darth Vader (TIE Defender)",
             canonical_name: 'Darth Vader'.canonicalize(),
+            xws: "darthvader-tieddefender",
             id: 469,
             unique: true,
             faction: "Galactic Empire",
@@ -13841,6 +13847,7 @@ exportObj.basicCardData = () => ({
         {
             name: "B6 Blade Wing Prototype (Epic)",
             canonical_name: 'B6 Blade Wing Prototype'.canonicalize(),
+            xws: "b6bladewingprototype-command",
             id: 377,
             points: 12,
             unique: true,
@@ -13870,6 +13877,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Sabine Wren (Gunner)",
             canonical_name: 'Sabine Wren'.canonicalize(),
+            xws: "sabinewren-gunner",
             id: 379,
             points: 2,
             unique: true,
