@@ -1974,6 +1974,7 @@ exportObj.basicCardData = () => ({
             id: 0,
             faction: "Rebel Alliance",
             ship: "X-Wing",
+            keyword: ["Partisan"],
             skill: 1,
             points: 38,
             slots: [
@@ -2980,7 +2981,7 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "VCX-100",
             skill: 3,
-            keyword: ["Spectre"],
+            keyword: ["Light Side", "Jedi", "Spectre"],
             force: 2,
             points: 76,
             slots: [
@@ -9453,6 +9454,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Hera Syndulla (B-Wing)",
             canonical_name: 'Hera Syndulla'.canonicalize(),
+            xws: "herasyndulla-asf01bwing",
             id: 450,
             unique: true,
             faction: "Rebel Alliance",
@@ -9492,6 +9494,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Wedge Antilles (A-Wing)",
             canonical_name: 'Wedge Antilles'.canonicalize(),
+            xws: "wedgeantilles-rz1awing",
             id: 452,
             unique: true,
             faction: "Rebel Alliance",
@@ -9508,6 +9511,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Sabine Wren (A-Wing)",
             canonical_name: 'Sabine Wren'.canonicalize(),
+            xws: "sabinewren-rz1awing",
             id: 453,
             unique: true,
             faction: "Rebel Alliance",
@@ -9558,6 +9562,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Gideon Hask (TIE Interceptor)",
             canonical_name: 'Gideon Hask'.canonicalize(),
+            xws: "gideonhask-tieininterceptor",
             id: 456,
             unique: true,
             faction: "Galactic Empire",
@@ -9817,7 +9822,7 @@ exportObj.basicCardData = () => ({
             ]
         },
         {
-            name: "Jinta Security Officer",
+            name: "Jinata Security Officer",
             id: 471,
             faction: "Scum and Villainy",
             ship: "Y-Wing",
@@ -9871,6 +9876,7 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Tápusk",
+            xws: "tapusk",
             id: 474,
             unique: true,
             faction: "Scum and Villainy",
@@ -10303,7 +10309,6 @@ exportObj.basicCardData = () => ({
             name: "Kanan Jarrus",
             id: 41,
             slot: "Crew",
-            keyword: ["Light Side"],
             points: 12,
             force: 1,
             unique: true,
@@ -10370,9 +10375,9 @@ exportObj.basicCardData = () => ({
             slot: "Crew",
             points: 10,
             unique: true,
+            keyword: ["Dark Side"],
             faction: ["Scum and Villainy", "Rebel Alliance"],
             force: 1,
-            keyword: ["Dark Side"], 
             restrictions: [
                 ["orUnique", "Ezra Bridger"],
                 ["Faction", "Scum and Villainy"]
@@ -13842,7 +13847,9 @@ exportObj.basicCardData = () => ({
             id: 376,
             points: 2,
             slot: "Talent",
-            ship: "Y-Wing"
+            restrictions: [
+                ["Keyword", "Y-Wing"]
+            ]
         },
         {
             name: "B6 Blade Wing Prototype (Epic)",
@@ -15852,7 +15859,6 @@ exportObj.basicCardData = () => ({
             pilot: "Cavern Angels Zealot",
             ship: "X-Wing",
             threat: 2,
-            keyword: ["Partisan"],
             upgrades: [
                 "R2 Astromech",
                 "Deadman's Switch",
