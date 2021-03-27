@@ -13828,7 +13828,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Sensitive Controls",
             id: 374,
-            points: 2,
+            points: 0,
             slot: "Configuration",
             standardized: true,
             restrictions: [
@@ -13897,7 +13897,8 @@ exportObj.basicCardData = () => ({
             points: 5,
             unique: true,
             slot: "Command",
-            faction: "Rebel Alliance"
+            faction: "Rebel Alliance",
+            ship: "VCX-100"
         },
         {
             name: "Disciplined",
@@ -13912,7 +13913,8 @@ exportObj.basicCardData = () => ({
             points: 3,
             max_per_squad: 2,
             slot: "Command",
-            faction: "Galactic Empire"
+            faction: "Galactic Empire",
+            ship: ["TIE Fighter", "TIE Interceptor"]
         },
         {
             name: "Shadow Wing",
@@ -13931,7 +13933,7 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             restrictions: [
                 ["isUnique", true],
-                ["Format", "Standard"]
+                ["Base", "Standard"]
             ]
         },
         {
@@ -13942,7 +13944,7 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             restrictions: [
                 ["isUnique", true],
-                ["Format", "Standard"]
+                ["Base", "Standard"]
             ]
         },
         {
