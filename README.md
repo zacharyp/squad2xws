@@ -52,5 +52,7 @@ sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcup
 
 ### submodule (xwing-data2 and xwing, aka YASB)
 ```
+git submodule init
+git submodule update
 git submodule foreach git pull origin master
 ````
