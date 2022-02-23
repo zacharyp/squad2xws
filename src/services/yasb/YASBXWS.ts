@@ -25,7 +25,7 @@ export async function serializedToXWS(faction: string, serialized: string, squad
         obstacles: undefined,
         points: 0,
         vendor: vendorMap,
-        version: '2.0.0'
+        version: '2.5.0'
     }
 
     if (squadName !== undefined && ['Unnamed Squadron', 'New Squadron'].indexOf(squadName) == -1) {

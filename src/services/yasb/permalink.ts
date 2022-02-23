@@ -25,7 +25,7 @@ export function serializedToShips(serialized: string): Pilot[] {
     }
 
     return pilots;
-};
+}
 
 function fromSerializedShip(serialized: string): Pilot | undefined {
     let unused_value, pilot_id, upgrade_ids;
@@ -65,8 +65,6 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
                 currentUpgradeArray.push(uXWS)
 
                 upgrades[uSlot] = currentUpgradeArray
-                let upgradePoints = getUpgradePoints(upgradeById, ship, p.skill)
-                pilotObj.points += upgradePoints
             }
         }
 
@@ -75,22 +73,22 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
     }
 
     return pilotObj;
-};
+}
 
 
 // hackily copied from xwing GenericAddon getPoints
-function getUpgradePoints(upgrade: UpgradeById, ship: Ship, skill: number): number {
-    if (upgrade.variableagility)
-        return Math.max(0, (upgrade.pointsarray || [])[ship.agility])
-    else if (upgrade.variablebase)
-        if (!(ship.medium || ship.large))
-            return Math.max(0, (upgrade.pointsarray || [])[0])
-        else if (ship.medium)
-            return Math.max(0, (upgrade.pointsarray || [])[1])
-        else // large
-            return Math.max(0, (upgrade.pointsarray || [])[2])
-    else if (upgrade.variableinit)
-        return Math.max(0, (upgrade.pointsarray || [])[skill])
-    else
-        return upgrade.points || 0
-};
+// function getUpgradePoints(upgrade: UpgradeById, ship: Ship, skill: number): number {
+//     if (upgrade.variableagility)
+//         return Math.max(0, (upgrade.pointsarray || [])[ship.agility])
+//     else if (upgrade.variablebase)
+//         if (!(ship.medium || ship.large))
+//             return Math.max(0, (upgrade.pointsarray || [])[0])
+//         else if (ship.medium)
+//             return Math.max(0, (upgrade.pointsarray || [])[1])
+//         else // large
+//             return Math.max(0, (upgrade.pointsarray || [])[2])
+//     else if (upgrade.variableinit)
+//         return Math.max(0, (upgrade.pointsarray || [])[skill])
+//     else
+//         return upgrade.points || 0
+// };

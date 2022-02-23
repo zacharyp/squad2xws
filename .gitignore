@@ -109,3 +109,6 @@ tmp/
 temp/
 
 .tscache
+
+
+.DS_Store
