@@ -12,7 +12,7 @@ export async function serializedToXWS(faction: string, serialized: string, squad
     const vendor = <Vendor>{
         builder: 'squad2xws',
         builder_url: 'http://squad2xws.herokuapp.com/',
-        link: "https://raithos.github.io?" + originalPath
+        link: "https://yasb.app/?" + originalPath
     }
 
     const vendorMap: Map<string, Vendor> = new Map()

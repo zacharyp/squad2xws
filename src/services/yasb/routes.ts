@@ -6,8 +6,6 @@ export interface YASBURL {
     url: string;
 }
 
-// function queryObjToQueryString()
-
 export default [
     {
         path: '/yasb/xws',

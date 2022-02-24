@@ -1,40 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "REST helper endpoints for FFG X-wing squads",
-    "version": "1.0.0"
+    "description": "REST helper endpoints for AMG X-wing squads",
+    "version": "2.5.0"
   },
   "host": "squad2xws.herokuapp.com",
   "basePath": "",
   "schemes": ["http"],
   "produces": ["application/json"],
   "paths": {
-    "/translate/{squadId}": {
-      "get": {
-        "tags": ["XWS"],
-        "summary": "Translates FFG Squad to XWS output",
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad request"
-          }
-        },
-        "content": {
-          "application/json": {}
-        },
-        "parameters": [
-          {
-            "name": "squadId",
-            "in": "path",
-            "description": "Specifies the FFG squad id",
-            "required": true,
-            "type": "string"
-          }
-        ]
-      }
-    },
     "/yasb/xws": {
       "get": {
         "tags": ["XWS"],
