@@ -2366,7 +2366,7 @@ exportObj.basicCardData = () => ({
             skill: 3,
             points: 3,
             pointsupg: 7,
-            keyword: ["Spectre"],
+            keyword: ["Spectre", "Mandalorian"],
             slots: [
                 "Talent",
                 "Missile",
@@ -3213,7 +3213,7 @@ exportObj.basicCardData = () => ({
             keyword: ["Droid","Spectre"],
             slots: [
                 "Sensor",
-                "Crew",
+                "Turret",
                 "Torpedo",
                 "Crew",
                 "Crew",
@@ -4648,7 +4648,7 @@ exportObj.basicCardData = () => ({
             charge: 1,
             recurring: 1,
             points: 6,
-            pointsupg: 11,
+            pointsupg: 17,
             slots: [
                 "Talent",
                 "Turret",
@@ -4685,7 +4685,7 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Scurrg H-6 Bomber",
             skill: 2,
-            points: 4,
+            points: 5,
             pointsupg: 7,
             slots: [
                 "Turret",
@@ -11026,7 +11026,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Galactic Empire",
             ship: "TIE Fighter",
-            skill: 2,
+            skill: 4,
             charge: 2,
             recurring: 1,
             points: 4,
@@ -11044,7 +11044,7 @@ exportObj.basicCardData = () => ({
             id: 504,
             faction: "Galactic Empire",
             ship: "TIE Fighter",
-            skill: 2,
+            skill: 4,
             points: 3,
             pointsupg: 4,
             max_per_squad: 2,
@@ -11351,6 +11351,7 @@ exportObj.basicCardData = () => ({
             force: 1,
             points: 7,
             pointsupg: 16,
+            keyword: ["Light Side","Spectre"],
             unique: true,
             slots: [
                 "Force",
@@ -16362,8 +16363,7 @@ exportObj.basicCardData = () => ({
             points: 4,
             charge: 1,
             slot: "Device",
-            unique: true,
-            applies_condition: 'Blazer Bomb'.canonicalize()
+            applies_condition: 'Blaze Bomb'.canonicalize()
         },
         {
             name: "Beskar Reinforced Plating",
@@ -16579,7 +16579,11 @@ exportObj.basicCardData = () => ({
             slot: "Modification",
             faction: ["Scum and Villainy","Resistance"],
             restrictions: [
-                ["Base", "Small or Medium"]
+                ["Base", "Small or Medium"], {
+            modifier_func(stats) {
+                return stats.actions.push('Slam');
+            }
+        }
             ]
         },
         {
@@ -24619,6 +24623,7 @@ exportObj.standardPilotExclusions = [
 
     // Galactic Republic
     'Saesee Tiin',
+    'Saesee Tiin (Delta-7b)',
 
     // Separatist Alliance
     'Phlac-Arphocc Prototype'
@@ -24634,10 +24639,12 @@ exportObj.standardUpgradeExclusions = [
 
     // Scum and Villainy
     'Boba Fett',
+    'Tobias Beckett',
     'Slave I',
 
     // Resistance
-    
+    'Kaydel Connix',
+
     // FO
     'Supreme Leader Snoke',
 
