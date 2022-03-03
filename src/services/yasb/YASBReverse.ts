@@ -21,7 +21,7 @@ const upgradeIdsByXWS: Map<string, number> = upgradeMap()
 export async function covert_xws(xwsString: string): Promise<string> {
     const xwsSquadron = <XWSSquadron>JSON.parse(xwsString)
 
-    let serializedSquad = "v8ZsZ200Z" // serialization version 8, standard squad, 200 points
+    let serializedSquad = "v9ZsZ20Z" // serialization version 9, extended squad, 20 points
 
     const faction = fromXWSFaction(xwsSquadron.faction)
     const squadName = xwsSquadron.name || "Unnamed"
@@ -50,7 +50,7 @@ export async function covert_xws(xwsString: string): Promise<string> {
     }
 
     let urlFaction = encodeURIComponent(faction)
-    var result = "https://raithos.github.io/?"
+    var result = "https://yasb.app?"
     result += "f=" + urlFaction
     result += "&sn=" + encodeURIComponent(squadName)
     result += "&d=" + serializedSquad

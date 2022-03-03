@@ -1,26 +1,24 @@
 ## squad2xws
 
-Useful REST endpoints related to [X-Wing: The Miniatures Game (Second Edition)](https://www.fantasyflightgames.com/en/products/x-wing-second-edition/) by [Fantasy Flight Games](http://fantasyflightgames.com/).
+Useful REST endpoints related to [X-Wing: The Miniatures Game (Second Edition)](https://www.atomicmassgames.com/xwing-documents) by [Atomic Mass Gaming](https://www.atomicmassgames.com).
 
 ## Related projects and web pages
 
-FFG X-wing Squad Builder: https://squadbuilder.fantasyflightgames.com
-
 XWS is the X-wing Specification: https://github.com/elistevens/xws-spec
 
-YASB is Yet Another Squad Builder: https://github.com/raithos/xwing
+YASB is Yet Another Squad Builder: https://yasb.app
 
 X-Wing Data 2 holds useful information about x-wing pilots, upgrade cards, etc: https://github.com/guidokessels/xwing-data2
 
 ## YASB URL to XWS
 
 GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `squad2xws.herokuapp.com/yasb/xws`
-Example: `https://raithos.github.io/?f=Galactic%20Empire&d=v8ZsZ200Z179X116W249W165Y167X112WW28WWWY191X240W136WWWW71WW&sn=Soontir%20Redline%20Jenden&obs=`
-becomes `https://squad2xws.herokuapp.com/yasb/xws?f=Galactic%20Empire&d=v8ZsZ200Z179X116W249W165Y167X112WW28WWWY191X240W136WWWW71WW&sn=Soontir%20Redline%20Jenden&obs=`
+Example: `https://yasb.app/?f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
+becomes `https://squad2xws.herokuapp.com/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
 
 ## Reverse YASB
 
-Post endpoint for XWS data.  Returns a valid YASB2 url.
+Post endpoint for XWS data.  Returns a valid YASB 2.5 url.
 
 POST JSON xws to `http://squad2xws.herokuapp.com/yasb/reverse`
 
