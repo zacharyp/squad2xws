@@ -5243,7 +5243,7 @@ exportObj.basicCardData = () => ({
             pointsupg: 4,
             slots: [
                 "Sensor",
-                "Missile",
+                "Modification",
                 "Modification"
             ]
         },
@@ -11121,7 +11121,7 @@ exportObj.basicCardData = () => ({
             name: "Bo-Katan Kryze",
             id: 509,
             faction: "Separatist Alliance",
-            xws: "bokatan-separatistalliance",
+            xws: "bokatankryze-separatistalliance",
             ship: "Gauntlet Fighter",
             skill: 4,
             points: 7,
@@ -11144,7 +11144,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Bo-Katan Kryze (Republic)",
             canonical_name: 'Bo-Katan Kryze'.canonicalize(),
-            xws: "bokatan",
+            xws: "bokatankryze",
             id: 510,
             faction: "Galactic Republic",
             ship: "Gauntlet Fighter",
@@ -11188,7 +11188,6 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Maul",
-            xws: "maul-gauntletfighter",
             id: 512,
             faction: "Scum and Villainy",
             ship: "Gauntlet Fighter",
@@ -11220,6 +11219,7 @@ exportObj.basicCardData = () => ({
             skill: 1,
             points: 7,
             pointsupg: 10,
+            keyword: ["Mandalorian"],
             slots: [
                 "Crew",
                 "Gunner",
@@ -11239,6 +11239,7 @@ exportObj.basicCardData = () => ({
             points: 7,
             pointsupg: 18,
             unique: true,
+            keyword: ["Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -11276,6 +11277,7 @@ exportObj.basicCardData = () => ({
             points: 7,
             pointsupg: 10,
             unique: true,
+            keyword: ["Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -11294,7 +11296,10 @@ exportObj.basicCardData = () => ({
             skill: 3,
             points: 8,
             pointsupg: 20,
+            charge: 2,
+            recurring: 1,
             unique: true,
+            keyword: ["Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -11314,6 +11319,7 @@ exportObj.basicCardData = () => ({
             points: 7,
             pointsupg: 10,
             unique: true,
+            keyword: ["Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -11801,7 +11807,7 @@ exportObj.basicCardData = () => ({
             name: "C-3PO",
             id: 18,
             slot: "Crew",
-            points: 7,
+            points: 5,
             unique: true,
             faction: "Rebel Alliance",
             modifier_func(stats) {
@@ -16153,6 +16159,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Ahsoka Tano (Crew)",
             canonical_name: 'Ahsoka Tano'.canonicalize(),
+            xws: "ahsokatano-crew",
             id: 424,
             points: 9,
             force: 1,
@@ -16175,6 +16182,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Bo-Katan Kryze (Rebel/Scum)",
             canonical_name: 'Bo-Katan Kryze'.canonicalize(),
+            xws: "bokatankryze-rebel-scum",
             id: 426,
             points: 4,
             slot: "Crew",
@@ -16312,6 +16320,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Maul (Mandalore)",
             canonical_name: 'Maul'.canonicalize(),
+            xws: 'maul-crew',
             id: 440,
             points: 10,
             slot: "Crew",
@@ -16339,6 +16348,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Gar Saxon (Gunner)",
             canonical_name: 'Gar Saxon'.canonicalize(),
+            xws: "garsaxon-gunner",
             id: 441,
             points: 9,
             slot: "Gunner",
@@ -16361,6 +16371,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Ursa Wren (Gunner)",
             canonical_name: 'Ursa Wren'.canonicalize(),
+            xws: "ursawren-gunner",
             id: 443,
             points: 6,
             slot: "Gunner",
@@ -16588,14 +16599,13 @@ exportObj.basicCardData = () => ({
             id: 462,
             points: 6,
             slot: "Modification",
-            faction: ["Scum and Villainy","Resistance"],
+            faction: ["Scum and Villainy"],
             restrictions: [
-                ["Base", "Small or Medium"], {
+                ["Base", "Small or Medium"]
+            ],
             modifier_func(stats) {
-                return stats.actions.push('Slam');
+                if (!Array.from(stats.actions).includes('Slam')) { return stats.actions.push('Slam'); }
             }
-        }
-            ]
         },
         {
             name: "Hotshot Tail Blaster",
@@ -24456,20 +24466,22 @@ exportObj.setupCommonCardData = function(basic_cards) {
     }
 
     exportObj.pilotsByFactionCanonicalName = {};
+    exportObj.pilotsByKeyword = {};
     // uniqueness can't be enforced just be canonical name, but by the base part
     exportObj.pilotsByUniqueName = {};
     for (pilot_name in exportObj.pilots) {
-        var base, name1;
+        var base, base1, name1;
         pilot = exportObj.pilots[pilot_name];
         (((base = exportObj.pilotsByFactionCanonicalName[pilot.faction] != null ? exportObj.pilotsByFactionCanonicalName[pilot.faction] : (exportObj.pilotsByFactionCanonicalName[pilot.faction] = {})))[pilot.canonical_name] != null ? base[pilot.canonical_name] : (base[pilot.canonical_name] = [])).push(pilot);
+        (((base1 = exportObj.pilotsByKeyword[pilot.keyword] != null ? exportObj.pilotsByKeyword[pilot.keyword] : (exportObj.pilotsByKeyword[pilot.keyword] = {})))[pilot.canonical_name] != null ? base1[pilot.canonical_name] : (base1[pilot.canonical_name] = [])).push(pilot);
         (exportObj.pilotsByUniqueName[name1 = pilot.canonical_name.getXWSBaseName()] != null ? exportObj.pilotsByUniqueName[name1] : (exportObj.pilotsByUniqueName[name1] = [])).push(pilot);
     }
 
     exportObj.pilotsByFactionXWS = {};
     for (pilot_name in exportObj.pilots) {
-        var base1;
+        var base2;
         pilot = exportObj.pilots[pilot_name];
-        (((base1 = exportObj.pilotsByFactionXWS[pilot.faction] != null ? exportObj.pilotsByFactionXWS[pilot.faction] : (exportObj.pilotsByFactionXWS[pilot.faction] = {})))[pilot.xws] != null ? base1[pilot.xws] : (base1[pilot.xws] = [])).push(pilot);
+        (((base2 = exportObj.pilotsByFactionXWS[pilot.faction] != null ? exportObj.pilotsByFactionXWS[pilot.faction] : (exportObj.pilotsByFactionXWS[pilot.faction] = {})))[pilot.xws] != null ? base2[pilot.xws] : (base2[pilot.xws] = [])).push(pilot);
     }
 
 
