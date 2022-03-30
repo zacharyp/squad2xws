@@ -4359,7 +4359,7 @@ exportObj.basicCardData = () => ({
             skill: 5,
             points: 7,
             pointsupg: 15,
-            keyword: ["Bounty Hunter"],
+            keyword: ["Bounty Hunter","Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -4379,7 +4379,7 @@ exportObj.basicCardData = () => ({
             skill: 3,
             points: 6,
             pointsupg: 9,
-            keyword: ["Mandalorian"],
+            keyword: ["Bounty Hunter","Mandalorian"],
             slots: [
                 "Talent",
                 "Crew",
@@ -4834,7 +4834,8 @@ exportObj.basicCardData = () => ({
                 "Crew",
                 "Gunner",
                 "Illicit",
-                "Modification"
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -11264,6 +11265,7 @@ exportObj.basicCardData = () => ({
                 "Talent",
                 "Crew",
                 "Gunner",
+                "Device",
                 "Modification",
                 "Configuration"
             ]
@@ -11339,6 +11341,7 @@ exportObj.basicCardData = () => ({
             skill: 2,
             points: 7,
             pointsupg: 18,
+            keyword: ["Droid","Spectre"],
             unique: true,
             slots: [
                 "Crew",
@@ -11388,8 +11391,6 @@ exportObj.basicCardData = () => ({
             unique: true,
             keyword: ["Droid"],
             slots: [
-                "Talent",
-                "Talent",
                 "Crew",
                 "Crew",
                 "Cannon",
@@ -11581,6 +11582,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Ahsoka Tano (Delta-7b)",
             canonical_name: 'Ahsoka Tano'.canonicalize(),
+            xws: "ahsokatano-delta7baethersprite",
             id: 531,
             unique: true,
             faction: "Galactic Republic",
@@ -11599,6 +11601,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Jedi Knight (Delta-7b)",
             canonical_name: 'Jedi Knight'.canonicalize(),
+            xws: "jediknight-delta7baethersprite",
             id: 532,
             faction: "Galactic Republic",
             ship: "Delta-7b Aethersprite",
@@ -11616,6 +11619,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Obi-Wan Kenobi (Delta-7b)",
             canonical_name: 'Obi-Wan Kenobi'.canonicalize(),
+            xws: "obiwankenobi-delta7baethersprite",
             id: 533,
             unique: true,
             faction: "Galactic Republic",
@@ -14840,7 +14844,7 @@ exportObj.basicCardData = () => ({
             name: "Coaxium Hyperfuel",
             id: 310,
             slot: "Illicit",
-            points: 1,
+            points: 4,
             restrictions: [
                 ["Action", "Slam"]
             ]
@@ -16384,7 +16388,7 @@ exportObj.basicCardData = () => ({
             points: 4,
             charge: 1,
             slot: "Device",
-            applies_condition: 'Blaze Bomb'.canonicalize()
+            applies_condition: 'Blazer Bomb'.canonicalize()
         },
         {
             name: "Beskar Reinforced Plating",
@@ -16872,7 +16876,7 @@ exportObj.basicCardData = () => ({
             unique: true
         },
         {
-            name: 'Blaze Bomb',
+            name: 'Blazer Bomb',
             id: 32
         },
         {
@@ -24867,11 +24871,21 @@ exportObj.standardCheck = function(data, faction, shipCheck) {
 
 exportObj.standardCheckBrowser = function(data, faction, type) {
     // check ship/pilot first
+    let ship;
     if (faction == null) { faction = ''; }
     if (type === 'Pilot') {
+        let check = false;
+        for (ship of Array.from(exportObj.standardShipInclusions)) {
+            if ((data.faction === ship.faction) && (data.ship === ship.name)) {
+                check = true;
+            }
+        }
+        if (check === false) {
+            return false;
+        }
         return !Array.from(exportObj.standardPilotExclusions).includes(data.name);
     } else if (type === 'Ship') {
-        for (let ship of Array.from(exportObj.standardShipInclusions)) {
+        for (ship of Array.from(exportObj.standardShipInclusions)) {
             // checks against name for ship itself or ship name/faction for pilot inclusions
             if ((ship.faction === faction) && ((data.name === ship.name) || (data.ship === ship.name) || (Array.isArray(data.ship) && Array.from(data.ship).includes(ship.name)))) {
                 return true;
