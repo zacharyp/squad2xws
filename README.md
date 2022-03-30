@@ -29,7 +29,7 @@ Located here: http://squad2xws.herokuapp.com/api-docs/#/
 ### Getting started
 1. ```npm install```
 2. ```npm run dev``` or ```npm run start```
-3. install grunt-cli.  OSX `brew install grunt-cli` or linux: `sudo apt-get install grunt-cli`
+3. install grunt-cli.  OSX `brew install grunt-cli` or linux: `sudo apt-get install grunt`
 4. linux:
 ```
 sudo apt-get install gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
@@ -41,3 +41,21 @@ git submodule init
 git submodule update
 git submodule foreach git pull origin master
 ````
+
+### Make an update
+```
+./yasb-reimport.sh
+git add .
+git commit -m 'more updates'
+git push origin master
+git push heroku master
+```
+
+### Troubleshooting
+If you get weird "extra argument" npm errors, try updating to the latest npm:
+```
+sudo npm install -g n
+sudo n latest
+sudo npm install -g npm
+```
+Source: https://github.com/npm/cli/issues/681#issuecomment-640470740
