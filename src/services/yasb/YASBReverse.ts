@@ -30,7 +30,8 @@ export async function covert_xws(xwsString: string): Promise<string> {
         xwsSquadron.pilots.forEach(pilot => {
             const pilotXWS = pilot.id
             let pilotFound = cardData.pilotsById.find(p => {
-                return p.faction == faction && canonicalize(p.name) == pilotXWS
+                return p.faction == faction && (
+                    p.xws == pilotXWS || canonicalize(p.name) == pilotXWS)
             })
             if (pilotFound != undefined) {
                 serializedSquad += pilotFound.id + "X"
