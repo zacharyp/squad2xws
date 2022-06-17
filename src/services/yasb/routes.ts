@@ -12,10 +12,10 @@ export default [
         method: "get",
         handler: [
             async (req: Request, res: Response) => {
-                let fQuery = req.query.f
-                let dQuery = req.query.d
-                let snQuery = req.query.sn
-                let obsQuery = req.query.obs
+                let fQuery = req.query.f as string
+                let dQuery = req.query.d as string
+                let snQuery = req.query.sn as string
+                let obsQuery = req.query.obs as string
 
                 if (fQuery !== undefined && dQuery !== undefined) {
                     let query = req.url.split('?')[1]
