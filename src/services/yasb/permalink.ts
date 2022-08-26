@@ -48,7 +48,7 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
         pilotObj.id = p.xws || canonicalize(p.name);
 
         let ship: Ship = cardData.ships[p.ship]
-        pilotObj.ship = canonicalize(ship.xws)
+        pilotObj.ship = canonicalize(ship.name)
         pilotObj.points = p.points
 
         let uSplit = upgrade_ids.split(upgrade_splitter)
