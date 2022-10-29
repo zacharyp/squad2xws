@@ -11,6 +11,7 @@ export function canonicalize(s) {
  * decaffeinate suggestions:
  * DS101: Remove unnecessary use of Array.from
  * DS102: Remove unnecessary code created because of implicit returns
+ * DS103: Rewrite code to no longer use __guard__, or convert again using --optional-chaining
  * DS104: Avoid inline assignments
  * DS202: Simplify dynamic range loops
  * DS204: Change includes calls to have a more natural evaluation order
@@ -5951,10 +5952,11 @@ exportObj.basicCardData = () => ({
             skill: 1,
             recurring: 1,
             charge: 1,
-            points: 2,
-            loadout: 2,
+            points: 3,
+            loadout: 5,
             slots: [
-                "Talent"
+                "Talent",
+                "Modification"
             ]
         },
         {
@@ -6008,9 +6010,10 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 3,
-            points: 2,
-            loadout: 1,
+            points: 3,
+            loadout: 5,
             slots: [
+                "Talent",
                 "Talent"
             ]
         },
@@ -6035,9 +6038,8 @@ exportObj.basicCardData = () => ({
             ship: "TIE/ln Fighter",
             skill: 3,
             points: 2,
-            loadout: 2,
+            loadout: 0,
             slots: [
-                "Talent"
             ]
         },
         {
@@ -6058,9 +6060,8 @@ exportObj.basicCardData = () => ({
             ship: "TIE/ln Fighter",
             skill: 1,
             points: 2,
-            loadout: 3,
+            loadout: 0,
             slots: [
-                "Modification"
             ]
         },
         {
@@ -6686,7 +6687,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/fo Fighter",
             skill: 5,
             points: 3,
-            loadout: 5,
+            loadout: 4,
             charge: 2,
             slots: [
                 "Talent",
@@ -7868,6 +7869,7 @@ exportObj.basicCardData = () => ({
             force: 3,
             points: 7,
             loadout: 24,
+            keyword: ["Dark Side","Sith"],
             slots: [
                 "Force",
                 "Cannon",
@@ -9330,8 +9332,8 @@ exportObj.basicCardData = () => ({
             charge: 2,
             recurring: 1,
             ship: "LAAT/i Gunship",
-            points: 5,
-            loadout: 23,
+            points: 6,
+            loadout: 20,
             keyword: ["Clone"],
             slots: [
                 "Sensor",
@@ -9377,7 +9379,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             ship: "LAAT/i Gunship",
             points: 5,
-            loadout: 20,
+            loadout: 12,
             keyword: ["Clone"],
             slots: [
                 "Talent",
@@ -10524,7 +10526,7 @@ exportObj.basicCardData = () => ({
             ship: "BTA-NR2 Y-wing",
             skill: 5,
             points: 5,
-            loadout: 24,
+            loadout: 19,
             charge: 1,
             recurring: 1,
             slots: [
@@ -10546,7 +10548,7 @@ exportObj.basicCardData = () => ({
             ship: "BTA-NR2 Y-wing",
             skill: 4,
             points: 4,
-            loadout: 17,
+            loadout: 12,
             slots: [
                 "Talent",
                 "Tech",
@@ -10565,8 +10567,8 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "BTA-NR2 Y-wing",
             skill: 4,
-            points: 3,
-            loadout: 14,
+            points: 4,
+            loadout: 12,
             slots: [
                 "Tech",
                 "Turret",
@@ -10585,7 +10587,7 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "BTA-NR2 Y-wing",
             skill: 3,
-            points: 3,
+            points: 4,
             loadout: 13,
             slots: [
                 "Talent",
@@ -10606,7 +10608,7 @@ exportObj.basicCardData = () => ({
             ship: "BTA-NR2 Y-wing",
             skill: 3,
             points: 4,
-            loadout: 19,
+            loadout: 14,
             slots: [
                 "Talent",
                 "Tech",
@@ -10627,7 +10629,7 @@ exportObj.basicCardData = () => ({
             ship: "BTA-NR2 Y-wing",
             skill: 2,
             points: 4,
-            loadout: 18,
+            loadout: 13,
             slots: [
                 "Talent",
                 "Talent",
@@ -10647,7 +10649,7 @@ exportObj.basicCardData = () => ({
             ship: "BTA-NR2 Y-wing",
             skill: 1,
             points: 4,
-            loadout: 20,
+            loadout: 15,
             slots: [
                 "Tech",
                 "Turret",
@@ -10668,8 +10670,8 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "BTA-NR2 Y-wing",
             skill: 2,
-            points: 3,
-            loadout: 15,
+            points: 4,
+            loadout: 10,
             slots: [
                 "Talent",
                 "Tech",
@@ -11035,10 +11037,11 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 4,
-            points: 2,
-            loadout: 3,
+            points: 3,
+            loadout: 5,
             max_per_squad: 2,
             slots: [
+                "Talent",
                 "Illicit"
             ]
         },
@@ -12004,7 +12007,7 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
                 "Adv. Proton Torpedoes",
@@ -12020,7 +12023,7 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 5,
-            points: 20,
+            points: 6,
             chassis: "Hope",
             upgrades: [
                 "Instinctive Aim",
@@ -12038,12 +12041,12 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
                 "Adv. Proton Torpedoes",
                 "R5-D8 (BoY)",
-                "Unstable Engines (BoY)"
+                "Unstable Sublight Engines (BoY)"
             ]
         },
         {
@@ -12055,7 +12058,7 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 3,
-            points: 20,
+            points: 5,
             chassis: "Hope",
             upgrades: [
                 "Attack Speed (BoY)",
@@ -12073,7 +12076,7 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 5,
-            points: 20,
+            points: 5,
             chassis: "Hope",
             upgrades: [
                 "Attack Speed (BoY)",
@@ -12091,8 +12094,9 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "Modified YT-1300 Light Freighter",
             skill: 6,
-            points: 20,
+            points: 7,
             charge: 4,
+            chassis: "Solo",
             upgrades: [
                 "Chewbacca (BoY)",
                 "Rigged Cargo Chute",
@@ -12101,27 +12105,32 @@ exportObj.basicCardData = () => ({
             ]
         },
         {
-            name: 'Jon "Dutch" Vander (BoY)',
+            name: '"Dutch" Vander (BoY)',
             canonical_name: '"Dutch" Vander'.canonicalize(),
-            xws: "jondutchvader-battleofyavin",
+            xws: "dutchvader-battleofyavin",
             unique: true,
             id: 560,
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
+                "Ion Cannon Turret",
+                "Adv. Proton Torpedoes",
+                "Targeting Astromech (BoY)"
             ]
         },
         {
             name: "Dex Tiree (BoY)",
+            canonical_name: 'Dex Tiree'.canonicalize(),
+            xws: "dextiree-battleofyavin",
             unique: true,
             id: 561,
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
             skill: 2,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
                 "Dorsal Turret",
@@ -12131,12 +12140,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: '"Pops" Krail (BoY)',
+            canonical_name: '"Pops" Krail'.canonicalize(),
+            xws: "popskrail-battleofyavin",
             unique: true,
             id: 562,
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
                 "Ion Cannon Turret",
@@ -12145,13 +12156,15 @@ exportObj.basicCardData = () => ({
             ]
         },
         {
-            name: "Hol Okland (BoY)",
+            name: "Hol Okand (BoY)",
+            canonical_name: 'Hol Okand'.canonicalize(),
+            xws: "holokand-battleofyavin",
             unique: true,
             id: 563,
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Hope",
             upgrades: [
                 "Dorsal Turret",
@@ -12168,7 +12181,7 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE Advanced x1",
             skill: 6,
-            points: 20,
+            points: 6,
             force: 3,
             keyword: ["Dark Side", "Sith"],
             ship_override: {
@@ -12182,12 +12195,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: '"Backstabber" (BoY)',
+            canonical_name: '"Backstabber"'.canonicalize(),
+            xws: "dextiree-battleofyavin",
             unique: true,
             id: 565,
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 5,
-            points: 20,
+            points: 4,
             ship_override: {
                 hull: 4
             },
@@ -12206,7 +12221,7 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 5,
-            points: 20,
+            points: 3,
             ship_override: {
                 hull: 4
             },
@@ -12217,12 +12232,13 @@ exportObj.basicCardData = () => ({
         },
         {
             name: '"Dark Curse" (BoY)',
+            xws: "darkcurse-battleofyavin",
             unique: true,
             id: 567,
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 6,
-            points: 20,
+            points: 4,
             ship_override: {
                 hull: 4
             },
@@ -12242,7 +12258,7 @@ exportObj.basicCardData = () => ({
             skill: 1,
             charge: 1,
             recurring: 1,
-            points: 20,
+            points: 3,
             ship_override: {
                 hull: 4
             },
@@ -12260,7 +12276,7 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/in Interceptor",
             skill: 4,
-            points: 20,
+            points: 6,
             charge: 2,
             recurring: 1,
             chassis: "Sensitive Controls",
@@ -12274,12 +12290,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Sigma 4 (BoY)",
+            canonical_name: 'Sigma 4'.canonicalize(),
+            xws: "sigma4-battleofyavin",
             unique: true,
             id: 570,
             faction: "Galactic Empire",
             ship: "TIE/in Interceptor",
             skill: 4,
-            points: 20,
+            points: 4,
             charge: 2,
             chassis: "Sensitive Controls",
             ship_override: {
@@ -12292,12 +12310,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Sigma 5 (BoY)",
+            canonical_name: 'Sigma 5'.canonicalize(),
+            xws: "sigma5-battleofyavin",
             unique: true,
             id: 571,
             faction: "Galactic Empire",
             ship: "TIE/in Interceptor",
             skill: 4,
-            points: 20,
+            points: 4,
             charge: 2,
             chassis: "Sensitive Controls",
             ship_override: {
@@ -12310,12 +12330,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Sigma 6 (BoY)",
+            canonical_name: 'Sigma 6'.canonicalize(),
+            xws: "sigma6-battleofyavin",
             unique: true,
             id: 572,
             faction: "Galactic Empire",
             ship: "TIE/in Interceptor",
             skill: 4,
-            points: 20,
+            points: 4,
             charge: 2,
             chassis: "Sensitive Controls",
             ship_override: {
@@ -12328,12 +12350,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Sigma 7 (BoY)",
+            canonical_name: 'Sigma 7'.canonicalize(),
+            xws: "sigma7-battleofyavin",
             unique: true,
             id: 573,
             faction: "Galactic Empire",
             ship: "TIE/in Interceptor",
             skill: 4,
-            points: 20,
+            points: 4,
             charge: 2,
             chassis: "Sensitive Controls",
             ship_override: {
@@ -12353,12 +12377,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Anakin Skywalker (SoC)",
+            canonical_name: 'Anakin Skywalker'.canonicalize(),
+            xws: "anakinskywalker-siegeofcoruscant",
             unique: true,
             id: 574,
             faction: "Galactic Republic",
             ship: "Eta-2 Actis",
             skill: 6,
-            points: 20,
+            points: 5,
             force: 3,
             chassis: "Intuitive Controls",
             keyword: ["Dark Side"],
@@ -12370,25 +12396,32 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Obi-Wan Kenobi (SoC)",
+            canonical_name: 'Obi-Wan Kenobi'.canonicalize(),
+            xws: "obiwankenobi-siegeofcoruscant",
             unique: true,
             id: 575,
             faction: "Galactic Republic",
             ship: "Eta-2 Actis",
             skill: 5,
-            points: 20,
+            points: 4,
             force: 3,
             chassis: "Intuitive Controls",
             upgrades: [
+                "Patience",
+                "Ancillary Ion Weapons (SoC)",
+                "R4-P17 (SoC)"
             ]
         },
         {
             name: "Shaak Ti (SoC)",
+            canonical_name: 'Shaak Ti'.canonicalize(),
+            xws: "shaakti-siegeofcoruscant",
             unique: true,
             id: 576,
             faction: "Galactic Republic",
             ship: "Eta-2 Actis",
             skill: 4,
-            points: 20,
+            points: 4,
             force: 2,
             chassis: "Intuitive Controls",
             upgrades: [
@@ -12400,84 +12433,98 @@ exportObj.basicCardData = () => ({
         },
         {
             name: '"Odd Ball" (SoC)',
+            canonical_name: 'Odd Ball'.canonicalize(),
+            xws: "oddball-siegeofcoruscant",
             unique: true,
             id: 577,
             faction: "Galactic Republic",
             ship: "ARC-170 Starfighter",
             skill: 5,
-            points: 20,
+            points: 5,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Wolffe" (SoC)',
+            canonical_name: 'Wolffe'.canonicalize(),
+            xws: "wolffe-siegeofcoruscant",
             unique: true,
             id: 578,
             faction: "Galactic Republic",
             ship: "ARC-170 Starfighter",
             skill: 4,
-            points: 20,
+            points: 4,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Jag" (SoC)',
+            canonical_name: 'Jag'.canonicalize(),
+            xws: "jag-siegeofcoruscant",
             unique: true,
             id: 579,
             faction: "Galactic Republic",
             ship: "ARC-170 Starfighter",
             skill: 3,
-            points: 20,
+            points: 4,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Contrail" (SoC)',
+            canonical_name: 'Contrail'.canonicalize(),
+            xws: "contrail-siegeofcoruscant",
             unique: true,
             id: 580,
             faction: "Galactic Republic",
             ship: "Nimbus-class V-wing",
             skill: 5,
-            points: 20,
+            points: 3,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Klick" (SoC)',
+            canonical_name: 'Klick'.canonicalize(),
+            xws: "klick-siegeofcoruscant",
             unique: true,
             id: 581,
             faction: "Galactic Republic",
             ship: "Nimbus-class V-wing",
             skill: 4,
-            points: 20,
+            points: 3,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Kickback" (SoC)',
+            canonical_name: 'Kickback'.canonicalize(),
+            xws: "kickback-siegeofcoruscant",
             unique: true,
             id: 582,
             faction: "Galactic Republic",
             ship: "V-19 Torrent Starfighter",
             skill: 4,
-            points: 20,
+            points: 3,
             chassis: "Born for This",
             upgrades: [
             ]
         },
         {
             name: '"Axe" (SoC)',
+            canonical_name: 'Axe'.canonicalize(),
+            xws: "axe-siegeofcoruscant",
             unique: true,
             id: 583,
             faction: "Galactic Republic",
             ship: "V-19 Torrent Starfighter",
             skill: 3,
-            points: 20,
+            points: 4,
             chassis: "Born for This",
             upgrades: [
                 "Deadeye Shot",
@@ -12486,12 +12533,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Count Dooku (SoC)",
+            canonical_name: 'Count Dooku'.canonicalize(),
+            xws: "countdooku-siegeofcoruscant",
             unique: true,
             id: 584,
             faction: "Separatist Alliance",
             ship: "Sith Infiltrator",
             skill: 3,
-            points: 20,
+            points: 6,
             force: 3,
             keyword: ["Dark Side"],
             upgrades: [
@@ -12502,12 +12551,14 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "DBS-32C (SoC)",
+            canonical_name: 'DBS-32C'.canonicalize(),
+            xws: "dbs32c-siegeofcoruscant",
             unique: true,
             id: 585,
             faction: "Separatist Alliance",
             ship: "Hyena-class Droid Bomber",
             skill: 3,
-            points: 20,
+            points: 3,
             chassis: "Networked Calculations",
             ship_override: {
                 actions: [
@@ -12526,18 +12577,22 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "DBS-404 (SoC)",
+            canonical_name: 'DBS-404'.canonicalize(),
+            xws: "dbs404-siegeofcoruscant",
             unique: true,
             id: 586,
             faction: "Separatist Alliance",
             ship: "Hyena-class Droid Bomber",
             skill: 4,
-            points: 20,
+            points: 3,
             chassis: "Networked Calculations",
             upgrades: [
             ]
         },
         {
             name: "Baktoid Prototype (SoC)",
+            canonical_name: 'Baktoid Prototype'.canonicalize(),
+            xws: "baktoidprototype-siegeofcoruscant",
             id: 587,
             faction: "Separatist Alliance",
             ship: "Hyena-class Droid Bomber",
@@ -12549,24 +12604,28 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "DIS-347 (SoC)",
+            canonical_name: 'DIS-347'.canonicalize(),
+            xws: "dis347-siegeofcoruscant",
             unique: true,
             id: 588,
             faction: "Separatist Alliance",
             ship: "Droid Tri-fighter",
             skill: 3,
-            points: 20,
+            points: 4,
             chassis: "Networked Calculations",
             upgrades: [
             ]
         },
         {
             name: "DIS-T81 (SoC)",
+            canonical_name: 'DIS-T81'.canonicalize(),
+            xws: "dist81-siegeofcoruscant",
             unique: true,
             id: 589,
             faction: "Separatist Alliance",
             ship: "Droid Tri-fighter",
             skill: 4,
-            points: 20,
+            points: 5,
             chassis: "Networked Calculations",
             upgrades: [
                 "Outmaneuver",
@@ -12576,48 +12635,524 @@ exportObj.basicCardData = () => ({
         },
         {
             name: "Phlac-Arphocc Prototype (SoC)",
+            canonical_name: 'Phlac-Arphocc Prototype'.canonicalize(),
+            xws: "phlacarphoccprototype-siegeofcoruscant",
             id: 590,
             faction: "Separatist Alliance",
             ship: "Droid Tri-fighter",
             skill: 1,
-            points: 20,
+            points: 4,
             chassis: "Networked Calculations",
             upgrades: [
             ]
         },
         {
             name: "DFS-081 (SoC)",
+            canonical_name: 'DFS-081'.canonicalize(),
+            xws: "dfs081-siegeofcoruscant",
             unique: true,
             id: 591,
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 3,
-            points: 20,
+            points: 2,
             chassis: "Networked Calculations",
             upgrades: [
             ]
         },
         {
             name: "DFS-311 (SoC)",
+            canonical_name: 'DFS-311'.canonicalize(),
+            xws: "dfs311-siegeofcoruscant",
             unique: true,
             id: 592,
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 1,
-            points: 20,
+            points: 3,
             chassis: "Networked Calculations",
             upgrades: [
             ]
         },
         {
             name: "Haor Chall Prototype (SoC)",
+            canonical_name: 'Haor Chall Prototype'.canonicalize(),
+            xws: "haorchallprototype-siegeofcoruscant",
             id: 593,
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 1,
-            points: 20,
+            points: 2,
             chassis: "Networked Calculations",
             upgrades: [
+            ]
+        },
+        {
+            name: "Corran Horn (X-Wing)",
+            id: 594,
+            unique: true,
+            xws: "corranhorn-t65xwing",
+            faction: "Rebel Alliance",
+            ship: "T-65 X-wing",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Wes Janson",
+            id: 595,
+            unique: true,
+            faction: "Rebel Alliance",
+            ship: "T-65 X-wing",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Tycho Celchu",
+            id: 596,
+            unique: true,
+            faction: "Rebel Alliance",
+            ship: "RZ-1 A-wing",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Keo Venzee",
+            id: 597,
+            unique: true,
+            faction: "Rebel Alliance",
+            ship: "RZ-1 A-wing",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: '"Pops" Krail',
+            id: 598,
+            unique: true,
+            faction: "Rebel Alliance",
+            ship: "BTL-A4 Y-wing",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Flight Leader Ubbel",
+            id: 599,
+            unique: true,
+            faction: "Galactic Empire",
+            ship: "TIE/rb Heavy",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Juno Eclipse",
+            id: 600,
+            unique: true,
+            faction: "Galactic Empire",
+            ship: "TIE Advanced x1",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Second Sister",
+            id: 601,
+            unique: true,
+            faction: "Galactic Empire",
+            ship: "TIE/in Interceptor",
+            skill: 4,
+            force: 2,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Magna Tolvan",
+            id: 602,
+            unique: true,
+            faction: "Galactic Empire",
+            ship: "TIE/ln Fighter",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Yrica Quell",
+            id: 603,
+            unique: true,
+            faction: "Galactic Empire",
+            ship: "TIE/ln Fighter",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Poe Dameron (YT-1300)",
+            canonical_name: 'Poe Dameron'.canonicalize(),
+            xws: "poedameron-scavengedyt1300",
+            id: 604,
+            unique: true,
+            faction: "Resistance",
+            ship: "Scavenged YT-1300",
+            skill: 6,
+            charge: 2,
+            recurring: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Lando Calrissian (Resistance)",
+            xws: "landocalrissian-scavengedyt1300",
+            id: 605,
+            unique: true,
+            faction: "Resistance",
+            ship: "Scavenged YT-1300",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Venisa Doza",
+            id: 606,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-wing",
+            skill: 4,
+            points: 20,
+            slots: [
+                "Modification",
+                "HardpointShip"
+            ]
+        },
+        {
+            name: "Zay Versio",
+            id: 607,
+            unique: true,
+            faction: "Resistance",
+            ship: "T-70 X-wing",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification",
+                "HardpointShip"
+            ]
+        },
+        {
+            name: "Taka Jamoreesa",
+            id: 608,
+            unique: true,
+            faction: "Resistance",
+            ship: "Resistance Transport",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Hondo Ohnaka",
+            id: 609,
+            unique: true,
+            faction: "Scum and Villainy",
+            ship: "Firespray-class Patrol Craft",
+            skill: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Tor Phun",
+            id: 610,
+            unique: true,
+            faction: "Scum and Villainy",
+            ship: "Fang Fighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Durge",
+            id: 611,
+            unique: true,
+            faction: "Scum and Villainy",
+            ship: "Rogue-class Starfighter",
+            skill: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Doctor Aphra",
+            id: 612,
+            unique: true,
+            faction: "Scum and Villainy",
+            ship: "YV-666 Light Freighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Lapin",
+            id: 613,
+            unique: true,
+            faction: "Scum and Villainy",
+            ship: "Modified TIE/ln Fighter",
+            skill: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Volan Das",
+            id: 614,
+            unique: true,
+            faction: "Separatist Alliance",
+            ship: "Droid Tri-fighter",
+            skill: 5,
+            points: 20,
+            chassis: "Modified for Organics",
+            slots: [
+                "Modification"
+            ],
+            ship_override: {
+                actions: [
+                    "Focus",
+                    "Evade",
+                    "Lock",
+                    "Barrel Roll",
+                    "R-> Evade",
+                    "Boost",
+                    "R-> Focus"
+                ]
+            }
+        },
+        {
+            name: "Aurra Sing",
+            id: 615,
+            unique: true,
+            faction: "Separatist Alliance",
+            ship: "Firespray-class Patrol Craft",
+            skill: 4,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Durge (Separatist)",
+            xws: "durge-separatistalliance",
+            id: 616,
+            unique: true,
+            faction: "Separatist Alliance",
+            ship: "Rogue-class Starfighter",
+            skill: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "The Iron Assembler",
+            id: 617,
+            unique: true,
+            faction: "Separatist Alliance",
+            ship: "Vulture-class Droid Fighter",
+            skill: 1,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Kelrodo-Ai Holdout",
+            id: 618,
+            faction: "Separatist Alliance",
+            ship: "Droid Tri-fighter",
+            skill: 1,
+            points: 20,
+            chassis: "Modified for Organics",
+            slots: [
+                "Modification"
+            ],
+            ship_override: {
+                actions: [
+                    "Focus",
+                    "Evade",
+                    "Lock",
+                    "Barrel Roll",
+                    "R-> Evade",
+                    "Boost",
+                    "R-> Focus"
+                ]
+            }
+        },
+        {
+            name: "Adi Gallia",
+            id: 619,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "Delta-7 Aethersprite",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Adi Gallia (Delta-7B)",
+            canonical_name: 'Adi Gallia'.canonicalize(),
+            xws: "adigallia-delta7baethersprite",
+            id: 620,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "Delta-7b Aethersprite",
+            skill: 5,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: '"Sicko"',
+            id: 621,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "LAAT/i Gunship",
+            skill: 2,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Kit Fisto",
+            id: 622,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "Eta-2 Actis",
+            skill: 4,
+            force: 2,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: '"Slammer"',
+            id: 623,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "V-19 Torrent Starfighter",
+            skill: 4,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Gavyn Sykes",
+            id: 624,
+            unique: true,
+            faction: "Galactic Republic",
+            ship: "Naboo Royal N-1 Starfighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Lieutenant Galek",
+            id: 625,
+            unique: true,
+            faction: "First Order",
+            ship: "TIE/fo Fighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Jul Jerjerrod",
+            id: 626,
+            unique: true,
+            faction: "First Order",
+            ship: "TIE/se Bomber",
+            skill: 4,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "DT-798",
+            id: 627,
+            unique: true,
+            faction: "First Order",
+            ship: "TIE/fo Fighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Lin Gaava",
+            id: 628,
+            unique: true,
+            faction: "First Order",
+            ship: "TIE/fo Fighter",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
+            ]
+        },
+        {
+            name: "Agent Tierny",
+            id: 629,
+            unique: true,
+            faction: "First Order",
+            ship: "Xi-class Light Shuttle",
+            skill: 3,
+            points: 20,
+            slots: [
+                "Modification"
             ]
         }
     ],
@@ -12660,13 +13195,13 @@ exportObj.basicCardData = () => ({
             name: "R3 Astromech",
             id: 4,
             slot: "Astromech",
-            points: 3
+            points: 4
         },
         {
             name: "R4 Astromech",
             id: 5,
             slot: "Astromech",
-            points: 2,
+            points: 3,
             restrictions: [
                 ["Base", "Small"]
             ],
@@ -13317,7 +13852,7 @@ exportObj.basicCardData = () => ({
             name: "Proximity Mines",
             id: 70,
             slot: "Device",
-            points: 6,
+            points: 8,
             charge: 2,
             applies_condition: 'Proximity Mine'.canonicalize()
         },
@@ -15883,7 +16418,7 @@ exportObj.basicCardData = () => ({
             id: 316,
             slot: "Device",
             charge: 1,
-            points: 5,
+            points: 7,
             applies_condition: 'Cluster Mine'.canonicalize()
         },
         {
@@ -16428,6 +16963,7 @@ exportObj.basicCardData = () => ({
             points: 0,
             standardized: true,
             slot: "Modification",
+            chassis: "Independent Calculations",
             restrictions: [
                 ["Keyword", "Networked Calculations"]
             ]
@@ -16468,12 +17004,14 @@ exportObj.basicCardData = () => ({
             points: 0,
             slot: "Configuration",
             standardized: true,
+            chassis: "Vectored Cannons",
             restrictions: [
                 ["Keyword", "Vectored Thrusters"]
             ],
             modifier_func(stats) {
-                return stats.chassis = "Vectored Cannons";
-            }
+                stats.attackt = stats.attack;
+                return stats.attack = 0;
+            } 
         },
         {
             name: "B6 Blade Wing Prototype",
@@ -16498,6 +17036,7 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/d Defender",
             standardized: true,
+            chassis: "Advanced Fire Control",
             modifier_func(stats) {
                 if (stats.maneuvers[1] != null) {
                     return (() => {
@@ -16526,12 +17065,10 @@ exportObj.basicCardData = () => ({
             points: 0,
             slot: "Configuration",
             standardized: true,
+            chassis: "Sensitive Controls",
             restrictions: [
                 ["Keyword", "Autothrusters"]
-            ],
-            modifier_func(stats) {
-                return stats.chassis = "Sensitive Controls";
-            }
+            ]
         },
         {
             name: "Cutthroat",
@@ -16964,9 +17501,10 @@ exportObj.basicCardData = () => ({
             name: "Wartime Loadout",
             id: 409,
             slot: "Configuration",
-            points: 10,
+            points: 5,
             ship: "BTA-NR2 Y-wing",
             standardized: true,
+            chassis: "Devastating Barrage",
             restrictions: [
                 ["Slot", "Modification"]
             ],
@@ -16977,8 +17515,7 @@ exportObj.basicCardData = () => ({
             modifier_func(stats) {
                 stats.actions.push('Lock');
                 stats.actions.push('Reload');
-                stats.shields += 2;
-                return stats.chassis = "Devastating Barrage";
+                return stats.shields += 2;
             },
             confersAddons: [
                 {
@@ -17089,7 +17626,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Electro-Chaff Missiles",
             id: 420,
-            points: 4,
+            points: 9,
             slot: "Missile",
             max_per_squad: 2,
             charge: 1,
@@ -17516,7 +18053,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Notorious",
             id: 455,
-            points: 2,
+            points: 5,
             charge: 2,
             recurring: 1,
             slot: "Talent",
@@ -17786,7 +18323,7 @@ exportObj.basicCardData = () => ({
             standard: true
         },
         {
-            name: "Unstable Engines (BoY)",
+            name: "Unstable Sublight Engines (BoY)",
             id: 476,
             slot: "Modification",
             standard: true
@@ -17892,6 +18429,19 @@ exportObj.basicCardData = () => ({
             standard: true,
             charge: 2,
             slot: "Configuration"
+        },
+        {
+            name: "R4-P17 (SoC)",
+            id: 490,
+            standard: true,
+            charge: 2,
+            slot: "Astromech"
+        },
+        {
+            name: "Targeting Astromech (BoY)",
+            id: 491,
+            standard: true,
+            slot: "Astromech"
         }
     ],
 
@@ -18262,6 +18812,37 @@ exportObj.basicCardData = () => ({
         {
             name: "Born for This",
             id: 46
+        },
+        {
+            name: "Modified for Organics",
+            id: 47,
+            modifier_func(stats) {
+                if (stats.maneuvers[2] != null) {
+                    return (() => {
+                        const result = [];
+                        for (let turn = 0; turn < 5; turn++) {
+                            if ((turn === 1) || (turn === 3)) {
+                                if (stats.maneuvers[2][turn] > 1) {
+                                    stats.maneuvers[2][turn]--;
+                                }
+                                if (stats.maneuvers[3][turn] > 1) {
+                                    stats.maneuvers[3][turn]--;
+                                }
+                            }
+                            if (((turn === 0) || (turn === 4)) && (stats.maneuvers[3][turn] < 3)) {
+                                result.push(stats.maneuvers[3][turn]++);
+                            } else {
+                                result.push(undefined);
+                            }
+                        }
+                        return result;
+                    })();
+                }
+            }
+        },
+        {
+            name: "Solo",
+            id: 48
         }
     ],
 
@@ -26163,8 +26744,6 @@ exportObj.setupCommonCardData = function(basic_cards) {
     return exportObj.expansions = Object.keys(exportObj.expansions).sort();
 };
 
-
-
 exportObj.setupTranslationCardData = function(pilot_translations, upgrade_translations, condition_translations, chassis_translations) {
     let e, field, translation, translations;
     for (let upgrade_name in upgrade_translations) {
@@ -26558,3 +27137,133 @@ exportObj.standardCheckBrowser = function(data, faction, type) {
         return !Array.from(exportObj.standardUpgradeExclusions).includes(data.name);
     }
 };
+
+//not functional yet
+String.prototype.serialtoxws = function() {
+    let desired_points, left, ship, upgrade, version, xwsship;
+    const list = this.getParameterByName('d');
+    const re = Array.from(list).includes("Z") ? /^v(\d+)Z(.*)/ : /^v(\d+)!(.*)/;
+    const matches = re.exec(list);
+    if ((matches != null) && (version > 7) && (serialized_ships == null)) {
+        var game_type_abbrev, serialized_ships;
+        version = parseInt(matches[1]);
+        const ship_splitter = 'Y';
+        const [g, p, s] = matches[2].split('Z');
+        [ game_type_abbrev, desired_points, serialized_ships ] = [g, parseInt(p), s];
+
+        const ships_with_unmet_dependencies = [];
+        if (serialized_ships.length != null) {
+            for (let serialized_ship of Array.from(serialized_ships.split(ship_splitter))) {
+                if (serialized_ship !== '') {
+                    const new_ship = this.addShip();
+                    if ((!new_ship.fromSerialized(version, serialized_ship)) || !new_ship.pilot) { // also check, if the pilot has been set (the pilot himself was not invalid)
+                        ships_with_unmet_dependencies.push([new_ship, serialized_ship]);
+                    }
+                }
+            }
+            for (ship of Array.from(ships_with_unmet_dependencies)) {
+                // 2nd attempt to load ships with unmet dependencies.
+                if (!ship[0].pilot) {
+                    // create ship, if the ship was so invalid, that it in fact decided to not exist
+                    ship[0] = this.addShip();
+                }
+                ship[0].fromSerialized(version, ship[1]);
+            }
+        }
+    }
+
+    this.suppress_automatic_new_ship = false;
+    // Finally, the unassigned ship
+
+    const pilot_splitter = 'X';
+    const upgrade_splitter = 'W';
+    let [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split(pilot_splitter);
+    upgrade_ids = upgrade_ids.split(upgrade_splitter);
+    // set the pilot
+    this.setPilotById(parseInt(pilot_id), true);
+    // make sure the pilot is valid 
+    
+    for (let _ = 1; _ < 3; _++) { // try adding each upgrade a few times, as the required slots might be added in by titles etc and are not yet available on the first try
+        upgradeloop: //; 
+        for (let start = upgrade_ids.length - 1, i = start, end = -1, asc = start <= end; asc ? i < end : i > end; asc ? i++ : i--) {
+            var upgrade_selection;
+            const upgrade_id = upgrade_ids[i];
+            upgrade = exportObj.upgradesById[upgrade_id];
+            if ((upgrade == null)) { 
+                upgrade_ids.splice(i,1); // Remove unknown or empty ID
+                if (upgrade_id !== "") {
+                    console.log("Unknown upgrade id " + upgrade_id + " could not be added. Please report that error");
+                    const everythingadded = false;
+                }
+                continue;
+            }
+            for (upgrade_selection of Array.from(this.upgrades)) {
+                if (__guard__(upgrade_selection != null ? upgrade_selection.data : undefined, x => x.name) === upgrade.name) {
+                    // for some reason the correct upgrade already was equipped (e.g. an earlier ship alread had a standardized that was added on creation here)
+                    upgrade_ids.splice(i,1); // was already added successfully, remove from list
+                    continue upgradeloop;
+                }
+            }
+
+            for (upgrade_selection of Array.from(this.upgrades)) {
+                if (exportObj.slotsMatching(upgrade.slot, upgrade_selection.slot) && !upgrade_selection.isOccupied()) {
+                    upgrade_selection.setById(upgrade_id);
+                    if (upgrade_selection.lastSetValid) {
+                        upgrade_ids.splice(i,1); // added successfully, remove from list
+                    }
+                    break;    
+                }
+            }
+        }
+    }
+
+    // create the xws json now that ships/pilots have been made
+    const xws = {
+        description: "List generated by yasb.app URL",
+        faction: this.getParameterByName('f'),
+        name: (left = this.getParameterByName('sn')) != null ? left : "",
+        pilots: [],
+        points: desired_points,
+        vendor: {
+            yasb: {
+                builder: 'YASB - X-Wing 2.5',
+                builder_url: window.location.href.split('?')[0],
+                link: this.getPermaLink()
+            }
+        },
+        version: '06/15/2022'
+    };
+        // there is no point to have this version identifier, if we never actually increase it, right?
+
+    // create xws entry
+    for (ship of Array.from(this.ships)) {
+        if (ship.pilot != null) {
+            xwsship = {
+                id: (ship.pilot.xws != null ? ship.pilot.xws : ship.pilot.canonical_name),
+                name: (ship.pilot.xws != null ? ship.pilot.xws : ship.pilot.canonical_name), 
+                points: ship.getPoints(),
+                ship: ship.data.name.canonicalize()
+            };
+
+            const upgrade_obj = {};
+
+            for (upgrade of Array.from(ship.upgrades)) {
+                if ((upgrade != null ? upgrade.data : undefined) != null) {
+                    var name;
+                    upgrade.toXWS; 
+                    (upgrade_obj[name = exportObj.toXWSUpgrade[this.data.slot] != null ? exportObj.toXWSUpgrade[this.data.slot] : this.data.slot.canonicalize()] != null ? upgrade_obj[name] : (upgrade_obj[name] = [])).push((this.data.xws != null ? this.data.xws : this.data.canonical_name));
+                }
+            }
+
+            if (Object.keys(upgrade_obj).length > 0) {
+                xwsship.upgrades = upgrade_obj;
+            }
+
+            xwsship.pilots.push = xws;
+        }
+    }
+    return xwsship;
+};
+function __guard__(value, transform) {
+  return (typeof value !== 'undefined' && value !== null) ? transform(value) : undefined;
+}
