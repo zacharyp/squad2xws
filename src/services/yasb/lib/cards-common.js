@@ -12107,7 +12107,7 @@ exportObj.basicCardData = () => ({
         {
             name: '"Dutch" Vander (BoY)',
             canonical_name: '"Dutch" Vander'.canonicalize(),
-            xws: "dutchvader-battleofyavin",
+            xws: "dutchvander-battleofyavin",
             unique: true,
             id: 560,
             faction: "Rebel Alliance",
@@ -12196,7 +12196,7 @@ exportObj.basicCardData = () => ({
         {
             name: '"Backstabber" (BoY)',
             canonical_name: '"Backstabber"'.canonicalize(),
-            xws: "dextiree-battleofyavin",
+            xws: "backstabber-battleofyavin",
             unique: true,
             id: 565,
             faction: "Galactic Empire",
@@ -27148,8 +27148,8 @@ String.prototype.serialtoxws = function() {
         var game_type_abbrev, serialized_ships;
         version = parseInt(matches[1]);
         const ship_splitter = 'Y';
-        const [g, p, s] = matches[2].split('Z');
-        [ game_type_abbrev, desired_points, serialized_ships ] = [g, parseInt(p), s];
+        const [g, p, s] = Array.from(matches[2].split('Z'));
+        [ game_type_abbrev, desired_points, serialized_ships ] = Array.from([g, parseInt(p), s]);
 
         const ships_with_unmet_dependencies = [];
         if (serialized_ships.length != null) {
@@ -27177,7 +27177,7 @@ String.prototype.serialtoxws = function() {
 
     const pilot_splitter = 'X';
     const upgrade_splitter = 'W';
-    let [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split(pilot_splitter);
+    let [ pilot_id, upgrade_ids, conferredaddon_pairs ] = Array.from(serialized.split(pilot_splitter));
     upgrade_ids = upgrade_ids.split(upgrade_splitter);
     // set the pilot
     this.setPilotById(parseInt(pilot_id), true);
