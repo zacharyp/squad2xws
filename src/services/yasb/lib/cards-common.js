@@ -12443,6 +12443,9 @@ exportObj.basicCardData = () => ({
             points: 5,
             chassis: "Born for This",
             upgrades: [
+                "Selfless",
+                "Veteran Tail Gunner",
+                "R4-P Astromech"
             ]
         },
         {
@@ -12454,9 +12457,13 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             ship: "ARC-170 Starfighter",
             skill: 4,
+            charge: 1,
             points: 4,
             chassis: "Born for This",
             upgrades: [
+                "Wolfpack (SoC)",
+                "Veteran Tail Gunner",
+                "Q7 Astromech"
             ]
         },
         {
@@ -12471,6 +12478,9 @@ exportObj.basicCardData = () => ({
             points: 4,
             chassis: "Born for This",
             upgrades: [
+                "Veteran Tail Gunner",
+                "R4-P Astromech",
+                "Synchronized Console"
             ]
         },
         {
@@ -12485,6 +12495,10 @@ exportObj.basicCardData = () => ({
             points: 3,
             chassis: "Born for This",
             upgrades: [
+                "Ion Limiter Override",
+                "Precise Astromech (BoY)",
+                "Ion Bombs",
+                'Alpha-3B "Besh"'
             ]
         },
         {
@@ -12497,8 +12511,13 @@ exportObj.basicCardData = () => ({
             ship: "Nimbus-class V-wing",
             skill: 4,
             points: 3,
+            charge: 1,
+            recurring: 1,
             chassis: "Born for This",
             upgrades: [
+                "R3 Astromech",
+                "Precision Ion Engines",
+                'Alpha-3E "Esk"'
             ]
         },
         {
@@ -12513,6 +12532,8 @@ exportObj.basicCardData = () => ({
             points: 3,
             chassis: "Born for This",
             upgrades: [
+                "Diamond-Boron Missiles",
+                "Munitions Failsafe"
             ]
         },
         {
@@ -12696,6 +12717,7 @@ exportObj.basicCardData = () => ({
             ship: "T-65 X-wing",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12707,7 +12729,10 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 5,
+            charge: 1,
+            recurring: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12720,6 +12745,7 @@ exportObj.basicCardData = () => ({
             ship: "RZ-1 A-wing",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12730,8 +12756,11 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Rebel Alliance",
             ship: "RZ-1 A-wing",
-            skill: 5,
+            skill: 3,
             points: 20,
+            force: 1,
+            forcerecurring: 0,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12742,8 +12771,9 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
-            skill: 5,
+            skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12756,6 +12786,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/rb Heavy",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12768,6 +12799,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE Advanced x1",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12781,6 +12813,7 @@ exportObj.basicCardData = () => ({
             skill: 4,
             force: 2,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12791,8 +12824,9 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
-            skill: 5,
+            skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12803,8 +12837,9 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
-            skill: 5,
+            skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12821,6 +12856,7 @@ exportObj.basicCardData = () => ({
             charge: 2,
             recurring: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12834,6 +12870,7 @@ exportObj.basicCardData = () => ({
             ship: "Scavenged YT-1300",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12846,6 +12883,7 @@ exportObj.basicCardData = () => ({
             ship: "T-70 X-wing",
             skill: 4,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification",
                 "HardpointShip"
@@ -12859,6 +12897,7 @@ exportObj.basicCardData = () => ({
             ship: "T-70 X-wing",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification",
                 "HardpointShip"
@@ -12872,6 +12911,7 @@ exportObj.basicCardData = () => ({
             ship: "Resistance Transport",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12884,6 +12924,7 @@ exportObj.basicCardData = () => ({
             ship: "Firespray-class Patrol Craft",
             skill: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12896,6 +12937,7 @@ exportObj.basicCardData = () => ({
             ship: "Fang Fighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12908,6 +12950,7 @@ exportObj.basicCardData = () => ({
             ship: "Rogue-class Starfighter",
             skill: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12920,6 +12963,7 @@ exportObj.basicCardData = () => ({
             ship: "YV-666 Light Freighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12932,6 +12976,7 @@ exportObj.basicCardData = () => ({
             ship: "Modified TIE/ln Fighter",
             skill: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12944,6 +12989,7 @@ exportObj.basicCardData = () => ({
             ship: "Droid Tri-fighter",
             skill: 5,
             points: 20,
+            loadout: 99,
             chassis: "Modified for Organics",
             slots: [
                 "Modification"
@@ -12968,6 +13014,7 @@ exportObj.basicCardData = () => ({
             ship: "Firespray-class Patrol Craft",
             skill: 4,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12981,6 +13028,7 @@ exportObj.basicCardData = () => ({
             ship: "Rogue-class Starfighter",
             skill: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -12993,6 +13041,7 @@ exportObj.basicCardData = () => ({
             ship: "Vulture-class Droid Fighter",
             skill: 1,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13004,6 +13053,7 @@ exportObj.basicCardData = () => ({
             ship: "Droid Tri-fighter",
             skill: 1,
             points: 20,
+            loadout: 99,
             chassis: "Modified for Organics",
             slots: [
                 "Modification"
@@ -13028,6 +13078,7 @@ exportObj.basicCardData = () => ({
             ship: "Delta-7 Aethersprite",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13042,6 +13093,7 @@ exportObj.basicCardData = () => ({
             ship: "Delta-7b Aethersprite",
             skill: 5,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13054,6 +13106,7 @@ exportObj.basicCardData = () => ({
             ship: "LAAT/i Gunship",
             skill: 2,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13067,6 +13120,7 @@ exportObj.basicCardData = () => ({
             skill: 4,
             force: 2,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13079,6 +13133,7 @@ exportObj.basicCardData = () => ({
             ship: "V-19 Torrent Starfighter",
             skill: 4,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13091,6 +13146,7 @@ exportObj.basicCardData = () => ({
             ship: "Naboo Royal N-1 Starfighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13103,6 +13159,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/fo Fighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13115,6 +13172,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/se Bomber",
             skill: 4,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13127,6 +13185,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/fo Fighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13139,6 +13198,7 @@ exportObj.basicCardData = () => ({
             ship: "TIE/fo Fighter",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -13151,6 +13211,7 @@ exportObj.basicCardData = () => ({
             ship: "Xi-class Light Shuttle",
             skill: 3,
             points: 20,
+            loadout: 99,
             slots: [
                 "Modification"
             ]
@@ -18442,6 +18503,14 @@ exportObj.basicCardData = () => ({
             id: 491,
             standard: true,
             slot: "Astromech"
+        },
+        {
+            name: "Wolfpack (SoC)",
+            canonical_name: 'Wolfpack'.canonicalize(),
+            id: 492,
+            unique: true,
+            standard: true,
+            slot: "Crew"
         }
     ],
 
