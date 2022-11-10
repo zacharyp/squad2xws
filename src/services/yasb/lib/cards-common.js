@@ -12024,6 +12024,7 @@ exportObj.basicCardData = () => ({
             ship: "T-65 X-wing",
             skill: 5,
             points: 6,
+            force: 2,
             chassis: "Hope",
             upgrades: [
                 "Instinctive Aim",
@@ -12442,6 +12443,9 @@ exportObj.basicCardData = () => ({
             skill: 5,
             points: 5,
             chassis: "Born for This",
+            ship_override: {
+                shields: 4
+            },
             upgrades: [
                 "Selfless",
                 "Veteran Tail Gunner",
@@ -12514,6 +12518,9 @@ exportObj.basicCardData = () => ({
             charge: 1,
             recurring: 1,
             chassis: "Born for This",
+            ship_override: {
+                shields: 3
+            },
             upgrades: [
                 "R3 Astromech",
                 "Precision Ion Engines",
@@ -12528,9 +12535,12 @@ exportObj.basicCardData = () => ({
             id: 582,
             faction: "Galactic Republic",
             ship: "V-19 Torrent Starfighter",
-            skill: 4,
+            skill: 5,
             points: 3,
             chassis: "Born for This",
+            ship_override: {
+                hull: 6
+            },
             upgrades: [
                 "Diamond-Boron Missiles",
                 "Munitions Failsafe"
@@ -12547,6 +12557,9 @@ exportObj.basicCardData = () => ({
             skill: 3,
             points: 4,
             chassis: "Born for This",
+            ship_override: {
+                hull: 6
+            },
             upgrades: [
                 "Deadeye Shot",
                 "Barrage Rockets"
@@ -12560,7 +12573,7 @@ exportObj.basicCardData = () => ({
             id: 584,
             faction: "Separatist Alliance",
             ship: "Sith Infiltrator",
-            skill: 3,
+            skill: 5,
             points: 6,
             force: 3,
             keyword: ["Dark Side"],
@@ -12676,9 +12689,13 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 3,
+            charge: 2,
             points: 2,
             chassis: "Networked Calculations",
             upgrades: [
+                "Discord Missiles",
+                "Contingency Protocol (SoC)",
+                "Strut-Lock Override (SoC)"
             ]
         },
         {
@@ -12693,6 +12710,9 @@ exportObj.basicCardData = () => ({
             points: 3,
             chassis: "Networked Calculations",
             upgrades: [
+                "Discord Missiles",
+                "Contingency Protocol (SoC)",
+                "Strut-Lock Override (SoC)"
             ]
         },
         {
@@ -12706,6 +12726,9 @@ exportObj.basicCardData = () => ({
             points: 2,
             chassis: "Networked Calculations",
             upgrades: [
+                "Ion Missiles",
+                "Contingency Protocol (SoC)",
+                "Strut-Lock Override (SoC)"
             ]
         },
         {
@@ -12948,7 +12971,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Scum and Villainy",
             ship: "Rogue-class Starfighter",
-            skill: 1,
+            skill: 5,
             points: 20,
             loadout: 99,
             slots: [
@@ -12964,6 +12987,7 @@ exportObj.basicCardData = () => ({
             skill: 3,
             points: 20,
             loadout: 99,
+            charge: 3,
             slots: [
                 "Modification"
             ]
@@ -12974,7 +12998,7 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Scum and Villainy",
             ship: "Modified TIE/ln Fighter",
-            skill: 1,
+            skill: 2,
             points: 20,
             loadout: 99,
             slots: [
@@ -27217,8 +27241,8 @@ String.prototype.serialtoxws = function() {
         var game_type_abbrev, serialized_ships;
         version = parseInt(matches[1]);
         const ship_splitter = 'Y';
-        const [g, p, s] = Array.from(matches[2].split('Z'));
-        [ game_type_abbrev, desired_points, serialized_ships ] = Array.from([g, parseInt(p), s]);
+        const [g, p, s] = matches[2].split('Z');
+        [ game_type_abbrev, desired_points, serialized_ships ] = [g, parseInt(p), s];
 
         const ships_with_unmet_dependencies = [];
         if (serialized_ships.length != null) {
@@ -27246,7 +27270,7 @@ String.prototype.serialtoxws = function() {
 
     const pilot_splitter = 'X';
     const upgrade_splitter = 'W';
-    let [ pilot_id, upgrade_ids, conferredaddon_pairs ] = Array.from(serialized.split(pilot_splitter));
+    let [ pilot_id, upgrade_ids, conferredaddon_pairs ] = serialized.split(pilot_splitter);
     upgrade_ids = upgrade_ids.split(upgrade_splitter);
     // set the pilot
     this.setPilotById(parseInt(pilot_id), true);
