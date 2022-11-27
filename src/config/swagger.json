@@ -4,7 +4,7 @@
     "description": "REST helper endpoints for AMG X-wing squads",
     "version": "2.5.0"
   },
-  "host": "squad2xws.herokuapp.com",
+  "host": "squad2xws.objectivecat.com",
   "basePath": "",
   "schemes": ["http"],
   "produces": ["application/json"],

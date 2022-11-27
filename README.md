@@ -12,19 +12,19 @@ X-Wing Data 2 holds useful information about x-wing pilots, upgrade cards, etc: 
 
 ## YASB URL to XWS
 
-GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `squad2xws.herokuapp.com/yasb/xws`
+GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `squad2xws.objectivecat.com/yasb/xws`
 Example: `https://yasb.app/?f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
-becomes `https://squad2xws.herokuapp.com/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
+becomes `https://squad2xws.objectivecat.com/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
 
 ## Reverse YASB
 
 Post endpoint for XWS data.  Returns a valid YASB 2.5 url.
 
-POST JSON xws to `http://squad2xws.herokuapp.com/yasb/reverse`
+POST JSON xws to `http://squad2xws.objectivecat.com/yasb/reverse`
 
 ## API Documentation
 
-Located here: http://squad2xws.herokuapp.com/api-docs/#/
+Located here: http://squad2xws.objectivecat.com/api-docs/#/
 
 ### Getting started
 1. ```npm install```

@@ -11,7 +11,7 @@ export async function serializedToXWS(faction: string, serialized: string, squad
 
     const vendor = <Vendor>{
         builder: 'squad2xws',
-        builder_url: 'http://squad2xws.herokuapp.com/',
+        builder_url: 'http://squad2xws.objectivecat.com/',
         link: "https://yasb.app/?" + originalPath
     }
 
