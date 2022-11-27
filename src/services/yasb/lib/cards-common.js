@@ -6219,8 +6219,8 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "RZ-2 A-wing",
             skill: 5,
-            points: 5,
-            loadout: 16,
+            points: 4,
+            loadout: 12,
             slots: [
                 "Talent",
                 "Talent",
@@ -6237,7 +6237,7 @@ exportObj.basicCardData = () => ({
             skill: 5,
             charge: 1,
             recurring: 1,
-            points: 5,
+            points: 4,
             loadout: 12,
             slots: [
                 "Talent",
@@ -6760,7 +6760,7 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "RZ-2 A-wing",
             skill: 3,
-            points: 5,
+            points: 4,
             loadout: 11,
             slots: [
                 "Talent",
@@ -7348,7 +7348,7 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Modified TIE/ln Fighter",
             skill: 2,
-            loadout: 6,
+            loadout: 7,
             charge: 1,
             recurring: 1,
             points: 3,
@@ -8859,7 +8859,7 @@ exportObj.basicCardData = () => ({
             skill: 2,
             ship: "RZ-2 A-wing",
             points: 4,
-            loadout: 8,
+            loadout: 10,
             slots: [
                 "Talent",
                 "Missile",
@@ -9912,8 +9912,8 @@ exportObj.basicCardData = () => ({
             unique: true,
             skill: 1,
             ship: "RZ-2 A-wing",
-            points: 4,
-            loadout: 7,
+            points: 3,
+            loadout: 4,
             slots: [
                 "Talent",
                 "Missile",
@@ -9945,8 +9945,8 @@ exportObj.basicCardData = () => ({
             unique: true,
             skill: 4,
             ship: "RZ-2 A-wing",
-            points: 4,
-            loadout: 7,
+            points: 3,
+            loadout: 4,
             slots: [
                 "Talent",
                 "Missile",
@@ -9962,7 +9962,7 @@ exportObj.basicCardData = () => ({
             skill: 5,
             ship: "RZ-2 A-wing",
             points: 4,
-            loadout: 5,
+            loadout: 12,
             slots: [
                 "Talent",
                 "Talent",
@@ -12388,7 +12388,7 @@ exportObj.basicCardData = () => ({
             points: 5,
             force: 3,
             chassis: "Intuitive Controls",
-            keyword: ["Dark Side"],
+            keyword: ["Jedi","Light Side","Dark Side"],
             upgrades: [
                 "Malice",
                 "Ancillary Ion Weapons (SoC)",
@@ -12407,6 +12407,7 @@ exportObj.basicCardData = () => ({
             points: 4,
             force: 3,
             chassis: "Intuitive Controls",
+            keyword: ["Jedi","Light Side"],
             upgrades: [
                 "Patience",
                 "Ancillary Ion Weapons (SoC)",
@@ -12425,6 +12426,7 @@ exportObj.basicCardData = () => ({
             points: 4,
             force: 2,
             chassis: "Intuitive Controls",
+            keyword: ["Jedi","Light Side"],
             upgrades: [
                 "Marksmanship",
                 "Brilliant Evasion",
@@ -12593,7 +12595,6 @@ exportObj.basicCardData = () => ({
             ship: "Hyena-class Droid Bomber",
             skill: 3,
             points: 3,
-            chassis: "Networked Calculations",
             ship_override: {
                 actions: [
                     "Calculate",
@@ -12619,8 +12620,10 @@ exportObj.basicCardData = () => ({
             ship: "Hyena-class Droid Bomber",
             skill: 4,
             points: 3,
-            chassis: "Networked Calculations",
             upgrades: [
+                "Adv. Proton Torpedoes",
+                "Contingency Protocol (SoC)",
+                "Strut-Lock Override (SoC)"
             ]
         },
         {
@@ -12631,9 +12634,12 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Hyena-class Droid Bomber",
             skill: 1,
-            points: 20,
-            chassis: "Networked Calculations",
+            max_per_squad: 2,
+            points: 3,
             upgrades: [
+                "Homing Missiles",
+                "Contingency Protocol (SoC)",
+                "Strut-Lock Override (SoC)"
             ]
         },
         {
@@ -12646,8 +12652,10 @@ exportObj.basicCardData = () => ({
             ship: "Droid Tri-fighter",
             skill: 3,
             points: 4,
-            chassis: "Networked Calculations",
             upgrades: [
+                "Marksmanship",
+                "Afterburners",
+                "Contingency Protocol (SoC)"
             ]
         },
         {
@@ -12660,7 +12668,6 @@ exportObj.basicCardData = () => ({
             ship: "Droid Tri-fighter",
             skill: 4,
             points: 5,
-            chassis: "Networked Calculations",
             upgrades: [
                 "Outmaneuver",
                 "Afterburners",
@@ -12674,10 +12681,13 @@ exportObj.basicCardData = () => ({
             id: 590,
             faction: "Separatist Alliance",
             ship: "Droid Tri-fighter",
-            skill: 1,
+            skill: 5,
             points: 4,
-            chassis: "Networked Calculations",
+            max_per_squad: 2,
             upgrades: [
+                "Afterburners",
+                "Contingency Protocol (SoC)",
+                "Evasion Sequence 7 (SoC)"
             ]
         },
         {
@@ -12691,7 +12701,6 @@ exportObj.basicCardData = () => ({
             skill: 3,
             charge: 2,
             points: 2,
-            chassis: "Networked Calculations",
             upgrades: [
                 "Discord Missiles",
                 "Contingency Protocol (SoC)",
@@ -12708,7 +12717,6 @@ exportObj.basicCardData = () => ({
             ship: "Vulture-class Droid Fighter",
             skill: 1,
             points: 3,
-            chassis: "Networked Calculations",
             upgrades: [
                 "Discord Missiles",
                 "Contingency Protocol (SoC)",
@@ -12723,8 +12731,8 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 1,
+            max_per_squad: 2,
             points: 2,
-            chassis: "Networked Calculations",
             upgrades: [
                 "Ion Missiles",
                 "Contingency Protocol (SoC)",
@@ -12739,10 +12747,13 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "T-65 X-wing",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 18,
             slots: [
-                "Modification"
+                "Talent",
+                "Torpedo",
+                "Astromech",
+                "Configuration"
             ]
         },
         {
@@ -12754,10 +12765,14 @@ exportObj.basicCardData = () => ({
             skill: 5,
             charge: 1,
             recurring: 1,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 15,
             slots: [
-                "Modification"
+                "Talent",
+                "Torpedo",
+                "Astromech",
+                "Modification",
+                "Configuration"
             ]
         },
         {
@@ -12767,10 +12782,14 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "RZ-1 A-wing",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 14,
             slots: [
-                "Modification"
+                "Talent",
+                "Talent",
+                "Cannon",
+                "Missile",
+                "Configuration"
             ]
         },
         {
@@ -12780,12 +12799,14 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "RZ-1 A-wing",
             skill: 3,
-            points: 20,
+            points: 3,
+            loadout: 8,
             force: 1,
             forcerecurring: 0,
-            loadout: 99,
             slots: [
-                "Modification"
+                "Talent",
+                "Missile",
+                "Configuration"
             ]
         },
         {
@@ -12795,9 +12816,15 @@ exportObj.basicCardData = () => ({
             faction: "Rebel Alliance",
             ship: "BTL-A4 Y-wing",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 16,
             slots: [
+                "Talent",
+                "Turret",
+                "Torpedo",
+                "Astromech",
+                "Device",
+                "Missile",
                 "Modification"
             ]
         },
@@ -12808,10 +12835,16 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/rb Heavy",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 15,
             slots: [
-                "Modification"
+                "Talent",
+                "Cannon",
+                "Cannon",
+                "Gunner",
+                "Modification",
+                "Modification",
+                "Configuration"
             ]
         },
         {
@@ -12821,9 +12854,13 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE Advanced x1",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 8,
             slots: [
+                "Talent",
+                "Tech",
+                "Sensor",
+                "Missile",
                 "Modification"
             ]
         },
@@ -12835,10 +12872,15 @@ exportObj.basicCardData = () => ({
             ship: "TIE/in Interceptor",
             skill: 4,
             force: 2,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 14,
+            keyword: ["Dark Side"],
             slots: [
-                "Modification"
+                "Force",
+                "Talent",
+                "Missile",
+                "Modification",
+                "Configuration"
             ]
         },
         {
@@ -12848,9 +12890,11 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 3,
+            loadout: 10,
             slots: [
+                "Talent",
+                "Cannon",
                 "Modification"
             ]
         },
@@ -12861,9 +12905,11 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Empire",
             ship: "TIE/ln Fighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 3,
+            loadout: 9,
             slots: [
+                "Talent",
+                "Missile",
                 "Modification"
             ]
         },
@@ -12878,10 +12924,17 @@ exportObj.basicCardData = () => ({
             skill: 6,
             charge: 2,
             recurring: 1,
-            points: 20,
-            loadout: 99,
+            points: 7,
+            loadout: 25,
             slots: [
-                "Modification"
+                "Talent",
+                "Talent",
+                "Missile",
+                "Crew",
+                "Gunner",
+                "Illicit",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -12892,10 +12945,20 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "Scavenged YT-1300",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            charge: 3,
+            recurring: 1,
+            points: 8,
+            loadout: 20,
             slots: [
-                "Modification"
+                "Talent",
+                "Missile",
+                "Crew",
+                "Crew",
+                "Gunner",
+                "Illicit",
+                "Illicit",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -12905,10 +12968,17 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "T-70 X-wing",
             skill: 4,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 13,
             slots: [
+                "Talent",
+                "Tech",
+                "Missile",
+                "Missile",
+                "Astromech",
                 "Modification",
+                "Modification",
+                "Configuration",
                 "HardpointShip"
             ]
         },
@@ -12919,10 +12989,15 @@ exportObj.basicCardData = () => ({
             faction: "Resistance",
             ship: "T-70 X-wing",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 7,
             slots: [
+                "Talent",
+                "Talent",
+                "Tech",
+                "Astromech",
                 "Modification",
+                "Configuration",
                 "HardpointShip"
             ]
         },
@@ -12932,10 +13007,17 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Resistance",
             ship: "Resistance Transport",
-            skill: 5,
-            points: 20,
-            loadout: 99,
+            skill: 2,
+            points: 4,
+            loadout: 15,
             slots: [
+                "Talent",
+                "Tech",
+                "Cannon",
+                "Cannon",
+                "Torpedo",
+                "Astromech",
+                "Illicit",
                 "Modification"
             ]
         },
@@ -12946,10 +13028,18 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Firespray-class Patrol Craft",
             skill: 1,
-            points: 20,
-            loadout: 99,
+            points: 7,
+            loadout: 18,
             slots: [
-                "Modification"
+                "Cannon",
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Device",
+                "Illicit",
+                "Illicit",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -12959,9 +13049,13 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Fang Fighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 7,
+            keyword: ["Mandalorian"],
             slots: [
+                "Talent",
+                "Missile",
+                "Modification",
                 "Modification"
             ]
         },
@@ -12972,9 +13066,15 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Rogue-class Starfighter",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 10,
+            keyword: ["Bounty Hunter"],
             slots: [
+                "Talent",
+                "Talent",
+                "Cannon",
+                "Cannon",
+                "Illicit",
                 "Modification"
             ]
         },
@@ -12985,11 +13085,20 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "YV-666 Light Freighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 6,
+            loadout: 22,
             charge: 3,
             slots: [
-                "Modification"
+                "Cannon",
+                "Missile",
+                "Crew",
+                "Crew",
+                "Gunner",
+                "Illicit",
+                "Illicit",
+                "Modification",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -12999,9 +13108,12 @@ exportObj.basicCardData = () => ({
             faction: "Scum and Villainy",
             ship: "Modified TIE/ln Fighter",
             skill: 2,
-            points: 20,
-            loadout: 99,
+            points: 3,
+            loadout: 7,
             slots: [
+                "Talent",
+                "Cannon",
+                "Modification",
                 "Modification"
             ]
         },
@@ -13012,10 +13124,14 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Droid Tri-fighter",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 12,
             chassis: "Modified for Organics",
+            keyword: ["Bounty Hunter"],
             slots: [
+                "Talent",
+                "Missile",
+                "Illicit",
                 "Modification"
             ],
             ship_override: {
@@ -13037,10 +13153,18 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Firespray-class Patrol Craft",
             skill: 4,
-            points: 20,
-            loadout: 99,
+            force: 1,
+            points: 8,
+            loadout: 18,
+            keyword: ["Dark Side","Bounty Hunter"],
             slots: [
-                "Modification"
+                "Talent",
+                "Cannon",
+                "Cannon",
+                "Device",
+                "Illicit",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -13050,11 +13174,19 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Separatist Alliance",
             ship: "Rogue-class Starfighter",
-            skill: 1,
-            points: 20,
-            loadout: 99,
+            skill: 5,
+            charge: 1,
+            points: 4,
+            loadout: 10,
+            keyword: ["Bounty Hunter"],
             slots: [
-                "Modification"
+                "Talent",
+                "Cannon",
+                "Cannon",
+                "Illicit",
+                "Modification",
+                "Modification",
+                "Title"
             ]
         },
         {
@@ -13064,32 +13196,37 @@ exportObj.basicCardData = () => ({
             faction: "Separatist Alliance",
             ship: "Vulture-class Droid Fighter",
             skill: 1,
-            points: 20,
-            loadout: 99,
+            charge: 3,
+            points: 2,
+            loadout: 5,
+            keyword: ["Droid"],
             slots: [
-                "Modification"
+                "Missile",
+                "Modification",
+                "Modification",
+                "Configuration"
             ]
         },
         {
             name: "Kelrodo-Ai Holdout",
             id: 618,
             faction: "Separatist Alliance",
-            ship: "Droid Tri-fighter",
-            skill: 1,
-            points: 20,
-            loadout: 99,
+            ship: "Vulture-class Droid Fighter",
+            skill: 2,
+            max_per_squad: 3,
+            points: 2,
+            loadout: 7,
             chassis: "Modified for Organics",
             slots: [
+                "Talent",
+                "Missile",
                 "Modification"
             ],
             ship_override: {
                 actions: [
-                    "Focus",
-                    "Evade",
+                    "Calculate",
                     "Lock",
                     "Barrel Roll",
-                    "R-> Evade",
-                    "Boost",
                     "R-> Focus"
                 ]
             }
@@ -13101,10 +13238,16 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             ship: "Delta-7 Aethersprite",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 12,
+            force: 2,
+            keyword: ["Jedi","Light Side"],
             slots: [
-                "Modification"
+                "Force",
+                "Talent",
+                "Astromech",
+                "Modification",
+                "Configuration"
             ]
         },
         {
@@ -13116,9 +13259,14 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             ship: "Delta-7b Aethersprite",
             skill: 5,
-            points: 20,
-            loadout: 99,
+            force: 2,
+            points: 7,
+            loadout: 18,
+            keyword: ["Jedi","Light Side"],
             slots: [
+                "Force",
+                "Talent",
+                "Astromech",
                 "Modification"
             ]
         },
@@ -13129,11 +13277,22 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             ship: "LAAT/i Gunship",
             skill: 2,
-            points: 20,
-            loadout: 99,
+            charge: 2,
+            recurring: 1,
+            points: 5,
+            loadout: 12,
+            keyword: ["Clone"],
             slots: [
+                "Talent",
+                "Missile",
+                "Missile",
+                "Crew",
+                "Crew",
+                "Gunner",
+                "Gunner",
                 "Modification"
-            ]
+            ],
+            applies_condition: 'Sickening Maneuver'.canonicalize()
         },
         {
             name: "Kit Fisto",
@@ -13143,9 +13302,14 @@ exportObj.basicCardData = () => ({
             ship: "Eta-2 Actis",
             skill: 4,
             force: 2,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 8,
+            keyword: ["Jedi","Light Side"],
             slots: [
+                "Force",
+                "Force",
+                "Talent",
+                "Astromech",
                 "Modification"
             ]
         },
@@ -13155,10 +13319,16 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "Galactic Republic",
             ship: "V-19 Torrent Starfighter",
-            skill: 4,
-            points: 20,
-            loadout: 99,
+            skill: 1,
+            charge: 2,
+            recurring: 1,
+            points: 3,
+            loadout: 7,
+            keyword: ["Clone"],
             slots: [
+                "Talent",
+                "Missile",
+                "Missile",
                 "Modification"
             ]
         },
@@ -13169,9 +13339,13 @@ exportObj.basicCardData = () => ({
             faction: "Galactic Republic",
             ship: "Naboo Royal N-1 Starfighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 4,
+            loadout: 16,
             slots: [
+                "Talent",
+                "Sensor",
+                "Astromech",
+                "Torpedo",
                 "Modification"
             ]
         },
@@ -13181,10 +13355,14 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "First Order",
             ship: "TIE/fo Fighter",
-            skill: 3,
-            points: 20,
-            loadout: 99,
+            skill: 5,
+            points: 3,
+            loadout: 8,
             slots: [
+                "Talent",
+                "Tech",
+                "Tech",
+                "Cannon",
                 "Modification"
             ]
         },
@@ -13195,9 +13373,18 @@ exportObj.basicCardData = () => ({
             faction: "First Order",
             ship: "TIE/se Bomber",
             skill: 4,
-            points: 20,
-            loadout: 99,
+            charge: 3,
+            points: 4,
+            loadout: 13,
             slots: [
+                "Talent",
+                "Tech",
+                "Torpedo",
+                "Missile",
+                "Gunner",
+                "Device",
+                "Device",
+                "Modification",
                 "Modification"
             ]
         },
@@ -13207,10 +13394,13 @@ exportObj.basicCardData = () => ({
             unique: true,
             faction: "First Order",
             ship: "TIE/fo Fighter",
-            skill: 3,
-            points: 20,
-            loadout: 99,
+            skill: 4,
+            points: 3,
+            loadout: 8,
             slots: [
+                "Talent",
+                "Tech",
+                "Modification",
                 "Modification"
             ]
         },
@@ -13221,11 +13411,15 @@ exportObj.basicCardData = () => ({
             faction: "First Order",
             ship: "TIE/fo Fighter",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 3,
+            loadout: 9,
             slots: [
+                "Talent",
+                "Talent",
+                "Tech",
                 "Modification"
-            ]
+            ],
+            applies_condition: 'Primed For Speed'.canonicalize()
         },
         {
             name: "Agent Tierny",
@@ -13234,11 +13428,18 @@ exportObj.basicCardData = () => ({
             faction: "First Order",
             ship: "Xi-class Light Shuttle",
             skill: 3,
-            points: 20,
-            loadout: 99,
+            points: 5,
+            loadout: 15,
             slots: [
+                "Talent",
+                "Talent",
+                "Tech",
+                "Crew",
+                "Crew",
+                "Modification",
                 "Modification"
-            ]
+            ],
+            applies_condition: 'Broken Trust'.canonicalize()
         }
     ],
 
@@ -13248,6 +13449,7 @@ exportObj.basicCardData = () => ({
             id: 0,
             slot: "Astromech",
             canonical_name: '"Chopper"'.canonicalize(),
+            xws: "chopper",
             points: 2,
             unique: true,
             faction: "Rebel Alliance"
@@ -17782,6 +17984,7 @@ exportObj.basicCardData = () => ({
         {
             name: "Bo-Katan Kryze (Republic/Separatist)",
             canonical_name: 'Bo-Katan Kryze'.canonicalize(),
+            xws: "bokatankryze",
             id: 425,
             points: 6,
             slot: "Crew",
@@ -18535,6 +18738,12 @@ exportObj.basicCardData = () => ({
             unique: true,
             standard: true,
             slot: "Crew"
+        },
+        {
+            name: "Evasion Sequence 7 (SoC)",
+            id: 493,
+            standard: true,
+            slot: "Modification"
         }
     ],
 
@@ -18714,6 +18923,18 @@ exportObj.basicCardData = () => ({
         {
             name: 'Guarded',
             id: 40
+        },
+        {
+            name: 'Sickening Maneuver',
+            id: 41
+        },
+        {
+            name: 'Primed For Speed',
+            id: 42
+        },
+        {
+            name: 'Broken Trust',
+            id: 43
         }
     ],
 
@@ -26596,6 +26817,101 @@ exportObj.basicCardData = () => ({
                 "Concussion Bombs",
                 "Hull Upgrade"
             ]
+        },
+        {
+            id: 621,
+            faction: "Rebel Alliance",
+            pilot: "Fenn Rau (Rebel Fang)",
+            ship: "Fang Fighter",
+            threat: 3,
+            upgrades: [
+                "Clan Training",
+                "Ion Torpedoes",    
+                "Afterburners"
+            ]
+        },
+        {
+            id: 622,
+            faction: "Rebel Alliance",
+            pilot: "Clan Wren Volunteer",
+            ship: "Fang Fighter",
+            threat: 2,
+            upgrades: [
+                "Predator"
+            ]
+        },
+        {
+            id: 623,
+            faction: "Rebel Alliance",
+            pilot: "Bodica Venj",
+            ship: "Fang Fighter",
+            threat: 3,
+            upgrades: [
+                "Outmaneuver",
+                "Beskar Reinforced Plating",
+                "Mandalorian Optics"
+            ]
+        },
+        {
+            id: 624,
+            faction: "Rebel Alliance",
+            pilot: "Dirk Ullodin",
+            ship: "Fang Fighter",
+            threat: 3,
+            upgrades: [
+                "Clan Training",
+                "Proton Torpedoes",
+                "Hull Upgrade",
+                "Mandalorian Optics"
+            ]
+        },
+        {
+            id: 625,
+            faction: "Galactic Empire",
+            pilot: "Moff Gideon",
+            ship: "TIE/ln Fighter",
+            threat: 2,
+            upgrades: [
+                "Deadeye Shot",
+                "Outmaneuver",
+                "Overtuned Modulators",
+                "Hull Upgrade"
+            ]
+        },
+        {
+            id: 626,
+            faction: "Galactic Empire",
+            pilot: "ISB Jingoist",
+            ship: "TIE/ln Fighter",
+            threat: 2,
+            upgrades: [
+                "Ion Limiter Override",
+                "False Transponder Codes",
+                "Afterburners",
+                "Shield Upgrade"
+            ]
+        },
+        {
+            id: 627,
+            faction: "Scum and Villainy",
+            pilot: "Mandalorian Royal Guard",
+            ship: "Fang Fighter",
+            threat: 2,
+            upgrades: [
+                "Afterburners",
+                "Beskar Reinforced Plating"
+            ]
+        },
+        {
+            id: 628,
+            faction: "Scum and Villainy",
+            pilot: "Mandalorian Royal Guard",
+            ship: "Fang Fighter",
+            threat: 2,
+            upgrades: [
+                "Clan Training",
+                "Mandalorian Optics"
+            ]
         }
     ]
 });
@@ -27324,7 +27640,7 @@ String.prototype.serialtoxws = function() {
                 link: this.getPermaLink()
             }
         },
-        version: '06/15/2022'
+        version: '10/28/2022'
     };
         // there is no point to have this version identifier, if we never actually increase it, right?
 
@@ -27357,6 +27673,7 @@ String.prototype.serialtoxws = function() {
     }
     return xwsship;
 };
+
 function __guard__(value, transform) {
   return (typeof value !== 'undefined' && value !== null) ? transform(value) : undefined;
 }
