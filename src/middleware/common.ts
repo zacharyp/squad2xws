@@ -3,6 +3,14 @@ import cors from "cors";
 import parser from "body-parser";
 import compression from "compression";
 
+export const handleRobots = (router: Router) => {
+  router.use('/robots.txt', function (req, res, next) {
+    res.type('text/plain')
+    res.send(
+        `User-agent: *\nDisallow: /`);
+  });
+};
+
 export const handleCors = (router: Router) =>
   router.use(cors({ credentials: true, origin: true }));
 

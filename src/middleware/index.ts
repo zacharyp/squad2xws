@@ -1,4 +1,5 @@
 import {
+  handleRobots,
   handleCors,
   handleBodyRequestParsing,
   handleCompression
@@ -7,6 +8,7 @@ import {
 import { handleAPIDocs } from "./apiDocs";
 
 export default [
+  handleRobots,
   handleCors,
   handleBodyRequestParsing,
   handleCompression,
