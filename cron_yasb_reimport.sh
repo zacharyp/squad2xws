@@ -2,6 +2,8 @@
 
 cd /var/www/squad2xws
 
+git submodule foreach git pull origin master
+
 rm src/services/yasb/lib/cards-common.js
 
 curl --fail https://yasb.app/javascripts/xwingcontent.min.js > js-holding/cards-common.js
