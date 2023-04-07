@@ -51,23 +51,26 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
         pilotObj.ship = canonicalize(ship.name)
         pilotObj.points = p.points
 
-        let uSplit = upgrade_ids.split(upgrade_splitter)
+        // only add upgrades to xws output if they are not "standard" upgrades
+        if (!(p.upgrades != undefined && p.upgrades.length > 0)) {
+            let uSplit = upgrade_ids.split(upgrade_splitter)
 
-        for (let i = 0; i < uSplit.length; i++) {
-            let upgrade_id = parseInt(uSplit[i]);
-            if (upgrade_id >= 0) {
-                let upgradeById: UpgradeById = cardData.upgradesById[upgrade_id]
+            for (let i = 0; i < uSplit.length; i++) {
+                let upgrade_id = parseInt(uSplit[i]);
+                if (upgrade_id >= 0) {
+                    let upgradeById: UpgradeById = cardData.upgradesById[upgrade_id]
 
-                let uSlot: string = (upgradeById.slot == 'Force') ? 'force-power' : canonicalize(upgradeById.slot)
-                let uXWS: string = upgradeById.xws || upgradeById.canonical_name ||  canonicalize(upgradeById.name)
+                    let uSlot: string = (upgradeById.slot == 'Force') ? 'force-power' : canonicalize(upgradeById.slot)
+                    let uXWS: string = upgradeById.xws || upgradeById.canonical_name ||  canonicalize(upgradeById.name)
 
-                let currentUpgradeArray: string[] = upgrades[uSlot] || []
-                currentUpgradeArray.push(uXWS)
+                    let currentUpgradeArray: string[] = upgrades[uSlot] || []
+                    currentUpgradeArray.push(uXWS)
 
-                upgrades[uSlot] = currentUpgradeArray
+                    upgrades[uSlot] = currentUpgradeArray
+                }
             }
-        }
 
+        }
     } catch (error) {
         return undefined;
     }
