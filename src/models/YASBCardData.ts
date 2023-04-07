@@ -19,7 +19,8 @@ export type PilotById = {
     skill: number,
     points: number,
     canonical_name?: string,
-    xws?: string
+    xws?: string,
+    upgrades?: string[]
 }
 
 export type UpgradeById = {
