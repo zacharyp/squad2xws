@@ -26,6 +26,7 @@ export type PilotById = {
 export type UpgradeById = {
     name: string,
     canonical_name?: string,
+    xwsaddon?: string,
     id: number,
     slot: string,
     xws?: string,

@@ -43,6 +43,14 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
 
     [pilot_id, upgrade_ids, unused_value] = serialized.split(pilot_splitter);
 
+    // name_parse ?
+    // let nameSplit = p.name.split("(")
+
+    /*
+    pilot_data.xws = if pilot_data.xws? then pilot_data.xws else (if pilot_data.xwsaddon? then (pilot_data.canonical_name + "-" + pilot_data.xwsaddon) else (pilot_data.canonical_name + (if name_parse[1]? then ("-" + pilot_data.ship.canonicalize()) else "")))
+     */
+    // not output in squad2xws
+
     try {
         let p = cardData.pilotsById[parseInt(pilot_id)]
         pilotObj.id = p.xws || canonicalize(p.name);
@@ -61,7 +69,28 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
                     let upgradeById: UpgradeById = cardData.upgradesById[upgrade_id]
 
                     let uSlot: string = (upgradeById.slot == 'Force') ? 'force-power' : canonicalize(upgradeById.slot)
-                    let uXWS: string = upgradeById.xws || upgradeById.canonical_name ||  canonicalize(upgradeById.name)
+
+                    // original coffeescript
+                    // upgrade_data.canonical_name = name_parse[0].canonicalize() unless upgrade_data.canonical_name?
+                    // upgrade_data.xws = if upgrade_data.xws? then upgrade_data.xws else (if upgrade_data.xwsaddon? then (upgrade_data.canonical_name + "-" + upgrade_data.xwsaddon) else (upgrade_data.canonical_name + (if name_parse[1]? then ("-" + upgrade_data.slot.canonicalize()) else "")))
+
+                    let upgradeNameSplit = upgradeById.name.split("(")
+                    if (upgradeById.canonical_name == undefined) {
+                        upgradeById.canonical_name = canonicalize(upgradeNameSplit[0])
+                    }
+
+                    let uXWS: string = ""
+                    if (upgradeById.xws != undefined) {
+                        uXWS = upgradeById.xws
+                    } else if (upgradeById.xwsaddon != undefined) {
+                        uXWS = upgradeById.canonical_name + "-" + upgradeById.xwsaddon
+                    } else {
+                        uXWS = upgradeById.canonical_name
+                        if (upgradeNameSplit.length > 1) {
+                            uXWS += "-" + canonicalize(upgradeById.slot)
+                        }
+                    }
+                    // let uXWS: string = upgradeById.xws || upgradeById.canonical_name ||  canonicalize(upgradeById.name)
 
                     let currentUpgradeArray: string[] = upgrades[uSlot] || []
                     currentUpgradeArray.push(uXWS)
@@ -77,21 +106,3 @@ function fromSerializedShip(serialized: string): Pilot | undefined {
 
     return pilotObj;
 }
-
-
-// hackily copied from xwing GenericAddon getPoints
-// function getUpgradePoints(upgrade: UpgradeById, ship: Ship, skill: number): number {
-//     if (upgrade.variableagility)
-//         return Math.max(0, (upgrade.pointsarray || [])[ship.agility])
-//     else if (upgrade.variablebase)
-//         if (!(ship.medium || ship.large))
-//             return Math.max(0, (upgrade.pointsarray || [])[0])
-//         else if (ship.medium)
-//             return Math.max(0, (upgrade.pointsarray || [])[1])
-//         else // large
-//             return Math.max(0, (upgrade.pointsarray || [])[2])
-//     else if (upgrade.variableinit)
-//         return Math.max(0, (upgrade.pointsarray || [])[skill])
-//     else
-//         return upgrade.points || 0
-// };
