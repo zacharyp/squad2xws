@@ -14,9 +14,9 @@ X-Wing Data 2 holds useful information about x-wing pilots, upgrade cards, etc: 
 
 ## YASB URL to XWS
 
-GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `squad2xws.objectivecat.com/yasb/xws`
+GET endpoint for XWS data.  Copy a usual YASB url, changing the host and path from `raithos.github.io` to `{somehost}/yasb/xws`
 Example: `https://yasb.app/?f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
-becomes `https://squad2xws.objectivecat.com/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
+becomes `https://{somehost}/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ20Z393X417W99W368W453WW236W108W154Y52X119W331W371Y74X130W114W13W12WW68W247W313Y49X355W106&sn=Random%20Squad&obs=`
 
 ## Reverse YASB
 
