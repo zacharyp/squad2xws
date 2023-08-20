@@ -1,3 +1,5 @@
+#  NOTE: This project is no longer maintained
+
 ## squad2xws
 
 Useful REST endpoints related to [X-Wing: The Miniatures Game (Second Edition)](https://www.atomicmassgames.com/xwing-documents) by [Atomic Mass Gaming](https://www.atomicmassgames.com).
@@ -19,12 +21,6 @@ becomes `https://squad2xws.objectivecat.com/yasb/xws??f=Rebel%20Alliance&d=v9ZsZ
 ## Reverse YASB
 
 Post endpoint for XWS data.  Returns a valid YASB 2.5 url.
-
-POST JSON xws to `http://squad2xws.objectivecat.com/yasb/reverse`
-
-## API Documentation
-
-Located here: http://squad2xws.objectivecat.com/api-docs/#/
 
 ### Getting started
 1. ```npm install```
